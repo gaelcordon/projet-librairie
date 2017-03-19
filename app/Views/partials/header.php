@@ -32,26 +32,45 @@
   </head>
   <body>
 
-    <header>
-			<h1><?php echo $titre; ?></h1>
-			<nav>
-			    <ul>
-			        <!-- 
-			        CONSTRUIRE L'URL A PARTIR DU NOM DE LA ROUTE
-			        $this EST L'OBJET QUI INSTANCIE LE MOTEUR PLATES (CREE PAR FRAMEWORK W)
-			        -->
-			        <li><a href="<?php echo $this->url('librairie_accueil'); ?>">Accueil</a></li>
-			        <li><a href="<?php echo $this->url('librairie_librairie'); ?>">Librairie</a></li>
-			        <li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
-					<li><a href="<?php echo $this->url('librairie_papeterie'); ?>">Papeterie</a></li>
-					<li><a href="<?php echo $this->url('librairie_loisirs_et_jeux'); ?>">Loisirs et jeux</a></li>
-					<li><a href="<?php echo $this->url('librairie_evenements_ateliers'); ?>">Evènements/Ateliers</a></li>
-					<li><a href="<?php echo $this->url('librairie_plaisir_offrir'); ?>">Plaisir d'offrir</a></li>
-					<li><a href="<?php echo $this->url('librairie_contact'); ?>">Contact/Nous trouver</a></li>
-					<li><a href="<?php echo $this->url('librairie_espace_membre'); ?>">Espace membre</a></li>
-			    </ul>
-			</nav>
-        
+    <header class="container-fluid">
+		<div class="container" id="logo">
+			
+			<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
+		</div>
+		<nav class="navbar navbar-default">
+		
+			<div class="container-fluid">
+				<!-- Menu sandwich -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>		
+				</div> <!-- /div class="navbar-header" -->
+				<!-- On récupère les liens de navigations pour les réduire en responsive design -->
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+             		<div class="row">
+                		<ul class="nav navbar-nav">
+						<!-- 
+						CONSTRUIRE L'URL A PARTIR DU NOM DE LA ROUTE
+						$this EST L'OBJET QUI INSTANCIE LE MOTEUR PLATES (CREE PAR FRAMEWORK W)
+						-->
+							<li><a href="<?php echo $this->url('librairie_accueil'); ?>">Accueil</a></li>
+							<li><a href="<?php echo $this->url('librairie_librairie'); ?>">Librairie</a></li>
+							<li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
+							<li><a href="<?php echo $this->url('librairie_papeterie'); ?>">Papeterie</a></li>
+							<li><a href="<?php echo $this->url('librairie_loisirs_et_jeux'); ?>">Loisirs et jeux</a></li>
+							<li><a href="<?php echo $this->url('librairie_evenements_ateliers'); ?>">Evènements/Ateliers</a></li>
+							<li><a href="<?php echo $this->url('librairie_plaisir_offrir'); ?>">Plaisir d'offrir</a></li>
+							<li><a href="<?php echo $this->url('librairie_contact'); ?>">Contact/Nous trouver</a></li>
+							<li><a href="<?php echo $this->url('librairie_espace_membre'); ?>"><span class="glyphicon glyphicon-user"></span> Espace membre</a></li>
+						</ul>
+					</div><!-- class=row -->
+				</div><!-- /.navbar-collapse -->	
+			</div> <!-- /div class="container-fluid" -->
+		</nav>	 
     </header>
     
     <main>

@@ -2,8 +2,11 @@
     </main>
 
     <footer class="container-fluid">
-
-    <p>&copy;2017 - A la gloire de mon père tous droits réservés</p>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class=row class="col-md-12" id="copyright">
+            <p>&copy; A la gloire de mon père 2017</p>
+            </div>
+        </nav>
     </footer>
 
     <!--On construit l'url à partir du nom de la route grâce à l'objet $this
