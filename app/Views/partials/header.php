@@ -33,6 +33,24 @@
   <body>
 
     <header>
+			<h1><?php echo $titre; ?></h1>
+			<nav>
+			    <ul>
+			        <!-- 
+			        CONSTRUIRE L'URL A PARTIR DU NOM DE LA ROUTE
+			        $this EST L'OBJET QUI INSTANCIE LE MOTEUR PLATES (CREE PAR FRAMEWORK W)
+			        -->
+			        <li><a href="<?php echo $this->url('librairie_accueil'); ?>">Accueil</a></li>
+			        <li><a href="<?php echo $this->url('librairie_librairie'); ?>">Librairie</a></li>
+			        <li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
+					<li><a href="<?php echo $this->url('librairie_papeterie'); ?>">Papeterie</a></li>
+					<li><a href="<?php echo $this->url('librairie_loisirs_et_jeux'); ?>">Loisirs et jeux</a></li>
+					<li><a href="<?php echo $this->url('librairie_evenements_ateliers'); ?>">Evènements/Ateliers</a></li>
+					<li><a href="<?php echo $this->url('librairie_plaisir_offrir'); ?>">Plaisir d'offrir</a></li>
+					<li><a href="<?php echo $this->url('librairie_contact'); ?>">Contact/Nous trouver</a></li>
+					<li><a href="<?php echo $this->url('librairie_espace_membre'); ?>">Espace membre</a></li>
+			    </ul>
+			</nav>
         
     </header>
     

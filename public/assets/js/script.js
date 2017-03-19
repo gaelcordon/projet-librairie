@@ -1,9 +1,11 @@
 // DEBUG 
-alert("CHARGE");
+// alert("CHARGE");
 
 // IL FAUT AVOIR CHARGE LE SCRIPT DE JQUERY AVANT!
 // POUR UTILISER JQUERY
 /* global $ */
+
+/*
 
 $(function(){
     // CE CODE SERA APPELE PAR JQUERY QUAND LA PAGE SERA PRETE
@@ -79,3 +81,6 @@ $(function(){
 			}); // fin du $.ajax
 		}); //fin du 'on change' sur genre
 }); //fin du ready
+
+
+*/
