@@ -9,6 +9,11 @@
 		['GET|POST', '/evenementsAteliers', 'Librairie#evenementsAteliers', 'librairie_evenements_ateliers'],
 		['GET|POST', '/plaisirOffrir', 		'Librairie#plaisirOffrir', 		'librairie_plaisir_offrir'],
 		['GET|POST', '/contact', 			'Librairie#contact', 			'librairie_contact'],
-		['GET|POST', '/espaceMembre', 		'Librairie#espaceMembre', 		'librairie_espace_membre'],
+		
+		// ROUTE POUR LOGIN utilisation de la normalisation Framework W
+ 		['GET|POST', '/login',   			'Librairie#login',				'login'],
+ 		// ROUTE POUR LOGOUT utilisation de la normalisation Framework W
+ 		['GET|POST', '/logout',  			'Librairie#logout',				'logout'],
+		
 	
 	);

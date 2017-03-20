@@ -32,11 +32,8 @@
   </head>
   <body>
 
-    <header class="container-fluid">
-		<div class="container" id="logo">
-			
-			<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
-		</div>
+    <header>
+		<a href="<?php echo $this->url('librairie_accueil'); ?>"><img id="logo" class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
 		<nav class="navbar navbar-default">
 		
 			<div class="container-fluid">
@@ -48,7 +45,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>		
-				</div> <!-- /div class="navbar-header" -->
+				</div> <!-- div class="navbar-header" -->
 				<!-- On récupère les liens de navigations pour les réduire en responsive design -->
 				<div class="collapse navbar-collapse" id="navbar-collapse-1">
              		<div class="row">
@@ -65,12 +62,20 @@
 							<li><a href="<?php echo $this->url('librairie_evenements_ateliers'); ?>">Evènements/Ateliers</a></li>
 							<li><a href="<?php echo $this->url('librairie_plaisir_offrir'); ?>">Plaisir d'offrir</a></li>
 							<li><a href="<?php echo $this->url('librairie_contact'); ?>">Contact/Nous trouver</a></li>
-							<li><a href="<?php echo $this->url('librairie_espace_membre'); ?>"><span class="glyphicon glyphicon-user"></span> Espace membre</a></li>
-						</ul>
+
+							<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
+							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?> 
+								<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-remove"></span></a></li>
+							<?php else: ?>			        
+								<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-user"></span></a></li>
+							<?php endif; ?>
+						</ul><!-- class="nav navbar-nav" -->
 					</div><!-- class=row -->
-				</div><!-- /.navbar-collapse -->	
-			</div> <!-- /div class="container-fluid" -->
+				</div><!-- navbar-collapse -->	
+			</div> <!-- div class="container-fluid" -->
 		</nav>	 
     </header>
     
     <main>
+
+

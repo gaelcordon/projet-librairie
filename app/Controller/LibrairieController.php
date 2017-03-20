@@ -71,11 +71,44 @@ class LibrairieController extends Controller
 	}
 
 	/**
-	 * Page spécifique a Espace membre
-	 */
-	public function espaceMembre()
+	 * Page de logout
+	*/
+	public function logout()
 	{
-		$this->show('pages/espace-membre');
+		// ON CREE UN OBJET DE LA CLASSE \W\Security\AuthentificationModel
+		$objetAuthentificationModel = new \W\Security\AuthentificationModel;
+		// GERE LA DESTRUCTION DU COOKIE
+		$objetAuthentificationModel->logUserOut();
+		
+		// ON VA REDIRIGER VERS LA PAGE DE LOGIN
+		$this->redirectToRoute("login");
+	}
+
+	/**
+	 * Page de login
+	 */
+	public function login()
+	{
+	    // CONTROLLER
+	    // TRAITEMENT DU FORMULAIRE
+	    $GLOBALS["loginRetour"] = "";
+	    
+	    // RECUPERER L'INFO idForm
+	    $idForm = $this->verifierSaisie("idForm");
+	    if ($idForm == "login")
+	    {
+	        // ACTIVER LE CODE POUR TRAITER LE FORMULAIRE newsletter
+	        $this->loginTraitement();
+	    }
+	    
+	    // VIEW
+		// LA METHODE show EST DEFINIE 
+		// DANS LA CLASSE PARENTE Controller
+		// ON ACTIVE LA PARTIE VIEW
+		
+		// ON TRANSMET A LA VUE DES VARIABLES DEPUIS LE CONTROLEUR AVEC UN TABLEAU ASSOCIATIF
+		// LA CLE newsletterRetour VA ETRE TRANSFORME EN VARIABLE LOCALE $newsletterRetour
+		$this->show('page/login', [ "loginRetour" => $GLOBALS["loginRetour"] ]);
 	}
 
 
