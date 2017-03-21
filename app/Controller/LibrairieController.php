@@ -4,7 +4,9 @@ namespace Controller;
 
 use \W\Controller\Controller;
 
-class LibrairieController extends Controller
+class LibrairieController 		// ON HERITE DE LA CLASSE FormController 
+      extends FormController	// QUI HERITE DE LA CLASSE W\Controller\Controller
+	
 {
 
 	/**
@@ -108,8 +110,7 @@ class LibrairieController extends Controller
 		
 		// ON TRANSMET A LA VUE DES VARIABLES DEPUIS LE CONTROLEUR AVEC UN TABLEAU ASSOCIATIF
 		// LA CLE newsletterRetour VA ETRE TRANSFORME EN VARIABLE LOCALE $newsletterRetour
-		$this->show('page/login', [ "loginRetour" => $GLOBALS["loginRetour"] ]);
+		$this->show('pages/login', [ "loginRetour" => $GLOBALS["loginRetour"] ]);
 	}
-
 
 }
