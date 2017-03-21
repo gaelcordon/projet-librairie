@@ -2,41 +2,80 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-  <!-- On place le logo de la librairie dans l'URL -->
-    <link rel="icon" type="image/png" href="./assets/img/favicon-librairie.png" />
-    <title><?php echo $this->titre; ?></title>
-	<!-- On prepare au Responsive Web Design -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-	
-	<!-- Chargement de la bibliothèque jquery pour Javascript -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<!-- On place le logo de la librairie dans l'URL 
+		On construit l'url à partir du nom de la route grâce à l'objet $this
+		qui instancie le moteur plates (utilisé par le frameworl W)-->
 
-	<!-- Chargement du Framework Bootstrap et de son script associé -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 	
-	<!-- Chargement de notre propre feuille de style principale, on y appelle normalize.css avec une pseudo règle -->
-	<link rel="stylesheet/less" type="text/css" href="./assets/css/main.less" />
+		<link rel="icon" type="image/png" href="<?php echo $this->assetUrl('img/commun/favicon-librairie.png')?>"/>
 
-	<!-- Prise en charge de LESS pour le CSS -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
-	<script type="text/javascript" src="./assets/js/script.js" ></script>
+		<!--Titre de la page naviguée-->
+		<title><?php echo $titre; ?></title>
 	
-	<!-- Fonctionnalité date picker dans la section Admin afin de remonter le calendrier dans le formulaire évènement -->
-	 
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<!-- On prepare au Responsive Web Design -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
-	<!-- Fonctionnalité time picker dans la section Admin afin de remonter l'heure dans le formulaire évènement -->
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
-	
+		<!-- On charge la feuille de style normalize afin d'unifier le comportement des navigateurs face au style css -->
+		<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl('css/normalize.css')?>"/>
+
+		<!-- Chargement du Framework Bootstrap et de son script associé -->
+		<link rel="stylesheet" href="<?php echo $this->assetUrl('css/bootstrap.min.css')?>"/>
+
+		<!-- Feuille de style pour la fonctionnalité date picker dans les formulaires -->
+		<link rel="stylesheet" href="<?php echo $this->assetUrl('css/jquery-ui.min.css')?>"/>
+
+		<!-- Feuille de style pour la fonctionnalité time picker dans les formulaires -->
+		<link rel="stylesheet" href="<?php echo $this->assetUrl('css/jquery.timepicker.min.css')?>"/>
+
+		<!-- On charge la feuille de style propre au projet au format less -->
+		<link rel="stylesheet/less" type="text/css" href="<?php echo $this->assetUrl('css/main.less')?>"/>
 	
   </head>
   <body>
 
     <header>
-        
+		<a href="<?php echo $this->url('librairie_accueil'); ?>"><img id="logo" class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
+		<nav class="navbar navbar-default">
+		
+			<div class="container-fluid">
+				<!-- Menu sandwich -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>		
+				</div> <!-- div class="navbar-header" -->
+				<!-- On récupère les liens de navigations pour les réduire en responsive design -->
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+             		<div class="row">
+                		<ul class="nav navbar-nav">
+						<!-- 
+						CONSTRUIRE L'URL A PARTIR DU NOM DE LA ROUTE
+						$this EST L'OBJET QUI INSTANCIE LE MOTEUR PLATES (CREE PAR FRAMEWORK W)
+						-->
+							<li><a href="<?php echo $this->url('librairie_accueil'); ?>">Accueil</a></li>
+							<li><a href="<?php echo $this->url('librairie_librairie'); ?>">Librairie</a></li>
+							<li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
+							<li><a href="<?php echo $this->url('librairie_papeterie'); ?>">Papeterie</a></li>
+							<li><a href="<?php echo $this->url('librairie_loisirs_et_jeux'); ?>">Loisirs et jeux</a></li>
+							<li><a href="<?php echo $this->url('librairie_evenements_ateliers'); ?>">Evènements/Ateliers</a></li>
+							<li><a href="<?php echo $this->url('librairie_plaisir_offrir'); ?>">Plaisir d'offrir</a></li>
+							<li><a href="<?php echo $this->url('librairie_contact'); ?>">Contact/Nous trouver</a></li>
+
+							<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
+							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?> 
+								<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-remove"></span></a></li>
+							<?php else: ?>			        
+								<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-user"></span></a></li>
+							<?php endif; ?>
+						</ul><!-- class="nav navbar-nav" -->
+					</div><!-- class=row -->
+				</div><!-- navbar-collapse -->	
+			</div> <!-- div class="container-fluid" -->
+		</nav>	 
     </header>
     
     <main>
+
+

@@ -1,8 +1,8 @@
 <?php
 
-$titre = "A la gloire de mon pere";
+$titre = "Coups de Coeur - A la gloire de mon pere";
 
-// On prévoit la déclaration de variable pour définir quel est le menu actif
+// On prévoit la décalration de variable pour définir quel est le menu actif
 
 /*$activeAccueil = "active";
 $activeLibrairie = "";
@@ -19,5 +19,5 @@ $activeAdmin = "";*/
 // Contruction de la vue
 
 $this->insert('partials/header', ["titre" => $titre]);
-$this->insert('partials/section-accueil');
+$this->insert('partials/section-coups-de-coeur');
 $this->insert('partials/footer');
