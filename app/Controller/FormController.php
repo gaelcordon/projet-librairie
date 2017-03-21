@@ -60,10 +60,10 @@ class FormController extends Controller
     {
         // RECUPERER LES INFOS DU FORMULAIRE
         $identifiant = $this->verifierSaisie("identifiant");
-        $password    = $this->verifierSaisie("password");
+        $password    = $this->verifierSaisie("cache");
         
         // SECURITE
-        if ( ($identifiant != "") && ($password != "") )
+        if ( ($identifiant != "") && ($password  != "") )
         {
             // ON CREE UN OBJET DE LA CLASSE \W\Security\AuthentificationModel
             // CE QUI NOUS PERMET D'UTILISER LA METHODE isValidLoginInfo

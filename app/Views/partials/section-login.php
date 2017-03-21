@@ -2,7 +2,7 @@
         <section class="container">
             <div class="row">   
                 <div col-xd-4 col-lg-4>
-                    <h3>Ceci est la future page "Login"</h3>
+                    <h3>Bienvenue sur la page de connexion</h3>
                 </div>
             </div>
         </section>
