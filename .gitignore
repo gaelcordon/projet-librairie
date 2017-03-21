@@ -2,3 +2,5 @@
 app/config.php
 /phpDocumentor.phar
 *.log
+app/Views/pages/administration.php
+app/Views/pages/administration.php
