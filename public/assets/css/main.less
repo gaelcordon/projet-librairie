@@ -1,0 +1,87 @@
+/*Réglage des problèmes de dimensions engendrés par les paddings dans les div*/
+
+* {
+	box-sizing: border-box;
+}
+
+/* Chargement de la police de caractère Pacifico */
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+/* Déclaration des variables */
+@orange: #F39D6A;
+
+/* On prévoit un format d'affichage pour les champs en erreur */
+
+input.erreur {
+    border:1px solid #FF0000;
+}
+
+header {
+
+	font-family: 'Pacifico', cursive;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: @orange;
+    background-color: #6fbf3f00;
+}
+
+#logo {
+	margin: 0.7em auto;
+}
+
+body {
+	
+	background-color: black;
+		/* temporaire pour la construction du site */
+		h3 {
+			color:white;
+		}
+}
+
+
+footer {
+	margin-top : 15em;
+}
+
+#copyright p {
+    padding-bottom : 0px;
+    text-align: right;
+    color: @orange;
+    font-size: 0.9em;
+    margin-right:2em;
+}
+
+/* Customization des Breakpoint
+
+/*************************************************************
+		Breakpoint 1 : sur téléphone (petit écran)
+*************************************************************/
+@media only screen and (max-width: 768px) {
+	
+}
+
+
+/*************************************************************
+		Breakpoint 2 : sur tablette (styles spécifiques)
+*************************************************************/
+@media only screen and (min-width: 768px) {
+	
+}
+
+/*************************************************************
+		Breakpoint 2 : sur tablette (styles généraux)
+*************************************************************/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	
+	
+}
+
+/*************************************************************
+		Breakpoint 3 : sur ordinateur de bureau
+*************************************************************/
+@media only screen and (min-width: 1280px) {
+	
+	
+}
