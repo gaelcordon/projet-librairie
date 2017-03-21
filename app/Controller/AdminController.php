@@ -12,10 +12,12 @@ class AdminController extends Controller
 	 */
 	public function administration()
 	{
+
+		$GLOBALS["ajoutUtilisateurRetour"] = "";
 		// SECURITE
 		// SEULEMENT LES ROLES admin PEUVENT VOIR CETTE PAGE 
 		$this->allowTo(['admin', 'libraire', 'membre']);
-		$this->show('pages/administration');
+		$this->show('pages/administration', ["ajoutUtilisateurRetour" => $GLOBALS["ajoutUtilisateurRetour"]]);
 	}
 
 }

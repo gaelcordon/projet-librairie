@@ -56,6 +56,36 @@ class FormController extends Controller
     }
 
 
+    function verifierNom ($nom)
+    {
+        $resultat = false;  // MODE PARANO
+        
+        // ON VEUT SEULEMENT DES LETTRES ET DES CHIFFRES
+        // ON VEUT EGALEMENT UNE LONGUEUR DE CHAMP MINIMUM DE 3 CARACTERES    
+        if ( (mb_strlen($nom) >= 3) && ctype_alnum($nom) )
+        {
+            $resultat = true;
+        }
+
+        return $resultat;
+    }
+
+
+
+
+    // AU MOINS 3 LETTRES
+    function verifierPassword ($password)
+    {
+        $resultat = false;  // MODE PARANO
+
+        if (mb_strlen($password) >= 3)
+        {
+            $resultat = true;
+        }
+
+        return $resultat;    
+    }
+
     function loginTraitement ()
     {
         // RECUPERER LES INFOS DU FORMULAIRE
