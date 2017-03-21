@@ -9,6 +9,8 @@
 		['GET|POST', '/evenementsAteliers', 'Librairie#evenementsAteliers', 'librairie_evenements_ateliers'],
 		['GET|POST', '/plaisirOffrir', 		'Librairie#plaisirOffrir', 		'librairie_plaisir_offrir'],
 		['GET|POST', '/contact', 			'Librairie#contact', 			'librairie_contact'],
+		['GET|POST', '/administration', 	'Admin#administration', 		'admin_administration'],
+
 		
 		// ROUTE POUR LOGIN utilisation de la normalisation Framework W
  		['GET|POST', '/login',   			'Librairie#login',				'login'],
