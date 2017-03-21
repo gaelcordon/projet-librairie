@@ -84,3 +84,5 @@ $(function(){
 
 
 */
+
+console.log("(╯°□°）╯︵ ┻━┻");
