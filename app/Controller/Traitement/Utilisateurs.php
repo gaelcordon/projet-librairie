@@ -15,7 +15,7 @@ class Utilisateurs
         $username   = $formController->verifierSaisie("username");
         $email      = $formController->verifierSaisie("email"); 
         $password   = $formController->verifierSaisie("password1");
-        $role       = "membre"; // Par défaut on peut choisir une zone de sélection avec option dans le formulaire sinon
+        $role       = "membre"; // Par défaut mais on peut choisir une zone de sélection avec option dans le formulaire sinon
         
         // UN PEU DE SECURITE
         if ( ($formController->verifierEmail($email)) 
@@ -32,7 +32,7 @@ class Utilisateurs
             // COMPLETER LES INFOS MANQUANTES
             $date = date("Y-m-d H:i:s");
             
-            // CREER UN OBJET DE LA CLASSE ContactModel
+            // CREER UN OBJET DE LA CLASSE UtilisateursModel
             $objetUtilisateursModel = new \Model\UtilisateursModel;
             $objetUtilisateursModel->insert([
                     "username"      => $username,
@@ -43,7 +43,7 @@ class Utilisateurs
                 ]);
                     
             // MESSAGE POUR L'ADMINISTRATEUR       
-            $GLOBALS["ajoutUtilisateurRetour"] = "L'utilisateur ".$nom." a bien été rajouté";
+            $GLOBALS["ajoutUtilisateurRetour"] = "L'utilisateur ".$username." a bien été rajouté";
         }
         else 
         {

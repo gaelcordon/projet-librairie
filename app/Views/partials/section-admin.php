@@ -113,7 +113,7 @@
 
 	<div id="formUser" class="row">
 		<h3>Formulaire d'ajout d'utilisateurs</h3>
-		<form method=¨POST" action="">
+		<form method="POST" action="">
 			<div>
 				<input type="text" name="username" required placeholder="Nom d'utilisateur">
 			</div>
@@ -126,10 +126,11 @@
 			<div>
 				<input type="password" name="password2" required placeholder="Confirmez le mot de passe" title="au moins 3 caractères" />
 			</div>
-			<input type="hidden" name="idForm" value="ajoutUser">
+			<input type="hidden" name="idFormClasse" value="Utilisateurs">
+			<input type="hidden" name="idFormMethode" value="UtilisateursTraitement">
 			<button>Ajouter cet utilisateur</button>
 			<div class="retour">
-			<?php if (isset($ajoutUtilisateurRetour)) echo $ajoutUtilisateurRetour; ?>
+			<?php if (isset($GLOBALS["ajoutUtilisateurRetour"])) echo $GLOBALS["ajoutUtilisateurRetour"]; ?>
 			</div>	
 		</form>		
 	</div>

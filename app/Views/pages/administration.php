@@ -19,5 +19,5 @@ $activeAdmin = "";*/
 // Contruction de la vue
 
 $this->insert('partials/header', ["titre" => $titre]);
-$this->insert('partials/section-admin', ["ajoutUtilisateurRetour" => $ajoutUtilisateurRetour]);
+$this->insert('partials/section-admin');
 $this->insert('partials/footer');
