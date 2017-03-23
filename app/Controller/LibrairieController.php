@@ -56,14 +56,7 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 		$this->show('pages/evenements-ateliers');
 	}
 
-	/**
-	 * Page spécifique au Plaisir d'offrir
-	 */
-	public function plaisirOffrir()
-	{
-		$this->show('pages/plaisir-offrir');
-	}
-
+	
 	/**
 	 * Page spécifique a Contact/Nous Trouver
 	 */

@@ -6,7 +6,7 @@
 		On construit l'url à partir du nom de la route grâce à l'objet $this
 		qui instancie le moteur plates (utilisé par le frameworl W)-->
 
-		<link rel="icon" type="image/png" href="<?php echo $this->assetUrl('img/commun/favicon-librairie.png')?>"/>
+		<link rel="icon" type="image/ico" href="<?php echo $this->assetUrl('img/commun/favicon.ico')?>"/>
 
 		<!--Titre de la page naviguée-->
 		<title><?php echo $titre; ?></title>
@@ -60,7 +60,6 @@
 							<li><a href="<?php echo $this->url('librairie_papeterie'); ?>">Papeterie</a></li>
 							<li><a href="<?php echo $this->url('librairie_loisirs_et_jeux'); ?>">Loisirs et jeux</a></li>
 							<li><a href="<?php echo $this->url('librairie_evenements_ateliers'); ?>">Evènements/Ateliers</a></li>
-							<li><a href="<?php echo $this->url('librairie_plaisir_offrir'); ?>">Plaisir d'offrir</a></li>
 							<li><a href="<?php echo $this->url('librairie_contact'); ?>">Contact/Nous trouver</a></li>
 							
 

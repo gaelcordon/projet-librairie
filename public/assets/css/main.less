@@ -10,6 +10,10 @@
 
 /* Déclaration des variables */
 @orange: #F39D6A;
+@vertKaki: #5c8160;
+@marron: #99765B;
+@bleuPale: #96b8b6;
+@marronGris: #beb2a6;
 
 /* On prévoit un format d'affichage pour les champs en erreur */
 
@@ -29,6 +33,47 @@ header {
 #logo {
 	margin: 0.7em auto;
 }
+
+
+/* Formulaires */
+
+#formUser {
+
+	legend {
+		color: @orange;
+		border-bottom: 1px solid @orange;
+	}
+
+	input {
+		color: @orange;
+		width: 54%;
+		background-color: @marronGris;
+		border-style: none;
+		// border: 1px solid @orange;
+	}
+
+	.btn-librairie-form {
+	    color: black;
+		background-color: @marronGris;
+		border-style: none;
+	}
+
+	.btn-librairie-form:hover {
+		color: black;
+		background-color: @marronGris;
+		box-shadow: 0 0 10px @orange;
+		// on augmente sensiblement la taille du bouton
+		-ms-transform: scale(2,3); /* IE 9 */
+    	-webkit-transform: scale(2,3); /* Safari */
+   		transform: scale(1.1); /* Standard syntax */
+   		// on déplace sensiblement le bouton vers la droite pour compenser l'augmentation de taille
+   		 -ms-transform: translate(2px,0); /* IE 9 */
+	    -webkit-transform: translate(2px,0); /* Safari */
+	    transform: translate(2px,0); /* Standard syntax */
+
+	}
+}
+
 
 body {
 	

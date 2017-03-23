@@ -7,7 +7,6 @@
 		['GET|POST', '/papeterie',			'Librairie#papeterie', 			'librairie_papeterie'],
 		['GET|POST', '/loisirsEtJeux', 		'Librairie#loisirsEtJeux', 		'librairie_loisirs_et_jeux'],
 		['GET|POST', '/evenementsAteliers', 'Librairie#evenementsAteliers', 'librairie_evenements_ateliers'],
-		['GET|POST', '/plaisirOffrir', 		'Librairie#plaisirOffrir', 		'librairie_plaisir_offrir'],
 		['GET|POST', '/contact', 			'Librairie#contact', 			'librairie_contact'],
 		['GET|POST', '/administration', 	'Admin#administration', 		'admin_administration'],
 

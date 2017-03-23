@@ -111,28 +111,68 @@
         </form>
 	</div>
 
-	<div id="formUser" class="row">
-		<h3>Formulaire d'ajout d'utilisateurs</h3>
-		<form method="POST" action="">
-			<div>
-				<input type="text" name="username" required placeholder="Nom d'utilisateur">
+<!-- Formulaire responsive -->
+	<form id="formUser" class="form-horizontal">
+		<fieldset>
+			<!-- Nom du Formulaire -->
+			<legend>Ajout d'un membre de la librairie</legend>
+
+			<!-- Champ nom du nouveau membre-->
+			<div class="form-group">
+				<label class="col-md-4 control-label icon-addon addon-right" for="username"></label>  
+				<div class="col-md-4">
+					<input type="text" id="username" name="username" placeholder="Nom d'utilisateur" class="form-control input-md" required>
+					<i class="icon icon-user"></i>
+					<span class="help-block"></span>
+				</div>
 			</div>
-			<div>
-				<input type="email" name="email" required placeholder="Adresse email">
+
+			<!-- champ adresse Email-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="email"></label>  
+				<div class="col-md-4">
+					<input type="email" id="email" name="email"  placeholder="Email" class="form-control input-md">
+					<span class="help-block"></span>		    
+				</div>
 			</div>
-			<div>
-				<input type="password" name="password1" required placeholder="Mot de passe" title="au moins 3 caractères" />
+
+			<!-- champ mot de Passe-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="password1"></label>
+				<div class="col-md-4">
+					<input type="password" id="password1" name="password1"  placeholder="Mot de Passe" class="form-control input-md" required>
+					<span class="help-block"></span>
+				</div>
 			</div>
-			<div>
-				<input type="password" name="password2" required placeholder="Confirmez le mot de passe" title="au moins 3 caractères" />
+
+			<!-- champ contrôle mot de passe-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="password2"></label>
+				<div class="col-md-4">
+					<input type="password" id="password2" name="password2"  placeholder="Confirmez le mot de passe" class="form-control input-md" required>
+					<span class="help-block"></span>
+				</div>
 			</div>
+
+			<!-- Bouton ajouter ce membre -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for=""></label>
+				<div class="col-md-4">
+					<button class="btn btn-primary btn-librairie-form">Ajouter ce membre</button>
+				</div>
+			</div>
+
+			<!-- Section cachée pour le traitement du formulaire en PHP -->
 			<input type="hidden" name="idFormClasse" value="Utilisateurs">
 			<input type="hidden" name="idFormMethode" value="UtilisateursTraitement">
-			<button>Ajouter cet utilisateur</button>
+
+			<!-- Emplacement pour message de retour de gestion du formulaire -->
 			<div class="retour">
-			<?php if (isset($GLOBALS["ajoutUtilisateurRetour"])) echo $GLOBALS["ajoutUtilisateurRetour"]; ?>
-			</div>	
-		</form>		
-	</div>
-	
+				<?php if (isset($GLOBALS["ajoutUtilisateurRetour"])) echo $GLOBALS["ajoutUtilisateurRetour"]; ?>
+			</div>
+
+		</fieldset>
+	</form>
+
+<!-- / Essai avec Bootstrap -->
 </section>
