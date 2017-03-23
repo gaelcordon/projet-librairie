@@ -2,7 +2,7 @@
     </main>
 
     <footer class="container-fluid">
-        <nav class="navbar navbar-default navbar-fixed-bottom">
+        <nav class="navbar navbar-default navbar-bottom">
             <div class=row class="col-md-12" id="copyright">
             <p>&copy; A la gloire de mon père 2017</p>
             </div>

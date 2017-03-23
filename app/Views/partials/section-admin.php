@@ -174,5 +174,5 @@
 		</fieldset>
 	</form>
 
-<!-- / Essai avec Bootstrap -->
+<!-- Formulaire responsive -->
 </section>

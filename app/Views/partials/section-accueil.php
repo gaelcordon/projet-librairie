@@ -1,9 +1,4 @@
 <section class="container-fluid">
-        <section class="container">
-            <div class="row">   
-                <div col-xd-4 col-lg-4>
-                    <h3>Ceci est la future page "Accueil"</h3>
-                </div>
-            </div>
-        </section>
+	<img class="img-responsive" src="<?php echo $this->assetUrl('img/commun/backgroundAccueil.jpg')?>" alt="Vue accueil librairie Mazan">
+
 </section>  <!-- section container-fluid-->

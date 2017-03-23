@@ -23,12 +23,30 @@ input.erreur {
 
 header {
 
+
+
+}
+
+nav {
 	font-family: 'Pacifico', cursive;
+	text-align: center;
+	font-size: 1.3em;
+	position: fixed;
+
+	.form-control {
+    font-family: 'Arial';
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	}
 }
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: @orange;
 }
+
+
+
 
 #logo {
 	margin: 0.7em auto;

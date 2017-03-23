@@ -34,7 +34,7 @@
 
     <header>
 		<a href="<?php echo $this->url('librairie_accueil'); ?>"><img id="logo" class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default navbar-static-top">
 		
 			<div class="container-fluid">
 				<!-- Menu sandwich -->
@@ -66,12 +66,22 @@
 							<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
 							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
 								<li><a href="<?php echo $this->url('admin_administration'); ?>">Administration</a></li>
-								<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-remove"></span></a></li>
+								<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-logout"></span></a></li>
 							<?php else: ?>			        
 								<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-user"></span></a></li>
 							<?php endif; ?>
 
 						</ul><!-- class="nav navbar-nav" -->
+						<form class="navbar-form navbar-left">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Rechercher">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit">
+									<i class="glyphicon glyphicon-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
 					</div><!-- class=row -->
 				</div><!-- navbar-collapse -->	
 			</div> <!-- div class="container-fluid" -->
