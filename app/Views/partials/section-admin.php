@@ -112,8 +112,8 @@
 	</div>
 
 <!-- Formulaire responsive -->
-	<form id="formUser" class="form-horizontal">
-		<fieldset>
+	<form id="formUser" class="container form-horizontal">
+		<fieldset id="formUserFieldset">
 			<!-- Nom du Formulaire -->
 			<legend>Ajout d'un membre de la librairie</legend>
 

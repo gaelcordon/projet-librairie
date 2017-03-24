@@ -84,3 +84,14 @@ $(function(){
 
 
 */
+
+// Effet Parallax
+
+$(window).scroll(function(e){
+    parallax();
+});
+
+function parallax(){
+    var scrolled = $(window).scrollTop();
+    $('.parallaxBgAccueil').css('bottom',-(scrolled*0.1)+'px');
+}

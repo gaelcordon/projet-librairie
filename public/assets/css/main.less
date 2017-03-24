@@ -4,16 +4,31 @@
 	box-sizing: border-box;
 }
 
-/* Chargement de la police de caractère Pacifico */
+// Chargement de la police de caractère Pacifico
 
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+// @import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+// Chargement de la police de caractère Champagne & Limousine issue de la charte du logo
+
+@font-face {
+    font-family: champagneLimousineLight;
+    src: url('../fonts/Champagne & Limousines.ttf');
+}
+
+@font-face {
+    font-family: champagneLimousineBold;
+    src: url('../fonts/Champagne & Limousines Bold.ttf');
+}
+
 
 /* Déclaration des variables */
 @orange: #F39D6A;
-@vertKaki: #5c8160;
 @marron: #99765B;
 @bleuPale: #96b8b6;
 @marronGris: #beb2a6;
+@grisNavbar: #222222;
+@grisNavbarHover: #2C2C2C;
 
 /* On prévoit un format d'affichage pour les champs en erreur */
 
@@ -21,17 +36,43 @@ input.erreur {
     border:1px solid #FF0000;
 }
 
-header {
+body, html {
+
+	font-family: 'champagneLimousineLight';
+	height: 100%;
+}
+
+/*******************Effet Parallax pour l'accueil****************/
+.parallaxBgAccueil {
+    /* L'image utilisée pour la page l'accueil */
+    background-image: url('../img/commun/backgroundAccueil.jpg');
+  	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 100px;
+	left: 0;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/************************************************/
 
 
-
+section {
+    width:94%;
+  	margin:0 auto;
+  	height:100%;
+	color:#fff;
 }
 
 nav {
-	font-family: 'Pacifico', cursive;
+	//font-family: 'Pacifico', cursive;
+	font-family: 'champagneLimousineBold';
 	text-align: center;
 	font-size: 1.3em;
 	position: fixed;
+	z-index: 1;
 
 	.form-control {
     font-family: 'Arial';
@@ -41,21 +82,47 @@ nav {
 	}
 }
 
-.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-    color: @orange;
+
+.navbar {
+    border-radius: 0;
+    background-color: @grisNavbar;
 }
 
+.navbar-inverse {
+	border-color: rgba(8, 8, 8, 0);
+}
 
+// Couleur orange lors de la sélection des menus
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color: @orange;
+    background-color: @grisNavbarHover;
+    
+}
+
+// Postionnement de la barre de navigation le logo disparaît quand on scroll down et le menu de navigation reste visible
+.affix {
+	top: 0;
+	width: 100%;
+	}
+
+	.affix + .container-fluid {
+	padding-top: 70px;
+}
 
 
 #logo {
-	margin: 0.7em auto;
+	
+	z-index: 1;
+	background-color: rgb(0,0,0);
+	img {
+		margin: 0.7em auto;
+	}
 }
-
 
 /* Formulaires */
 
-#formUser {
+#formUserFieldset {
+
 
 	legend {
 		color: @orange;
@@ -63,7 +130,7 @@ nav {
 	}
 
 	input {
-		color: @orange;
+		color: black;
 		width: 54%;
 		background-color: @marronGris;
 		border-style: none;
@@ -90,6 +157,23 @@ nav {
 	    transform: translate(2px,0); /* Standard syntax */
 
 	}
+
+	::-webkit-input-placeholder {
+	   color: white;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: white;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: white;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: white;  
+	}
+
 }
 
 
@@ -108,6 +192,11 @@ body {
 
 footer {
 	margin-top : 15em;
+}
+
+.navbar-bottom {
+	background-color: rgba(0,0,0,0);
+	border-style: none;
 }
 
 #copyright p {
