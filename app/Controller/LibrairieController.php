@@ -83,7 +83,7 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 		$objetAuthentificationModel->logUserOut();
 		
 		// ON VA REDIRIGER VERS LA PAGE DE LOGIN
-		$this->redirectToRoute("login");
+		$this->redirectToRoute("librairie_accueil");
 	}
 
 	/**

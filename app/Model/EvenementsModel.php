@@ -2,9 +2,15 @@
 
 namespace Model;
 
-use W\model\Model;
+// ON VA HERITER DE LA CLASSE Model DU FRAMEWORK W
+use W\Model\Model;
 
-class LivresModel extends Model
+// LE MECANISME DU FRAMEWORK W
+// VA DEDUIRE A PARTIR DU NOM DE LA CLASSE
+// QUEL EST LE NOM DE LA TABLE MYSQL CORRESPONDANTE
+
+class EvenementsModel 
+        extends Model   // ON FAIT UN HERITAGE A PARTIR DE LA CLASSE PARENTE Model
 {
-	
+    
 }

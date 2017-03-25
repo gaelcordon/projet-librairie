@@ -24,7 +24,6 @@ header {
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: @orange;
-    background-color: #6fbf3f00;
 }
 
 #logo {
@@ -40,6 +39,9 @@ body {
 		}
 }
 
+.retour {
+	color:white;
+}
 
 footer {
 	margin-top : 15em;
@@ -51,6 +53,43 @@ footer {
     color: @orange;
     font-size: 0.9em;
     margin-right:2em;
+}
+
+
+/*************************************************************
+					CSS Administration
+*************************************************************/
+
+#formBook, #formEvent, #formUser {
+	display: none;
+}
+
+#menuAdmin div {
+	background-color: red;
+	padding-left: 10px;
+	background-clip: content-box;
+		h3 {
+			text-align: center;
+		}
+}
+
+#menuAdmin div:active{
+	background-color: darkred;
+	background-clip: content-box;
+}
+
+
+/*************************************************************
+					CSS Evenement
+*************************************************************/
+
+.afficheEvent{
+	background-color: lightblue;
+}
+
+.afficheAtelier{
+	background-color: navy;
+	color: white;
 }
 
 /* Customization des Breakpoint

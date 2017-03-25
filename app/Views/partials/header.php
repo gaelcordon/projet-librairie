@@ -62,10 +62,11 @@
 							<li><a href="<?php echo $this->url('librairie_evenements_ateliers'); ?>">Evènements/Ateliers</a></li>
 							<li><a href="<?php echo $this->url('librairie_plaisir_offrir'); ?>">Plaisir d'offrir</a></li>
 							<li><a href="<?php echo $this->url('librairie_contact'); ?>">Contact/Nous trouver</a></li>
-							<li><a href="<?php echo $this->url('administration'); ?>">Administration</a></li>
+							
 
 							<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
-							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?> 
+							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
+								<li><a href="<?php echo $this->url('admin_administration'); ?>">Administration</a></li>
 								<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-remove"></span></a></li>
 							<?php else: ?>			        
 								<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-user"></span></a></li>
