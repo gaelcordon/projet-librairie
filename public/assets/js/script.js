@@ -6,6 +6,7 @@
 /* global $ */
 
 
+
 $(function(){
     // CE CODE SERA APPELE PAR JQUERY QUAND LA PAGE SERA PRETE
     
@@ -14,6 +15,33 @@ $(function(){
     // JE VAIS VERIFIER SI LES 2 PASSWORDS SONT IDENTIQUES
     // ALORS ON ENVOIE LE FORMULAIRE
     // SINON, ON AFFICHE UN MESSAGE D'ERREUR
+
+    // Sroll to top
+
+    dyscrollup.init({
+
+      // show after 300px
+      showafter : '300',
+
+      // scrolling animation speed
+      scrolldelay : '500',
+
+      // where to place the button
+      position : 'right',
+
+      // scroll to top image
+      image : 'image/36.png',
+
+      // circle or square
+      shape : 'circle',
+
+      // width / height
+      width : "auto",
+      height : "auto"
+      
+    });
+
+    
     $("#formUser").on("submit", function(event){
         // DEBUG
         alert("TU AS CLIQUE");
@@ -38,6 +66,7 @@ $(function(){
             $("#formUser input[name^=password]").addClass("erreur");
         }
     });
+
 });
 
 

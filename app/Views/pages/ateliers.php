@@ -1,6 +1,6 @@
 <?php
 
-$titre = "Evenements/ateliers - A la gloire de mon pere";
+$titre = "Ateliers - A la gloire de mon pere";
 
 // On prévoit la décalration de variable pour définir quel est le menu actif
 
@@ -19,5 +19,5 @@ $activeAdmin = "";*/
 // Contruction de la vue
 
 $this->insert('partials/header', ["titre" => $titre]);
-$this->insert('partials/section-evenements-ateliers');
+$this->insert('partials/section-ateliers');
 $this->insert('partials/footer');

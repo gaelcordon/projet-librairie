@@ -16,12 +16,13 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 	{
 		$this->show('pages/accueil');
 	}
+
 	/**
 	 * Page de présentation de la librairie
 	 */
-	public function librairie()
+	public function laLibrairie()
 	{
-		$this->show('pages/librairie');
+		$this->show('pages/laLibrairie');
 	}
 
 	/**
@@ -31,40 +32,36 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 	{
 		$this->show('pages/coups-de-coeur');
 	}
-
-	/**
-	 * Page spécifique à la papeterie
-	 */
-	public function papeterie()
-	{
-		$this->show('pages/papeterie');
-	}
-
-	/**
-	 * Page spécifique aux loisirs et aux jeux
-	 */
-	public function loisirsEtJeux()
-	{
-		$this->show('pages/loisirs-et-jeux');
-	}
-
-	/**
-	 * Page spécifique aux Evènements/Ateliers
-	 */
-	public function evenementsAteliers()
-	{
-		$this->show('pages/evenements-ateliers');
-	}
-
 	
 	/**
-	 * Page spécifique a Contact/Nous Trouver
+	 * Page spécifique aux Ateliers
+	 */
+	public function ateliers()
+	{
+		$this->show('pages/ateliers');
+	}
+
+	/**
+	 * Page spécifique aux Evènements Dédicaces
+	 */
+	public function evenementsDedicaces()
+	{
+		$this->show('pages/evenements-dedicaces');
+	}
+	/**
+	 * Page spécifique a Nous Contacter
 	 */
 	public function contact()
 	{
 		$this->show('pages/contact');
 	}
-
+	/**
+	 * Page spécifique aux Réseaux Sociaux
+	 */
+	public function reseauxSociaux()
+	{
+		$this->show('pages/reseaux-sociaux');
+	}
 	/**
 	 * Page de logout
 	*/

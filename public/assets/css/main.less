@@ -1,105 +1,208 @@
-/*Réglage des problèmes de dimensions engendrés par les paddings dans les div*/
-
+/*************************************************************************************************
+		réglage des problèmes de dimensions engendrés par les paddings dans les div
+*************************************************************************************************/
+//
 * {
 	box-sizing: border-box;
 }
 
-// Chargement de la police de caractère Pacifico
 
-// @import url('https://fonts.googleapis.com/css?family=Pacifico');
-
-
-// Chargement de la police de caractère Champagne & Limousine issue de la charte du logo
-
+/*************************************************************************************************
+		déclaration des polices de caractères utilisées dans le projet
+*************************************************************************************************/
+//
 @font-face {
-    font-family: champagneLimousineLight;
-    src: url('../fonts/Champagne & Limousines.ttf');
+    font-family: montez; // pour écriture manuscrite
+    src: url('../fonts/Montez.ttf');
 }
 
 @font-face {
-    font-family: champagneLimousineBold;
-    src: url('../fonts/Champagne & Limousines Bold.ttf');
+    font-family: champagneLimousine; // issue de la charte du logo pour le texte en général
+
+    src: url('../fonts/Champagne&Limousines.ttf');
+}
+
+@font-face {
+    font-family: decoTech; // issue de la charte du logo pour essai
+
+    src: url('../fonts/DecoTechTL.ttf');
 }
 
 
-/* Déclaration des variables */
-@orange: #F39D6A;
-@marron: #99765B;
-@bleuPale: #96b8b6;
-@marronGris: #beb2a6;
-@grisNavbar: #222222;
-@grisNavbarHover: #2C2C2C;
+/*************************************************************************************************
+		déclaration des variables de couleur
+*************************************************************************************************/
+//
+@orange: #F39D6B;
+// @bleuHover: #558184;
+@bleuHover: #25383a;
+@bleuNavbar: #182526;
+@beige: #EEE6D3;
+@brun: #977F67;
+@gris: #5A5955;
+@grisClair: #9d9d9d;
 
-/* On prévoit un format d'affichage pour les champs en erreur */
 
+/*************************************************************************************************
+		format d'affichage pour les champs en erreur dans les formulaires
+*************************************************************************************************/
+//
 input.erreur {
     border:1px solid #FF0000;
 }
 
-body, html {
+/*************************************************************************************************
+		on prévoit une class de debugage très voyante
+*************************************************************************************************/
+//
 
-	font-family: 'champagneLimousineLight';
-	height: 100%;
+.debug {
+	color:blue;
+	font-size: 35px;
+	font-family: arial;
+
 }
 
-/*******************Effet Parallax pour l'accueil****************/
-.parallaxBgAccueil {
-    /* L'image utilisée pour la page l'accueil */
-    background-image: url('../img/commun/backgroundAccueil.jpg');
-  	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 100px;
-	left: 0;
-	z-index: -1;
-	background-repeat: no-repeat;
-	background-size: cover;
+/*************************************************************************************************
+		réglages pour le corps de la page en général
+*************************************************************************************************/
+//
+body {
+
+	font-family: 'champagneLimousine',Helvetica, sans-serif;
+	color: white;
+	background-color: red;
 }
 
-/************************************************/
+/*************************************************************************************************
+		Header
+*************************************************************************************************/
+//
 
+header {
 
-section {
-    width:94%;
-  	margin:0 auto;
-  	height:100%;
-	color:#fff;
-}
-
-nav {
-	//font-family: 'Pacifico', cursive;
-	font-family: 'champagneLimousineBold';
 	text-align: center;
-	font-size: 1.3em;
-	position: fixed;
+	background-color: @bleuNavbar;
+}
+
+
+/*************************************************************************************************
+		mise en forme de la div contenant le logo en tête de page
+*************************************************************************************************/
+//
+#logo {
+	
 	z-index: 1;
 
-	.form-control {
-    font-family: 'Arial';
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	img {
+		margin: 0.7rem auto;
 	}
 }
 
+	
+/*************************************************************************************************
+		barre de menu du haut avec effet de comportement 'affix'
+*************************************************************************************************/
+//
+
+
+nav {
+	background-color: @bleuNavbar;
+	font-family: 'champagneLimousine';
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 2rem;
+	position: fixed;
+	z-index: 1;
+
+	}
+
+// surcharge à Bootstrap pour éviter les arrondis sur la barre de menu de navigation
+
 
 .navbar {
-    border-radius: 0;
-    background-color: @grisNavbar;
+	
+	// surcharge à Bootstrap : pas de border et couleur différente
+	border-color: rgba(255, 255, 255, 0);
+	margin-bottom: 0px;
+	// background-color: @gris;
+	// surcharge à Bootstrap : positionnement à gauche du menu sandwich
+	.navbar-toggle {
+		float: left;
+		margin-left: 15px;
+			.icon-bar {
+			background-color:@orange;
+			}
+	}
+	.navbar-collapse, .navbar-form {
+		border-color: @orange;
+	}
+
+	 .navbar-nav {
+	 	text-align: center;
+	 	> li {
+
+	 		display: block;
+	 		a {
+	 			color: @grisClair;
+	 		}
+	 		// écriture couleur orange lors de la sélection des menus
+	 		// background bleu
+	 		a:focus, a:hover{
+				color: @orange;
+	 			background-color: @bleuHover;
+	 		}
+	 	}
+	 	>.active{
+				>a,>a:focus, >a:hover {
+					color:  @orange;
+					background-color: @bleuHover;
+				}
+	 	}
+	 }
+
+	.input-group {
+		.form-control {
+			font-family: 'champagneLimousine', Helvetica, sans-serif;
+			font-style: italic;
+			//height: 1.6em;
+			margin-top: 15px;
+			border-style:none;
+			background-color: @bleuHover;
+			-webkit-transition: -webkit-box-shadow ease-in-out .15s;
+			-o-transition: box-shadow ease-in-out .15s;
+			transition: box-shadow ease-in-out .15s;
+		}
+	}	
+
+	.input-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-style: none;
+    color:@orange;
+	}
+
+	.input-group-btn {
+			.btn-default {
+		    background-color: @bleuHover;
+		    border-style: none;
+		    font-size: 1.55rem;
+		    position: relative;
+    		bottom: -0.8rem;
+    		border-top-right-radius: 4px;
+    		border-bottom-right-radius: 4px;
+			}
+			    
+	}
 }
 
-.navbar-inverse {
-	border-color: rgba(8, 8, 8, 0);
+// Couleur orange pour le symbole de la loupe dans le champ de recherche
+.glyphicon-search:before {
+	color:@orange;
 }
-
-// Couleur orange lors de la sélection des menus
-.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
-    color: @orange;
-    background-color: @grisNavbarHover;
-    
-}
-
-// Postionnement de la barre de navigation le logo disparaît quand on scroll down et le menu de navigation reste visible
+// postionnement de la barre de navigation 
+// le logo disparaît quand on scroll down 
+// et le menu de navigation reste visible
 .affix {
 	top: 0;
 	width: 100%;
@@ -110,17 +213,84 @@ nav {
 }
 
 
-#logo {
-	
-	z-index: 1;
-	background-color: rgb(0,0,0);
-	img {
-		margin: 0.7em auto;
-	}
+/*************************************************************************************************
+		Sidenav gauche et droit
+*************************************************************************************************/
+//
+
+.sidenav {
+	padding: 2rem;
+	height:1830px;
+	// min-height: 1275px;
+	background-color: @bleuNavbar;
+		.deco {
+			height: 20px;
+			widht: 20px;
+			background-color: @bleuHover;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
 }
 
-/* Formulaires */
 
+/*************************************************************************************************
+		effet Parallax
+*************************************************************************************************/
+//
+.parallax {
+   	background-image: url('../img/commun/backgroundAccueil.jpg');
+   	min-height: 1275px;
+   	top: 6rem;
+	// On créé l'effet parallax
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1; // permet à l'image de passer sous le logo et la barre de navigation
+	padding-top: 200px;
+}
+
+/*************************************************************************************************
+		texte apparaissant sur fond estompé
+*************************************************************************************************/
+//
+
+article.parallaxRideau {
+	background-color:@bleuHover;
+	opacity:0.9;
+    width:60%;
+    padding: 2%;
+  	margin:2% auto;
+  	height:100%;
+  	font-family: 'champagneLimousine', Helvetica, sans-serif;
+  	font-size: 1.5rem;
+
+	h2 {
+		font-family: 'montez', cursive, sans-serif;
+		letter-spacing: 1px;
+		color:@orange;
+  		margin-top: 1.5rem;
+  		margin-bottom: 1rem;
+	}
+
+	li {
+		list-style: none;
+	}
+}
+.sectionCentrale >.col-sm-10 {
+	// surcharge Bootstrap : pas de padding gauche ni droite
+	padding-right: 0;
+    padding-left: 0;
+
+ }
+
+
+
+
+/*************************************************************************************************
+		format d'affichage des formulaires 
+*************************************************************************************************/
+//
 #formUserFieldset {
 
 
@@ -132,20 +302,19 @@ nav {
 	input {
 		color: black;
 		width: 54%;
-		background-color: @marronGris;
+		background-color: @brun;
 		border-style: none;
-		// border: 1px solid @orange;
 	}
 
 	.btn-librairie-form {
 	    color: black;
-		background-color: @marronGris;
+		background-color: @brun;
 		border-style: none;
 	}
 
 	.btn-librairie-form:hover {
 		color: black;
-		background-color: @marronGris;
+		background-color: @brun;
 		box-shadow: 0 0 10px @orange;
 		// on augmente sensiblement la taille du bouton
 		-ms-transform: scale(2,3); /* IE 9 */
@@ -158,8 +327,10 @@ nav {
 
 	}
 
+	// surcharge Bootstrap : on change la couleur des placeholder pour plus de lisibilité
+
 	::-webkit-input-placeholder {
-	   color: white;
+	   color: @grisClair;
 	}
 
 	:-moz-placeholder { /* Firefox 18- */
@@ -170,44 +341,71 @@ nav {
 	   color: white;  
 	}
 
-	:-ms-input-placeholder {  
+	::-ms-input-placeholder {  
 	   color: white;  
 	}
 
 }
 
-
-body {
-	
-	background-color: black;
-		/* temporaire pour la construction du site */
-		h3 {
-			color:white;
-		}
-}
-
-.retour {
-	color:white;
-}
-
+/*************************************************************************************************
+		footer et copyright
+*************************************************************************************************/
+//
 footer {
-	margin-top : 15em;
+	height: 3rem;
+	margin-top : 2rem;
+	background-color: @bleuNavbar;
+
+	h4 {
+	    padding-bottom : 0px;
+	    text-align: left;
+	    color: @orange;
+	    margin-left:2rem;
+	}
 }
 
-.navbar-bottom {
-	background-color: rgba(0,0,0,0);
-	border-style: none;
+
+
+/*************************************************************************************************
+		scroll to top
+*************************************************************************************************/
+
+
+#dyscrollup-btn {
+
+  z-index: 999999;
+  position: fixed;
+  cursor: pointer;
+  display: none;
+  bottom: 32px
+
 }
 
-#copyright p {
-    padding-bottom : 0px;
-    text-align: right;
-    color: @orange;
-    font-size: 0.9em;
-    margin-right:2em;
+
+/*************************************************************************************************
+		Zone de tests
+*************************************************************************************************/
+//
+
+
+#colonnes {
+
+	background-color:@bleuHover;
+	opacity:0.9;
 }
 
-/* Customization des Breakpoint
+
+
+
+
+
+
+
+
+/*************************************************************************************************
+		réglages particuliers des Breakpoints pour les différents périphériques 
+*************************************************************************************************/
+//
 
 /*************************************************************
 		Breakpoint 1 : sur téléphone (petit écran)

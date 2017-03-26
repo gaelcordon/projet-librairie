@@ -2,7 +2,7 @@
         <section class="container">
             <div class="row">   
                 <div col-xd-4 col-lg-4>
-                    <h3>Ceci est la future page "Papeterie"</h3>
+                    <h3>Ceci est la future page "Evènements/Dédicaces"</h3>
                 </div>
             </div>
         </section>
