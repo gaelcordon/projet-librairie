@@ -70,7 +70,7 @@ input.erreur {
 body {
 
 	font-family: 'champagneLimousine',Helvetica, sans-serif;
-	color: white;
+	color: black;
 	background-color: @beige;
 }
 
@@ -223,12 +223,16 @@ nav {
 	padding: 2rem;
 	height: 130vh;
 	background-color: @bleuNavbar;
-		.deco {
+
+		li.deco {
+			color: @orange;
 			height: 20px;
 			widht: 20px;
 			background-color: @bleuHover;
 			margin-top: 50px;
 			margin-bottom: 50px;
+			list-style-type:none;
+
 		}
 }
 
@@ -256,7 +260,8 @@ nav {
 //
 
 article.parallaxRideau {
-	background-color:@bleuHover;
+	background-color: @bleuHover;
+	color: white;
 	opacity:0.9;
     width:80%;
     padding: 1%;
@@ -363,35 +368,74 @@ footer {
 }
 
 
+/*************************************************************
+					CSS Administration
+*************************************************************/
 
-/*************************************************************************************************
-		scroll to top
-*************************************************************************************************/
+#formBook, #formEvent, #formUser {
+	display: none;
+}
 
+#menuAdmin div {
+	background-color: red;
+	padding-left: 10px;
+	background-clip: content-box;
+		h3 {
+			text-align: center;
+		}
+}
 
-#dyscrollup-btn {
-
-  z-index: 999999;
-  position: fixed;
-  cursor: pointer;
-  display: none;
-  bottom: 32px
-
+#menuAdmin div:active{
+	background-color: darkred;
+	background-clip: content-box;
 }
 
 
-/*************************************************************************************************
-		Zone de tests
-*************************************************************************************************/
-//
+/*************************************************************
+					CSS Evenement
+*************************************************************/
 
-
-#colonnes {
-
-	background-color:@bleuHover;
-	opacity:0.9;
+.afficheEvent{
+	background-color: lightblue;
 }
 
+.afficheAtelier{
+	background-color: navy;
+	color: white;
+}
+
+/*************************************************************
+					CSS Contact / Adresse
+*************************************************************/
+
+.adresse {
+	height: 300px;
+	padding-left: 45px;
+}
+
+#adresseSection {
+	margin-bottom: 30px;
+	height: 400px;
+	color: white;
+}
+
+#contactSection {
+	background-color: #25383A;
+	height: 450px;
+}
+
+#containerContact {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#formContact {
+	height: 250px;
+}
+
+#adresseContact {
+	color: white;
+}
 
 /*************************************************************
 					CSS Administration
