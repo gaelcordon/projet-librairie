@@ -90,5 +90,6 @@
 						<?php else: ?>			        
 							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
 						<?php endif; ?>
+							<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><img class="img-responsive" src="<?php echo $this->assetUrl('img/commun/logo-facebook.png')?>" alt="facebook"></a></li>
 					</ul>
 		    </div>
