@@ -5,8 +5,6 @@
 // POUR UTILISER JQUERY
 /* global $ */
 
-
-
 $(function(){
     // CE CODE SERA APPELE PAR JQUERY QUAND LA PAGE SERA PRETE
     
@@ -16,7 +14,6 @@ $(function(){
     // ALORS ON ENVOIE LE FORMULAIRE
     // SINON, ON AFFICHE UN MESSAGE D'ERREUR
 
-   
     $("#formUser").on("submit", function(event){
         // DEBUG
         alert("TU AS CLIQUE");
@@ -57,6 +54,38 @@ $(function() {
 
 });
 
+$('#addBook').click(function(){
+    $('#formBook').show("fast");
+    $('#formEvent').hide();
+    $('#formUser').hide(); 
+});
+
+$('#addEvent').click(function(){
+    $('#formEvent').show("fast");
+    $('#formBook').hide();
+    $('#formUser').hide();
+});
+
+$('#addUser').click(function(){
+    $('#formUser').show("fast");
+    $('#formEvent').hide();
+    $('#formBook').hide();
+});
+
+$('#buttonEvent').click(function(){
+    $('.afficheEvent').show("fast");
+    $('.afficheAtelier').hide();
+})
+
+$('#buttonAtelier').click(function(){
+    $('.afficheAtelier').show("fast");
+    $('.afficheEvent').hide();
+})
+
+$('#buttonAnim').click(function(){
+    $('.afficheAtelier').show("fast");
+    $('.afficheEvent').show("fast");
+})
 
 // Effet Parallax
 
