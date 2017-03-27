@@ -36,9 +36,9 @@
 </head>
 <body>
 <header>
-	<div class="debug">
+	<!-- <div class="debug">
 		<p>Ceci est un texte de debug</p>
-	</div>
+	</div> -->
  	<div id="logo" class="container-fluid">
  		<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
  	</div>
