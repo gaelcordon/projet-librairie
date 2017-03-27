@@ -215,26 +215,37 @@ nav {
 
 
 /*************************************************************************************************
-		Sidenav gauche et droit
+		Sidenav gauche
 *************************************************************************************************/
 //
 
-.sidenav {
+#sidenav > ul {
 	padding: 2rem;
 	height: 130vh;
 	background-color: @bleuNavbar;
 
-		li.deco {
-			color: @orange;
-			height: 20px;
-			widht: 20px;
-			background-color: @bleuHover;
-			margin-top: 50px;
-			margin-bottom: 50px;
-			list-style-type:none;
-
+	> li {
+		color: @orange;
+		list-style-type:none;
+		a {
+			color: @grisClair;
+			font-size: 2.5vh;
 		}
-}
+		// écriture couleur orange lors de la sélection des menus
+		// background bleu
+		a:focus, a:hover{
+			color: @orange;
+			background-color: @bleuHover;
+		}
+	}
+	>.active{
+			>a,>a:focus, >a:hover {
+				color:  @orange;
+				background-color: @bleuHover;
+			}
+	}
+ }
+
 
 
 /*************************************************************************************************

@@ -79,18 +79,16 @@
 	<div id="corpsPrincipal" class="container-fluid">
 		<div class="row">
 		<!-- <div class="row content"> -->
-			<div class="col-xs-12 col-sm-1 sidenav">
-                <div class="deco">
-                	<ul>
-						<li><a href="<?php echo $this->url('librairie_contact'); ?>">Nous contacter</a></li>
+			<div id="sidenav" class="col-xs-12 col-sm-1">
+                	<ul class="nav nav-pills nav-stacked">
+						<li><a href="<?php echo $this->url('librairie_contact'); ?>"><span class="glyphicon glyphicon-envelope"></span></a></li>
+
 						<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
 						<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
-							<li><a href="<?php echo $this->url('admin_administration'); ?>">Administration</a></li>
-							<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
+							<li><a href="<?php echo $this->url('admin_administration'); ?>"><span class="glyphicon glyphicon-cog"></span></a></li>
+							<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-log-out"></span></a></li>
 						<?php else: ?>			        
-							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-out"></span></a></li>
+							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
 						<?php endif; ?>
 					</ul>
-
-                </div>
 		    </div>
