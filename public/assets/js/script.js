@@ -5,7 +5,6 @@
 // POUR UTILISER JQUERY
 /* global $ */
 
-
 $(function(){
     // CE CODE SERA APPELE PAR JQUERY QUAND LA PAGE SERA PRETE
     
@@ -14,6 +13,7 @@ $(function(){
     // JE VAIS VERIFIER SI LES 2 PASSWORDS SONT IDENTIQUES
     // ALORS ON ENVOIE LE FORMULAIRE
     // SINON, ON AFFICHE UN MESSAGE D'ERREUR
+
     $("#formUser").on("submit", function(event){
         // DEBUG
         alert("TU AS CLIQUE");
@@ -38,6 +38,7 @@ $(function(){
             $("#formUser input[name^=password]").addClass("erreur");
         }
     });
+
 });
 
 
@@ -86,36 +87,13 @@ $('#buttonAnim').click(function(){
     $('.afficheEvent').show("fast");
 })
 
+// Effet Parallax
 
-/*
-// au chargement de la page
-$(function(){
-    //modification du select categories
-    $('#genre').on('change', function(){
-        //appel du script ajax
-        $.ajax({
-            url: './assets/js/recupGenre.php',
-            method: 'get', 
-            data: {GenreJson: $(this).val()}, 
-            dataType: 'json',
-            success: function(data){
-                console.log(data);
-                // on vide le menu déroulant avant de le remplir avec la bouche
-                    $('#sgenre').empty(); 
-                //boucle foreach en JS
-                $.each(data, function(index, value)	
-                {
-                    //on ajoute l'option dans le menu déroulant
-                    $('#sgenre').append('<option value="'
-                                                            +value.id
-                                                            +'">'
-                                                            +value.libelle
-                                                            +'</option>'); 
-                }); //fin du $.each
-				} //fin du success
-			}); // fin du $.ajax
-		}); //fin du 'on change' sur genre
-}); //fin du ready
+$(window).scroll(function(e){
+    parallax();
+});
 
-
-*/
+function parallax(){
+    var scrolled = $(window).scrollTop();
+    $('.parallaxBgAccueil').css('bottom',-(scrolled*0.1)+'px');
+}

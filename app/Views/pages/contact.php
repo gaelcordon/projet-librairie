@@ -1,6 +1,6 @@
 <?php
 
-$titre = "Contact/nous trouver - A la gloire de mon pere";
+$titre = "Nous contacter - A la gloire de mon pere";
 
 // On prévoit la décalration de variable pour définir quel est le menu actif
 

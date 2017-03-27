@@ -1,6 +1,6 @@
 <?php
 
-$titre = "A la gloire de mon pere";
+$titre = "Accueil - A la gloire de mon pere";
 
 // On prévoit la déclaration de variable pour définir quel est le menu actif
 

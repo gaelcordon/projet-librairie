@@ -1,58 +1,395 @@
-/*Réglage des problèmes de dimensions engendrés par les paddings dans les div*/
-
+/*************************************************************************************************
+		réglage des problèmes de dimensions engendrés par les paddings dans les div
+*************************************************************************************************/
+//
 * {
 	box-sizing: border-box;
 }
 
-/* Chargement de la police de caractère Pacifico */
 
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+/*************************************************************************************************
+		déclaration des polices de caractères utilisées dans le projet
+*************************************************************************************************/
+//
+@font-face {
+    font-family: montez; // pour écriture manuscrite
+    src: url('../fonts/Montez.ttf');
+}
 
-/* Déclaration des variables */
-@orange: #F39D6A;
+@font-face {
+    font-family: champagneLimousine; // issue de la charte du logo pour le texte en général
 
-/* On prévoit un format d'affichage pour les champs en erreur */
+    src: url('../fonts/Champagne&Limousines.ttf');
+}
 
+@font-face {
+    font-family: decoTech; // issue de la charte du logo pour essai
+
+    src: url('../fonts/DecoTechTL.ttf');
+}
+
+
+/*************************************************************************************************
+		déclaration des variables de couleur
+*************************************************************************************************/
+//
+@orange: #F39D6B;
+//@bleuHover: #558184;
+@bleuHover: #25383a;
+@bleuNavbar: #182526;
+@beige: #EEE6D3;
+@brun: #977F67;
+@gris: #5A5955;
+@grisClair: #9d9d9d;
+
+
+/*************************************************************************************************
+		format d'affichage pour les champs en erreur dans les formulaires
+*************************************************************************************************/
+//
 input.erreur {
     border:1px solid #FF0000;
 }
 
+/*************************************************************************************************
+		on prévoit une class de debugage très voyante
+*************************************************************************************************/
+//
+
+.debug {
+	color:blue;
+	font-size: 35px;
+	font-family: arial;
+
+}
+
+/*************************************************************************************************
+		réglages pour le corps de la page en général
+*************************************************************************************************/
+//
+body {
+
+	font-family: 'champagneLimousine',Helvetica, sans-serif;
+	color: white;
+	background-color: red;
+}
+
+/*************************************************************************************************
+		Header
+*************************************************************************************************/
+//
+
 header {
 
-	font-family: 'Pacifico', cursive;
+	background-color: @bleuNavbar;
 }
 
-.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-    color: @orange;
-}
 
+/*************************************************************************************************
+		mise en forme de la div contenant le logo en tête de page
+*************************************************************************************************/
+//
 #logo {
-	margin: 0.7em auto;
+	
+	z-index: 1;
+
+	img {
+		margin: 0.7rem auto;
+	}
 }
 
-body {
 	
-	background-color: black;
-		/* temporaire pour la construction du site */
-		h3 {
-			color:white;
+/*************************************************************************************************
+		barre de menu du haut avec effet de comportement 'affix'
+*************************************************************************************************/
+//
+
+
+nav {
+	background-color: @bleuNavbar;
+	font-family: 'champagneLimousine';
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 2rem;
+	position: fixed;
+	z-index: 1;
+
+	}
+
+// surcharge à Bootstrap pour éviter les arrondis sur la barre de menu de navigation
+
+
+
+.navbar {
+	
+	// surcharge à Bootstrap : pas de border et couleur différente
+	border-color: rgba(255, 255, 255, 0);
+	margin-bottom: 0px;
+	// background-color: @gris;
+	// surcharge à Bootstrap : positionnement à gauche du menu sandwich
+	.navbar-toggle {
+		float: left;
+		margin-left: 15px;
+			.icon-bar {
+			background-color:@orange;
+			}
+	}
+	.navbar-collapse, .navbar-form {
+		border-color: @orange;
+	}
+
+	.navbar-nav {
+		width: 100%;
+		text-align: center;
+	 	> li {
+			float: none;
+			display: inline-block;
+	 		a {
+	 			color: @grisClair;
+	 		}
+	 		// écriture couleur orange lors de la sélection des menus
+	 		// background bleu
+	 		a:focus, a:hover{
+				color: @orange;
+	 			background-color: @bleuHover;
+	 		}
+	 	}
+	 	>.active{
+				>a,>a:focus, >a:hover {
+					color:  @orange;
+					background-color: @bleuHover;
+				}
+	 	}
+	 }
+
+	.input-group {
+		.form-control {
+			font-family: 'champagneLimousine', Helvetica, sans-serif;
+			font-style: italic;
+			//height: 1.6em;
+			margin-top: 15px;
+			border-style:none;
+			background-color: @bleuHover;
+			-webkit-transition: -webkit-box-shadow ease-in-out .15s;
+			-o-transition: box-shadow ease-in-out .15s;
+			transition: box-shadow ease-in-out .15s;
+		}
+	}	
+
+	.input-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-style: none;
+    color:@orange;
+	}
+
+	.input-group-btn {
+			.btn-default {
+		    background-color: @bleuHover;
+		    border-style: none;
+		    font-size: 1.55rem;
+		    position: relative;
+    		bottom: -0.8rem;
+    		border-top-right-radius: 4px;
+    		border-bottom-right-radius: 4px;
+			}
+			    
+	}
+}
+
+// Couleur orange pour le symbole de la loupe dans le champ de recherche
+.glyphicon-search:before {
+	color:@orange;
+}
+// postionnement de la barre de navigation 
+// le logo disparaît quand on scroll down 
+// et le menu de navigation reste visible
+.affix {
+	top: 0;
+	width: 100%;
+	}
+
+	.affix + .container-fluid {
+	padding-top: 70px;
+}
+
+
+/*************************************************************************************************
+		Sidenav gauche et droit
+*************************************************************************************************/
+//
+
+.sidenav {
+	padding: 2rem;
+	height: 130vh;
+	background-color: @bleuNavbar;
+		.deco {
+			height: 20px;
+			widht: 20px;
+			background-color: @bleuHover;
+			margin-top: 50px;
+			margin-bottom: 50px;
 		}
 }
 
-.retour {
-	color:white;
+
+/*************************************************************************************************
+		effet Parallax
+*************************************************************************************************/
+//
+.parallax {
+   	background-image: url('../img/commun/backgroundAccueil.jpg');
+   	min-height: 130vh;
+   	top: 6rem;
+	// On créé l'effet parallax
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1; // permet à l'image de passer sous le logo et la barre de navigation
+	padding-top: 15vh;
 }
 
+/*************************************************************************************************
+		texte apparaissant sur fond estompé
+*************************************************************************************************/
+//
+
+article.parallaxRideau {
+	background-color:@bleuHover;
+	opacity:0.9;
+    width:80%;
+    padding: 1%;
+  	margin: 0 auto;
+  	height:100%;
+  	font-family: 'champagneLimousine', Helvetica, sans-serif;
+  	font-size: 2vh; //https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.mammo425g
+
+	h2 {
+		font-family: 'montez', cursive, sans-serif;
+		letter-spacing: 1px;
+		color:@orange;
+  		margin-top: 1.5rem;
+  		margin-bottom: 1rem;
+	}
+
+	li {
+		list-style: none;
+	}
+}
+
+.col-xs-12,.col-sm-11 {
+	// surcharge Bootstrap : pas de padding gauche ni droite
+	padding-right: 0;
+    padding-left: 0;
+	}
+
+
+
+
+
+/*************************************************************************************************
+		format d'affichage des formulaires 
+*************************************************************************************************/
+//
+#formUserFieldset {
+
+
+	legend {
+		color: @orange;
+		border-bottom: 1px solid @orange;
+	}
+
+	input {
+		color: black;
+		width: 54%;
+		background-color: @brun;
+		border-style: none;
+	}
+
+	.btn-librairie-form {
+	    color: black;
+		background-color: @brun;
+		border-style: none;
+	}
+
+	.btn-librairie-form:hover {
+		color: black;
+		background-color: @brun;
+		box-shadow: 0 0 10px @orange;
+		// on augmente sensiblement la taille du bouton
+		-ms-transform: scale(2,3); /* IE 9 */
+    	-webkit-transform: scale(2,3); /* Safari */
+   		transform: scale(1.1); /* Standard syntax */
+   		// on déplace sensiblement le bouton vers la droite pour compenser l'augmentation de taille
+   		 -ms-transform: translate(2px,0); /* IE 9 */
+	    -webkit-transform: translate(2px,0); /* Safari */
+	    transform: translate(2px,0); /* Standard syntax */
+
+	}
+
+	// surcharge Bootstrap : on change la couleur des placeholder pour plus de lisibilité
+
+	::-webkit-input-placeholder {
+	   color: @grisClair;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: white;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: white;  
+	}
+
+	::-ms-input-placeholder {  
+	   color: white;  
+	}
+
+}
+
+/*************************************************************************************************
+		footer et copyright
+*************************************************************************************************/
+//
 footer {
-	margin-top : 15em;
+	height: 10vh;
+	background-color: @bleuNavbar;
+	color: @orange;
+
+	#sectionFooter {
+	display:inline;
+	}
 }
 
-#copyright p {
-    padding-bottom : 0px;
-    text-align: right;
-    color: @orange;
-    font-size: 0.9em;
-    margin-right:2em;
+
+
+/*************************************************************************************************
+		scroll to top
+*************************************************************************************************/
+
+
+#dyscrollup-btn {
+
+  z-index: 999999;
+  position: fixed;
+  cursor: pointer;
+  display: none;
+  bottom: 32px
+
+}
+
+
+/*************************************************************************************************
+		Zone de tests
+*************************************************************************************************/
+//
+
+
+#colonnes {
+
+	background-color:@bleuHover;
+	opacity:0.9;
 }
 
 
@@ -125,7 +462,17 @@ footer {
 	color: white;
 }
 
-/* Customization des Breakpoint
+
+
+
+
+
+
+
+/*************************************************************************************************
+		réglages particuliers des Breakpoints pour les différents périphériques 
+*************************************************************************************************/
+//
 
 /*************************************************************
 		Breakpoint 1 : sur téléphone (petit écran)
@@ -154,6 +501,5 @@ footer {
 		Breakpoint 3 : sur ordinateur de bureau
 *************************************************************/
 @media only screen and (min-width: 1280px) {
-	
 	
 }
