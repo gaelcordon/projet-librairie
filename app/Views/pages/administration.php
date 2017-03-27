@@ -19,5 +19,5 @@ $activeAdmin = "";*/
 // Contruction de la vue
 
 $this->insert('partials/header', ["titre" => $titre]);
-$this->insert('partials/section-admin');
+$this->insert('partials/section-admin', ["livreCreateRetour" => $GLOBALS["livreCreateRetour"], "eventCreateRetour" => $GLOBALS["eventCreateRetour"]]);
 $this->insert('partials/footer');

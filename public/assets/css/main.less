@@ -391,9 +391,83 @@ footer {
 	display: none;
 }
 
+#menuAdmin {
+	height: 150px;
+}
+
 #menuAdmin div {
 	background-color: red;
 	padding-left: 10px;
+	background-clip: content-box;
+		h3 {
+			text-align: center;
+		}
+}
+
+#menuAdmin div:active{
+	background-color: darkred;
+	background-clip: content-box;
+}
+
+
+/*************************************************************
+					CSS Evenement
+*************************************************************/
+
+.afficheEvent{
+	background-color: lightblue;
+}
+
+.afficheAtelier{
+	background-color: navy;
+	color: white;
+}
+
+/*************************************************************
+					CSS Contact / Adresse
+*************************************************************/
+
+.adresse {
+	height: 300px;
+	padding-left: 45px;
+}
+
+#adresseSection {
+	margin-bottom: 30px;
+	height: 400px;
+	color: white;
+}
+
+#contactSection {
+	background-color: #25383A;
+	height: 450px;
+}
+
+#containerContact {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#formContact {
+	height: 250px;
+}
+
+#adresseContact {
+	color: white;
+}
+
+/*************************************************************
+					CSS Administration
+*************************************************************/
+
+#formBook, #formEvent, #formUser {
+	display: none;
+}
+
+#menuAdmin div {
+	background-color: red;
+	padding-left: 10px;
+	padding-top: 200px;
 	background-clip: content-box;
 		h3 {
 			text-align: center;

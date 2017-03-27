@@ -97,3 +97,9 @@ function parallax(){
     var scrolled = $(window).scrollTop();
     $('.parallaxBgAccueil').css('bottom',-(scrolled*0.1)+'px');
 }
+
+// Modal
+
+/*$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})*/

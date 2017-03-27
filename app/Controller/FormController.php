@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Model\LivresModel;
 
 
 class FormController extends Controller
@@ -165,8 +166,9 @@ class FormController extends Controller
                 // JE VAIS AJOUTER LES INFOS DANS LA SESSION
                 $objetAuthentificationModel->logUserIn($tabUser);
                 
-                $username = $tabUser["username"];
-                $GLOBALS["loginRetour"] = "BIENVENUE ($username)";
+                /*$username = $tabUser["username"];
+                $GLOBALS["loginRetour"] = "BIENVENUE ($username)";*/
+                $this->redirectToRoute('admin_administration');
             }
             else
             {
@@ -177,5 +179,65 @@ class FormController extends Controller
         {
             $GLOBALS["loginRetour"] = "IDENTIFIANTS INCORRECTS";
         }
+    }
+
+    function livreCreateTraitement ()
+    {
+        $titreLivre     = $this->verifierSaisie("titreLivre");
+        $auteur         = $this->verifierSaisie("auteur");
+        $isbn           = $this->verifierSaisie("isbn");
+        $dateParution   = $this->verifierSaisie("dateParution");
+        $nbPage         = $this->verifierSaisie("nbPage");
+        $editeur        = $this->verifierSaisie("editeur");
+        $genre          = $this->verifierSaisie("genre");
+        $sgenre         = $this->verifierSaisie("sgenre");
+        $resume         = $this->verifierSaisie("resume");
+        $couverture     = $this->verifierSaisie("couverture");
+
+        /*if(($titre != "") && ($auteur !="") && ($coupDeCoeur != "") && ($isbn != "") && ($prix != "") && ($dateParution != "") && ($nbPage != "") && ($editeur != "") && ($genre != "") && ($sgenre != "") && ($resume != "") && ($couverture != ""))
+        {*/
+
+            $objetLivresModel = new LivresModel;
+
+            $objetLivresModel->insert([ "titreLivre"    =>                            $titreLivre,
+                                        "id_auteur"     => $auteur,
+                                        "isbn"          => $isbn,
+                                        "dateParution"  => $dateParution,
+                                        "nbPage"        => $nbPage,
+                                        "id_editeur"    => $editeur,
+                                        "id_genre"      => $genre,
+                                        "id_sousgenre"  => $sgenre,
+                                        "resume"        => $resume,
+                                        "couverture"    => $couverture,
+                                      ]);
+
+        $GLOBALS["livreCreateRetour"] = "Livre ajouté ($titreLivre) !";
+        /*
+        }
+        else
+        {
+            $GLOBALS["livreCreateRetour"] = "INFORMATION(S) MANQUANTE(S) !";
+        }*/
+    }
+
+    function eventCreateTraitement ()
+    {
+        $titreEvent     = $this->verifierSaisie("titreEvent");
+        $dateEvent      = $this->verifierSaisie("dateEvent");
+        $heureEvent     = $this->verifierSaisie("heureEvent");
+        $description    = $this->verifierSaisie("description");
+        $photo          = $this->verifierSaisie("photo");
+
+        $objetEvenementsModel = new \Model\EvenementsModel;
+
+        $objetEvenementsModel->insert([
+                                        "titreEvent"    => $titreEvent,
+                                        "dateEvent"     => $dateEvent,
+                                        "heureEvent"    => $heureEvent,
+                                        "description"   => $description,
+                                        "photo"         => $photo
+                                      ]);
+
+        $GLOBALS["eventCreateRetour"] = "Evenement crée !";
     }
 }
