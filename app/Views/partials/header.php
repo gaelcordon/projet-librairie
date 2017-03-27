@@ -17,6 +17,9 @@
 	<!-- On charge la feuille de style normalize afin d'unifier le comportement des navigateurs face au style css -->
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl('css/normalize.css')?>"/>
 
+	<!-- On charge la feuille de style pour les fonts Awesome -->
+	<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl('css/font-awesome.min.css')?>"/>
+
 	<!-- Chargement du Framework Bootstrap et de son script associé -->
 	<link rel="stylesheet" href="<?php echo $this->assetUrl('css/bootstrap.min.css')?>"/>
 
@@ -90,6 +93,6 @@
 						<?php else: ?>			        
 							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
 						<?php endif; ?>
-							<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><img class="img-responsive" src="<?php echo $this->assetUrl('img/commun/logo-facebook.png')?>" alt="facebook"></a></li>
+							<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
 					</ul>
 		    </div>
