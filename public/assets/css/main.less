@@ -34,7 +34,7 @@
 *************************************************************************************************/
 //
 @orange: #F39D6B;
-// @bleuHover: #558184;
+//@bleuHover: #558184;
 @bleuHover: #25383a;
 @bleuNavbar: #182526;
 @beige: #EEE6D3;
@@ -81,7 +81,6 @@ body {
 
 header {
 
-	text-align: center;
 	background-color: @bleuNavbar;
 }
 
@@ -120,6 +119,7 @@ nav {
 // surcharge à Bootstrap pour éviter les arrondis sur la barre de menu de navigation
 
 
+
 .navbar {
 	
 	// surcharge à Bootstrap : pas de border et couleur différente
@@ -138,11 +138,12 @@ nav {
 		border-color: @orange;
 	}
 
-	 .navbar-nav {
-	 	text-align: center;
+	.navbar-nav {
+		width: 100%;
+		text-align: center;
 	 	> li {
-
-	 		display: block;
+			float: none;
+			display: inline-block;
 	 		a {
 	 			color: @grisClair;
 	 		}
@@ -220,8 +221,7 @@ nav {
 
 .sidenav {
 	padding: 2rem;
-	height:1830px;
-	// min-height: 1275px;
+	height: 130vh;
 	background-color: @bleuNavbar;
 		.deco {
 			height: 20px;
@@ -239,7 +239,7 @@ nav {
 //
 .parallax {
    	background-image: url('../img/commun/backgroundAccueil.jpg');
-   	min-height: 1275px;
+   	min-height: 130vh;
    	top: 6rem;
 	// On créé l'effet parallax
 	background-attachment: fixed;
@@ -247,7 +247,7 @@ nav {
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: -1; // permet à l'image de passer sous le logo et la barre de navigation
-	padding-top: 70vh;
+	padding-top: 15vh;
 }
 
 /*************************************************************************************************
@@ -258,9 +258,9 @@ nav {
 article.parallaxRideau {
 	background-color:@bleuHover;
 	opacity:0.9;
-    width:60%;
-    padding: 2%;
-  	margin:2% auto;
+    width:80%;
+    padding: 1%;
+  	margin: 0 auto;
   	height:100%;
   	font-family: 'champagneLimousine', Helvetica, sans-serif;
   	font-size: 2vh; //https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.mammo425g
@@ -278,12 +278,12 @@ article.parallaxRideau {
 	}
 }
 
-.sectionCentrale >.col-sm-10 {
+.col-xs-12,.col-sm-11 {
 	// surcharge Bootstrap : pas de padding gauche ni droite
 	padding-right: 0;
     padding-left: 0;
+	}
 
- }
 
 
 
@@ -353,15 +353,12 @@ article.parallaxRideau {
 *************************************************************************************************/
 //
 footer {
-	height: 3rem;
-	margin-top : 2rem;
+	height: 10vh;
 	background-color: @bleuNavbar;
+	color: @orange;
 
-	h4 {
-	    padding-bottom : 0px;
-	    text-align: left;
-	    color: @orange;
-	    margin-left:2rem;
+	#sectionFooter {
+	display:inline;
 	}
 }
 
