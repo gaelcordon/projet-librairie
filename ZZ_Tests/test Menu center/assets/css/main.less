@@ -1,0 +1,93 @@
+/*************************************************************************************************
+		barre de menu du haut avec effet de comportement 'affix'
+*************************************************************************************************/
+//
+
+
+.affix {
+	top: 0;
+	width: 100%;
+  }
+
+.affix + .container-fluid {
+	padding-top: 70px;
+}
+
+
+
+.admin-panel
+{
+	background: #F8F8F8;
+	width: 240px;
+	height: 40px;
+	color: #888;
+	border: none;
+	border-radius: 3px;
+	padding: 0 0 0 10px;
+	font: bold 13px Helvetica, sans-serif;
+	text-transform: uppercase;
+	line-height: 41px;
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-bottom: 7px;
+	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
+}
+
+
+.admin-text,
+
+.menuAccueil a
+{
+	display: block;
+	background: #F8F8F8;
+	width: 240px;
+	height: 40px;
+	padding: 0 0 0 10px;
+	font: bold 13px Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000000;
+	color: rgba( 0, 0, 0, 0.4 );
+	line-height: 40px;
+	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
+}
+
+.menuAccueil a:nth-child( 2 )
+{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.menuAccueil a:last-child
+{
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.menuAccueil a:hover { color: #555555; }
+
+.menuAccueil a:hover > .octicon { color: #555555; }
+
+.icon
+{
+	float: right;
+	margin-top: 10px;
+	font-size: 20px;
+	color: #000000;
+	color: rgba( 0, 0, 0, 0.4 );
+	opacity: 0.8;
+}
+
+.flecheHaut
+{
+	width: 0;
+	height: 0;
+	margin-left: 15px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 9px solid #F8F8F8;
+}

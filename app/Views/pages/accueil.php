@@ -2,7 +2,7 @@
 
 $titre = "Accueil - A la gloire de mon pere";
 
-// On prévoit la décalration de variable pour définir quel est le menu actif
+// On prévoit la déclaration de variable pour définir quel est le menu actif
 
 /*$activeAccueil = "active";
 $activeLibrairie = "";
