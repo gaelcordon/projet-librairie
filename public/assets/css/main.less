@@ -17,6 +17,11 @@
 }
 
 @font-face {
+    font-family: erazure; // pour écriture manuscrite issue de la charte du logo pour le texte en général
+    src: url('../fonts/erazure.ttf');
+}
+
+@font-face {
     font-family: champagneLimousine; // issue de la charte du logo pour le texte en général
 
     src: url('../fonts/Champagne&Limousines.ttf');
@@ -70,8 +75,8 @@ input.erreur {
 body {
 
 	font-family: 'champagneLimousine',Helvetica, sans-serif;
-	color: white;
-	background-color: red;
+	color: black;
+	background-color: @beige;
 }
 
 /*************************************************************************************************
@@ -215,22 +220,41 @@ nav {
 
 
 /*************************************************************************************************
-		Sidenav gauche et droit
+		Sidenav gauche
 *************************************************************************************************/
 //
 
-.sidenav {
+#sidenav > ul {
 	padding: 2rem;
 	height: 130vh;
 	background-color: @bleuNavbar;
-		.deco {
-			height: 20px;
-			widht: 20px;
-			background-color: @bleuHover;
-			margin-top: 50px;
-			margin-bottom: 50px;
+
+	> li {
+		color: @orange;
+		list-style-type:none;
+		a {
+			color: @grisClair;
+			font-size: 2.5vh;
 		}
-}
+		// écriture couleur orange lors de la sélection des menus
+		// background bleu
+		a:focus, a:hover {
+			color: @orange;
+			background-color: @bleuHover;
+		}
+
+		.fa {
+			font-size: 3rem;
+		}
+	}
+	>.active{
+			>a,>a:focus, >a:hover {
+				color:  @orange;
+				background-color: @bleuHover;
+			}
+	}
+ }
+
 
 
 /*************************************************************************************************
@@ -256,7 +280,8 @@ nav {
 //
 
 article.parallaxRideau {
-	background-color:@bleuHover;
+	background-color: @bleuHover;
+	color: white;
 	opacity:0.9;
     width:80%;
     padding: 1%;
@@ -266,7 +291,8 @@ article.parallaxRideau {
   	font-size: 2vh; //https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.mammo425g
 
 	h2 {
-		font-family: 'montez', cursive, sans-serif;
+		font-family: 'erazure', cursive, sans-serif;
+		font-size: 4vh;
 		letter-spacing: 1px;
 		color:@orange;
   		margin-top: 1.5rem;
@@ -353,7 +379,7 @@ article.parallaxRideau {
 *************************************************************************************************/
 //
 footer {
-	height: 10vh;
+	max-height: 5vh;
 	background-color: @bleuNavbar;
 	color: @orange;
 
@@ -363,35 +389,148 @@ footer {
 }
 
 
+/*************************************************************
+					CSS Administration
+*************************************************************/
 
-/*************************************************************************************************
-		scroll to top
-*************************************************************************************************/
+#formBook, #formEvent, #formUser {
+	display: none;
+}
 
+#menuAdmin {
+	height: 150px;
+}
 
-#dyscrollup-btn {
+#menuAdmin div {
+	background-color: red;
+	padding-left: 10px;
+	background-clip: content-box;
+		h3 {
+			text-align: center;
+		}
+}
 
-  z-index: 999999;
-  position: fixed;
-  cursor: pointer;
-  display: none;
-  bottom: 32px
-
+#menuAdmin div:active{
+	background-color: darkred;
+	background-clip: content-box;
 }
 
 
-/*************************************************************************************************
-		Zone de tests
-*************************************************************************************************/
-//
+/*************************************************************
+					CSS Evenement
+*************************************************************/
 
-
-#colonnes {
-
-	background-color:@bleuHover;
-	opacity:0.9;
+.afficheEvent{
+	background-color: lightblue;
 }
 
+.afficheAtelier{
+	background-color: navy;
+	color: white;
+}
+
+/*************************************************************
+					CSS Contact / Adresse
+*************************************************************/
+
+.adresse {
+	height: 300px;
+	padding-left: 45px;
+}
+
+#adresseSection {
+	margin-bottom: 30px;
+	height: 400px;
+	color: white;
+}
+
+#contactSection {
+	background-color: #25383A;
+	height: 450px;
+}
+
+#containerContact {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#formContact {
+	height: 250px;
+}
+
+#adresseContact {
+	color: white;
+}
+
+/*************************************************************
+					CSS Administration
+*************************************************************/
+
+#formBook, #formEvent, #formUser {
+	display: none;
+}
+
+#menuAdmin div {
+	background-color: red;
+	padding-left: 10px;
+	padding-top: 200px;
+	background-clip: content-box;
+		h3 {
+			text-align: center;
+		}
+}
+
+#menuAdmin div:active{
+	background-color: darkred;
+	background-clip: content-box;
+}
+
+
+/*************************************************************
+					CSS Evenement
+*************************************************************/
+
+.afficheEvent{
+	background-color: lightblue;
+}
+
+.afficheAtelier{
+	background-color: navy;
+	color: white;
+}
+
+/*************************************************************
+					CSS Contact / Adresse
+*************************************************************/
+
+.adresse {
+	height: 300px;
+	padding-left: 45px;
+}
+
+#adresseSection {
+	margin-bottom: 30px;
+	height: 400px;
+	color: white;
+}
+
+#contactSection {
+	background-color: #25383A;
+	height: 450px;
+}
+
+#containerContact {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#formContact {
+	height: 250px;
+}
+
+#adresseContact {
+	color: white;
+}
 
 
 
@@ -432,6 +571,5 @@ footer {
 		Breakpoint 3 : sur ordinateur de bureau
 *************************************************************/
 @media only screen and (min-width: 1280px) {
-	
 	
 }
