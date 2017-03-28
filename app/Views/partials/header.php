@@ -93,6 +93,6 @@
 						<?php else: ?>			        
 							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
 						<?php endif; ?>
-							<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.facebook.com/librairiegloire/?fref=ts" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
 					</ul>
 		    </div>
