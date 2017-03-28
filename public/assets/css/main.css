@@ -184,8 +184,6 @@ nav form {
 		effet Parallax
 *************************************************************************************************/
 .parallax {
-  background-image: url('../img/commun/backgroundAccueil.jpg');
-  min-height: 130vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,18 +213,29 @@ nav form {
 .parallaxRideau li {
   list-style: none;
 }
+#bdAccueil {
+  background-image: url('../img/commun/bdAccueil.jpg');
+  height: 200vh;
+}
+#bdLaLibrairie {
+  background-image: url('../img/commun/bdLaLibrairie.jpg');
+  height: 200vh;
+}
 #texteAccueil {
   width: 50%;
   height: 100%;
 }
+#nos3Espaces {
+  margin: 20% 15%;
+}
 #espaceAdulte {
-  margin: 10% 5% 5% 0;
+  margin: 2.5%;
 }
 #espaceJeunesse {
-  margin: 10% 5% 5% 0;
+  margin: 2.5%;
 }
 #espacePapeterie {
-  margin: 10% 5% 5% 0;
+  margin: 2.5%;
 }
 .col-xs-12,
 .col-sm-11 {

@@ -1,5 +1,5 @@
-		<div id="corpsPrincipal" class="container-fluid">
-			<section  class="parallax">
+		<section id="bdAccueil" class="parallax">
+			<div class="container-fluid">
 				<article id="texteAccueil" class="text-center parallaxRideau">
 					<section id="ilEtaitUneFois">
 						<h2>Il était une fois...</h2>
@@ -28,5 +28,5 @@
 						Vous pouvez également nous rencontrer au cours de Salons, festivals.</p>
 					</section>
 				</article><!--id="texteAccueil"-->
-			</section> <!--class="parallax" -->
-		</div> <!-- class="container-fluid"-->
+			</div> <!-- class="container-fluid"-->
+		</section> <!--class="parallax" -->
