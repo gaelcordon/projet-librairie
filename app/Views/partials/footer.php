@@ -51,6 +51,10 @@
             <!-- Prise en charge de LESS -->
             <script type="text/javascript" src="<?php echo $this->assetUrl('js/less.min.js')?>"></script>
 
+
+            <!-- Chargement du script Match Height pour gérer les hauteurs de colonnes différentes-->
+            <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9487/jquery.matchHeight-min.js"></script>
+
             <!-- Chargement du script propre au projet-->
             <script type="text/javascript" src="<?php echo $this->assetUrl('js/script.js')?>"></script>
     </body>

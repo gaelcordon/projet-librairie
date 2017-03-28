@@ -82,7 +82,7 @@
 	<div id="corpsPrincipal" class="container-fluid">
 		<div class="row">
 		<!-- <div class="row content"> -->
-			<div id="sidenav" class="col-xs-12 col-sm-1">
+			<div id="sidenav" class="col-xs-12  col-sm-1">
                 	<ul class="nav nav-pills nav-stacked">
 						<li><a href="<?php echo $this->url('librairie_contact'); ?>"><span class="glyphicon glyphicon-envelope"></span></a></li>
 

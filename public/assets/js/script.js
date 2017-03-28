@@ -39,67 +39,79 @@ $(function(){
         }
     });
 
+    // Fonction pour faire apparître un calendrier
+     $('.datePicker').datepicker();
+
+    // Fonction pour faire apparaître un choix horaire
+     $('.timePicker').timepicker();
+
+     // Fonction pour faire afficher les formulaires en cliquant sur les boutons
+
+     $('#addBook').click(function(){
+        $('#formBook').show("fast");
+        $('#formEvent').hide();
+        $('#formUser').hide(); 
+    });
+
+    $('#addEvent').click(function(){
+        $('#formEvent').show("fast");
+        $('#formBook').hide();
+        $('#formUser').hide();
+    });
+
+    $('#addUser').click(function(){
+        $('#formUser').show("fast");
+        $('#formEvent').hide();
+        $('#formBook').hide();
+    });
+
+    $('#buttonEvent').click(function(){
+        $('.afficheEvent').show("fast");
+        $('.afficheAtelier').hide();
+    });
+
+    $('#buttonAtelier').click(function(){
+        $('.afficheAtelier').show("fast");
+        $('.afficheEvent').hide();
+    });
+
+    $('#buttonAnim').click(function(){
+        $('.afficheAtelier').show("fast");
+        $('.afficheEvent').show("fast");
+    });
+
+    // Effet Parallax
+
+    $(window).scroll(function(e){
+        parallax();
+    });
+
+    function parallax(){
+        var scrolled = $(window).scrollTop();
+        $('.parallaxBgAccueil').css('bottom',-(scrolled*0.1)+'px');
+    }
+
+    // Modal
+
+    /*$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+    })*/
+
+    //Redimensionnement hauteur des colonnes bootstrap matchHeight()
+    
+    $(function() {
+    $('#espaceAdulte, #espaceJeunesse, #espacePapeterie').matchHeight();
+    });
+
+
+
 });
 
 
-// Fonction pour faire apparître un calendrier
-$(function() {
-    $('.datePicker').datepicker();
 
-});
 
-// Fonction pour faire apparaître un choix horaire
-$(function() {
-    $('.timePicker').timepicker();
 
-});
 
-$('#addBook').click(function(){
-    $('#formBook').show("fast");
-    $('#formEvent').hide();
-    $('#formUser').hide(); 
-});
 
-$('#addEvent').click(function(){
-    $('#formEvent').show("fast");
-    $('#formBook').hide();
-    $('#formUser').hide();
-});
 
-$('#addUser').click(function(){
-    $('#formUser').show("fast");
-    $('#formEvent').hide();
-    $('#formBook').hide();
-});
 
-$('#buttonEvent').click(function(){
-    $('.afficheEvent').show("fast");
-    $('.afficheAtelier').hide();
-})
-
-$('#buttonAtelier').click(function(){
-    $('.afficheAtelier').show("fast");
-    $('.afficheEvent').hide();
-})
-
-$('#buttonAnim').click(function(){
-    $('.afficheAtelier').show("fast");
-    $('.afficheEvent').show("fast");
-})
-
-// Effet Parallax
-
-$(window).scroll(function(e){
-    parallax();
-});
-
-function parallax(){
-    var scrolled = $(window).scrollTop();
-    $('.parallaxBgAccueil').css('bottom',-(scrolled*0.1)+'px');
-}
-
-// Modal
-
-/*$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})*/

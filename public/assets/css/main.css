@@ -182,7 +182,7 @@ nav {
 *************************************************************************************************/
 .parallax {
   background-image: url('../img/commun/backgroundAccueil.jpg');
-  min-height: 130vh;
+  min-height: 200vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,6 +215,15 @@ nav {
 #texteAccueil {
   width: 50%;
   height: 100%;
+}
+#espaceAdulte {
+  margin: 10% 5% 5% 0;
+}
+#espaceJeunesse {
+  margin: 10% 5% 5% 0;
+}
+#espacePapeterie {
+  margin: 10% 5% 5% 0;
 }
 .col-xs-12,
 .col-sm-11 {
