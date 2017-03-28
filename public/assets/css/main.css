@@ -183,29 +183,25 @@ nav {
 .parallax {
   background-image: url('../img/commun/backgroundAccueil.jpg');
   min-height: 130vh;
-  top: 6rem;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  padding-top: 15vh;
 }
 /*************************************************************************************************
 		texte apparaissant sur fond estompé
 *************************************************************************************************/
-article.parallaxRideau {
+.parallaxRideau {
   background-color: #25383a;
   color: white;
   opacity: 0.9;
-  width: 80%;
   padding: 1%;
-  margin: 0 auto;
-  height: 100%;
+  margin: 10vh auto;
   font-family: 'champagneLimousine', Helvetica, sans-serif;
   font-size: 2vh;
 }
-article.parallaxRideau h2 {
+.parallaxRideau h2 {
   font-family: 'erazure', cursive, sans-serif;
   font-size: 4vh;
   letter-spacing: 1px;
@@ -213,8 +209,12 @@ article.parallaxRideau h2 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-article.parallaxRideau li {
+.parallaxRideau li {
   list-style: none;
+}
+#texteAccueil {
+  width: 50%;
+  height: 100%;
 }
 .col-xs-12,
 .col-sm-11 {

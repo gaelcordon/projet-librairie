@@ -263,15 +263,13 @@ nav {
 //
 .parallax {
    	background-image: url('../img/commun/backgroundAccueil.jpg');
-   	min-height: 130vh;
-   	top: 6rem;
+   	min-height: 200vh;
 	// On créé l'effet parallax
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: -1; // permet à l'image de passer sous le logo et la barre de navigation
-	padding-top: 15vh;
 }
 
 /*************************************************************************************************
@@ -279,14 +277,14 @@ nav {
 *************************************************************************************************/
 //
 
-article.parallaxRideau {
+
+.parallaxRideau {
 	background-color: @bleuHover;
 	color: white;
 	opacity:0.9;
-    width:80%;
     padding: 1%;
-  	margin: 0 auto;
-  	height:100%;
+  	margin: 10vh auto;
+
   	font-family: 'champagneLimousine', Helvetica, sans-serif;
   	font-size: 2vh; //https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.mammo425g
 
@@ -302,6 +300,12 @@ article.parallaxRideau {
 	li {
 		list-style: none;
 	}
+}
+
+
+#texteAccueil {
+    width:50%;
+	height:100%;
 }
 
 .col-xs-12,.col-sm-11 {
