@@ -75,6 +75,10 @@ nav {
   position: fixed;
   z-index: 1;
 }
+nav form {
+  min-width: 15rem;
+  max-width: 50rem;
+}
 .navbar {
   border-color: rgba(255, 255, 255, 0);
   margin-bottom: 0px;
@@ -152,7 +156,6 @@ nav {
 *************************************************************************************************/
 #sidenav > ul {
   padding: 2rem;
-  height: 130vh;
   background-color: #182526;
 }
 #sidenav > ul > li {
@@ -182,7 +185,7 @@ nav {
 *************************************************************************************************/
 .parallax {
   background-image: url('../img/commun/backgroundAccueil.jpg');
-  min-height: 200vh;
+  min-height: 130vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

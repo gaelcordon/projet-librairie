@@ -119,6 +119,11 @@ nav {
 	position: fixed;
 	z-index: 1;
 
+	form {
+		min-width: 15rem;
+		max-width: 50rem;
+	}
+
 	}
 
 // surcharge à Bootstrap pour éviter les arrondis sur la barre de menu de navigation
@@ -226,7 +231,7 @@ nav {
 
 #sidenav > ul {
 	padding: 2rem;
-	height: 130vh;
+//	height: 130vh;
 	background-color: @bleuNavbar;
 
 	> li {
@@ -263,7 +268,7 @@ nav {
 //
 .parallax {
    	background-image: url('../img/commun/backgroundAccueil.jpg');
-   	min-height: 200vh;
+  	min-height: 130vh;
 	// On créé l'effet parallax
 	background-attachment: fixed;
 	background-position: center;

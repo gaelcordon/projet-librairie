@@ -1,4 +1,4 @@
-			<section  class="parallax col-xs-12 col-sm-11">
+			<section  class="parallax">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-same-height">

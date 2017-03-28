@@ -1,4 +1,5 @@
-			<section  class="parallax col-xs-12 col-sm-11">
+		<div id="corpsPrincipal" class="container-fluid">
+			<section  class="parallax">
 				<article id="texteAccueil" class="text-center parallaxRideau">
 					<section id="ilEtaitUneFois">
 						<h2>Il était une fois...</h2>
@@ -28,3 +29,4 @@
 					</section>
 				</article><!--id="texteAccueil"-->
 			</section> <!--class="parallax" -->
+		</div> <!-- class="container-fluid"-->

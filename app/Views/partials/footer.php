@@ -1,5 +1,3 @@
-        </div> <!-- div class="row"-->
-    </div> <!-- class="container-fluid"-->
 </main>
 
 <footer>
@@ -23,13 +21,6 @@
                 -->
         </div> <!-- div class="container-fluid" -->
     </nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
-
-
-
-
-
-
-
 </footer>
 
             <!--On construit l'url à partir du nom de la route grâce à l'objet $this
