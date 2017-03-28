@@ -8,7 +8,6 @@
              <!-- On récupère les liens de navigations pour les réduire en responsive design -->
                 <ul class="nav navbar-nav">
                     <li>&copy; A la gloire de mon père 2017</li>
-                    <li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><img class="img-responsive" src="<?php echo $this->assetUrl('img/commun/logo-facebook.png')?>" alt="facebook"></a></li>
                 </ul><!-- class="nav navbar-nav" -->
                 <!--
                     <form>

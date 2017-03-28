@@ -17,6 +17,11 @@
 }
 
 @font-face {
+    font-family: erazure; // pour écriture manuscrite issue de la charte du logo pour le texte en général
+    src: url('../fonts/erazure.ttf');
+}
+
+@font-face {
     font-family: champagneLimousine; // issue de la charte du logo pour le texte en général
 
     src: url('../fonts/Champagne&Limousines.ttf');
@@ -215,26 +220,41 @@ nav {
 
 
 /*************************************************************************************************
-		Sidenav gauche et droit
+		Sidenav gauche
 *************************************************************************************************/
 //
 
-.sidenav {
+#sidenav > ul {
 	padding: 2rem;
 	height: 130vh;
 	background-color: @bleuNavbar;
 
-		li.deco {
-			color: @orange;
-			height: 20px;
-			widht: 20px;
-			background-color: @bleuHover;
-			margin-top: 50px;
-			margin-bottom: 50px;
-			list-style-type:none;
-
+	> li {
+		color: @orange;
+		list-style-type:none;
+		a {
+			color: @grisClair;
+			font-size: 2.5vh;
 		}
-}
+		// écriture couleur orange lors de la sélection des menus
+		// background bleu
+		a:focus, a:hover {
+			color: @orange;
+			background-color: @bleuHover;
+		}
+
+		.fa {
+			font-size: 3rem;
+		}
+	}
+	>.active{
+			>a,>a:focus, >a:hover {
+				color:  @orange;
+				background-color: @bleuHover;
+			}
+	}
+ }
+
 
 
 /*************************************************************************************************
@@ -271,7 +291,8 @@ article.parallaxRideau {
   	font-size: 2vh; //https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.mammo425g
 
 	h2 {
-		font-family: 'montez', cursive, sans-serif;
+		font-family: 'erazure', cursive, sans-serif;
+		font-size: 4vh;
 		letter-spacing: 1px;
 		color:@orange;
   		margin-top: 1.5rem;
@@ -358,7 +379,7 @@ article.parallaxRideau {
 *************************************************************************************************/
 //
 footer {
-	height: 10vh;
+	max-height: 5vh;
 	background-color: @bleuNavbar;
 	color: @orange;
 
