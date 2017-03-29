@@ -49,13 +49,6 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 		$this->show('pages/evenements-dedicaces');
 	}
 	/**
-	 * Page spécifique a Nous Contacter
-	 */
-	public function contact()
-	{
-		$this->show('pages/contact');
-	}
-	/**
 	 * Page spécifique aux Réseaux Sociaux
 	 */
 	public function reseauxSociaux()
