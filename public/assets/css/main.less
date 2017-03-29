@@ -223,44 +223,10 @@ nav {
 	padding-top: 70px;
 }
 
-
 /*************************************************************************************************
-		Sidenav gauche
+		Carousel Nouveautés
 *************************************************************************************************/
 //
-
-#sidenav > ul {
-	padding: 2rem;
-//	height: 130vh;
-	background-color: @bleuNavbar;
-
-	> li {
-		color: @orange;
-		list-style-type:none;
-		a {
-			color: @grisClair;
-			font-size: 2.5vh;
-		}
-		// écriture couleur orange lors de la sélection des menus
-		// background bleu
-		a:focus, a:hover {
-			color: @orange;
-			background-color: @bleuHover;
-		}
-
-		.fa {
-			font-size: 3rem;
-		}
-	}
-	>.active{
-			>a,>a:focus, >a:hover {
-				color:  @orange;
-				background-color: @bleuHover;
-			}
-	}
- }
-
-
 
 /*************************************************************************************************
 		effet Parallax
@@ -285,8 +251,6 @@ nav {
 	background-color: @bleuHover;
 	color: white;
 	opacity:0.9;
-    padding: 1%;
-  	margin: 10vh auto;
 
   	font-family: 'champagneLimousine', Helvetica, sans-serif;
   	font-size: 2vh; //https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.mammo425g
@@ -308,7 +272,7 @@ nav {
 
 #bdAccueil {
 	background-image: url('../img/commun/bdAccueil.jpg');
-	height:200vh;
+	height:100vh;
 
 }
 
@@ -321,25 +285,41 @@ nav {
 #texteAccueil {
     width:50%;
 	height:100%;
+	margin: 20vh auto;
+	padding: 3vh 0;
 }
 
 #nos3Espaces {
 
-	margin: 20% 15%;
+	margin: 20vh 15vh;
+	padding: 5vh 0;
+
 }
 
 #espaceAdulte {
 	margin:2.5%;
+	padding: 1%;
+	ul {
+		padding:0;
+	}
 
 }
 
 #espaceJeunesse {
 	margin:2.5%;
+	padding: 1%;
+	ul {
+		padding:0;
+	}
 
 }
 
 #espacePapeterie {
 	margin:2.5%;
+	padding: 1%;
+	ul {
+		padding:0;
+	}
 
 }
 
