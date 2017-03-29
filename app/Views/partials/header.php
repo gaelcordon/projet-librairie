@@ -57,7 +57,7 @@
 					</div>
 					<div class="col-md-4 col-md-push-4">
 						<ul id="iconNavBar" class="nav navbar-nav">
-							<li><a href="<?php echo $this->url('librairie_contact'); ?>"><span class="glyphicon glyphicon-envelope"></span></a></li>
+							<li><a href="#!"><span class="glyphicon glyphicon-envelope"></span></a></li>
 							<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
 							<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
 							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
