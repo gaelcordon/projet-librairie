@@ -1,6 +1,6 @@
 			<section id="bdLaLibrairie" class="parallax">
 					<div class="container-fluid">
-						<div id="nos3Espaces" class="container">
+						<div id="nos3Espaces">
 							<div class="row">
 								<div class="col-xs-12 col-sm-4 col-same-height">
 									<div id="espaceAdulte" class="text-center parallaxRideau">
