@@ -228,6 +228,11 @@ nav {
 *************************************************************************************************/
 //
 
+
+.carousel-inner {
+	height: 200px;
+}
+
 /*************************************************************************************************
 		effet Parallax
 *************************************************************************************************/
@@ -274,6 +279,11 @@ nav {
 	background-image: url('../img/commun/bdAccueil.jpg');
 	height:100vh;
 
+}
+
+#bdBottomAccueil {
+	background-image: url('../img/carousel/DSC_0049.jpg');
+	height: 190vh;
 }
 
 #bdLaLibrairie {
@@ -452,88 +462,41 @@ footer {
 					CSS Contact / Adresse
 *************************************************************/
 
-.adresse {
+#adresseSection iframe {
 	height: 300px;
-	padding-left: 45px;
+	padding-left: 0px;
 }
 
 #adresseSection {
 	margin-bottom: 30px;
 	height: 400px;
-	color: white;
+	color : @orange;
+	background-color: @bleuNavbar;
 }
 
-#contactSection {
-	background-color: #25383A;
-	height: 450px;
+#adresse {
+	address {
+		margin-top: 20px;
+	}
 }
 
-#containerContact {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-#formContact {
-	height: 250px;
-}
-
-#adresseContact {
-	color: white;
-}
-
-/*************************************************************
-					CSS Administration
-*************************************************************/
-
-#formBook, #formEvent, #formUser {
-	display: none;
-}
-
-#menuAdmin div {
-	background-color: red;
-	padding-left: 10px;
-	padding-top: 200px;
-	background-clip: content-box;
-		h3 {
-			text-align: center;
+#horaire {
+	margin-top: 80px;
+	ul {
+		margin-top: 20px;
+		padding-left: 0px;
+		li {
+			list-style-type: none;
 		}
+	}
 }
 
-#menuAdmin div:active{
-	background-color: darkred;
-	background-clip: content-box;
-}
-
-
-/*************************************************************
-					CSS Evenement
-*************************************************************/
-
-.afficheEvent{
-	background-color: lightblue;
-}
-
-.afficheAtelier{
-	background-color: navy;
-	color: white;
-}
-
-/*************************************************************
-					CSS Contact / Adresse
-*************************************************************/
-
-.adresse {
-	height: 300px;
-	padding-left: 45px;
-}
-
-#adresseSection {
-	margin-bottom: 30px;
-	height: 400px;
-	color: white;
+#sectionVide {
+	height: 100vh;
 }
 
 #contactSection {
+	color: #9d9d9d;
 	background-color: #25383A;
 	height: 450px;
 }
@@ -547,11 +510,10 @@ footer {
 	height: 250px;
 }
 
-#adresseContact {
-	color: white;
+
+#infoAdresseSection h3{
+	padding-bottom: 15px;
 }
-
-
 
 
 
