@@ -4,8 +4,8 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-4 col-same-height">
 									<div id="espaceAdulte" class="text-center parallaxRideau">
-										<h2>Littérature adulte</h2>
 										<ul>
+											<li><h2>Littérature adulte</h2></li>
 											<li>Littérature française</li>
 											<li>Littérature étrangère</li>
 											<li>Littérature policière</li>
@@ -17,8 +17,8 @@
 								</div>
 								<div class="col-xs-12 col-sm-4 col-same-height">
 									<div id="espaceJeunesse" class="text-center parallaxRideau">
-										<h2>Jeunesse</h2>
 										<ul>
+											<li><h2>Jeunesse</h2></li>
 											<li>Documentaires</li>
 											<li>Premières lectures</li>
 											<li>Romans Jeunesse et pré-Ados</li>
@@ -31,9 +31,9 @@
 								</div>
 								<div class="col-xs-12 col-sm-4 col-same-height">
 									<div id="espacePapeterie" class="text-center parallaxRideau">
-										<h2>Papeterie <br />
-											et Loisirs créatifs</h2>
 										<ul>
+											<li><h2>Papeterie <br />
+											Loisirs créatifs</h2></li>
 											<li>Papeterie scolaire ou de bureau</li>
 											<li>Décopatch</li>
 											<li>Jouets d’éveil</li>
