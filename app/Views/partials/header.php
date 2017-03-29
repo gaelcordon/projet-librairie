@@ -40,59 +40,57 @@
  		<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
  	</div>
 	<nav class="navbar" data-spy="affix" data-offset-top="100">
-	    <div class="container-fluid">	
+		<div class="container-fluid">
+			<div id="zoneRecherche" class="container">
+				<div class="row">
+					<div class="col-md-4 col-md-push-4">
+						<form>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Rechercher">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-4 col-md-push-4">
+						<ul id="iconNavBar" class="nav navbar-nav">
+							<li><a href="<?php echo $this->url('librairie_contact'); ?>"><span class="glyphicon glyphicon-envelope"></span></a></li>
+							<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+							<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
+							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
+							<li><a href="<?php echo $this->url('admin_administration'); ?>"><span class="glyphicon glyphicon-cog"></span></a></li>
+							<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-log-out"></span></a></li>
+							<?php else: ?>			        
+							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
+							<?php endif; ?>
+						</ul><!-- class="nav navbar-nav" -->
+					</div>
+				</div> <!-- class="row" -->
+			</div><!-- div id="zoneRecherche"-->
 			<!-- Menu sandwich -->
 			<div class="navbar-header">
-			<!-- <div class="debug">
-					<p>Ceci est un texte de debug</p>
-				</div> -->
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>		
+				</button>
+				
 			</div> <!-- div class="navbar-header" -->
 			<!-- On récupère les liens de navigations pour les réduire en responsive design -->
-			<div class="collapse navbar-collapse" id="navbar-collapse-1">
-        		<ul class="nav navbar-nav">
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">	
+				<ul class="nav navbar-nav">
 					<li><a href="<?php echo $this->url('librairie_accueil'); ?>"><img src="<?php echo $this->assetUrl('img/commun/iconAccueil.png')?>" alt="icon-accueil-librairie-Mazan"></a></li>
 					<li><a href="<?php echo $this->url('librairie_la_librairie'); ?>">La librairie</a></li>
 					<li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
 					<li><a href="<?php echo $this->url('librairie_ateliers'); ?>">Ateliers</a></li>
 					<li><a href="<?php echo $this->url('librairie_evenements_dedicaces'); ?>">Evènements/Dédicaces</a></li>
 				</ul><!-- class="nav navbar-nav" -->
-				<!--
-					<form>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Rechercher">
-							<div class="input-group-btn">
-								<button class="btn btn-default" type="submit">
-									<span class="glyphicon glyphicon-search"></span>
-								</button>
-							</div>
-						</div>
-					</form>
-				-->
 			</div><!-- id="navbar-collapse-1" -->	
 		</div> <!-- div class="container-fluid" -->
 	</nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
 </header>
 <main>
-	<div id="corpsPrincipal" class="container-fluid">
-		<div class="row">
-		<!-- <div class="row content"> -->
-			<div id="sidenav" class="col-xs-12 col-sm-1">
-                	<ul class="nav nav-pills nav-stacked">
-						<li><a href="<?php echo $this->url('librairie_contact'); ?>"><span class="glyphicon glyphicon-envelope"></span></a></li>
-
-						<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
-						<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
-							<li><a href="<?php echo $this->url('admin_administration'); ?>"><span class="glyphicon glyphicon-cog"></span></a></li>
-							<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-log-out"></span></a></li>
-						<?php else: ?>			        
-							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
-						<?php endif; ?>
-							<li><a href="https://www.facebook.com/librairiegloire/?fref=ts" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-					</ul>
-		    </div>

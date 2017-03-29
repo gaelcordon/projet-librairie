@@ -75,6 +75,10 @@ nav {
   position: fixed;
   z-index: 1;
 }
+nav form {
+  min-width: 15rem;
+  max-width: 50rem;
+}
 .navbar {
   border-color: rgba(255, 255, 255, 0);
   margin-bottom: 0px;
@@ -152,7 +156,6 @@ nav {
 *************************************************************************************************/
 #sidenav > ul {
   padding: 2rem;
-  height: 130vh;
   background-color: #182526;
 }
 #sidenav > ul > li {
@@ -181,31 +184,25 @@ nav {
 		effet Parallax
 *************************************************************************************************/
 .parallax {
-  background-image: url('../img/commun/backgroundAccueil.jpg');
-  min-height: 130vh;
-  top: 6rem;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  padding-top: 15vh;
 }
 /*************************************************************************************************
 		texte apparaissant sur fond estompé
 *************************************************************************************************/
-article.parallaxRideau {
+.parallaxRideau {
   background-color: #25383a;
   color: white;
   opacity: 0.9;
-  width: 80%;
   padding: 1%;
-  margin: 0 auto;
-  height: 100%;
+  margin: 10vh auto;
   font-family: 'champagneLimousine', Helvetica, sans-serif;
   font-size: 2vh;
 }
-article.parallaxRideau h2 {
+.parallaxRideau h2 {
   font-family: 'erazure', cursive, sans-serif;
   font-size: 4vh;
   letter-spacing: 1px;
@@ -213,8 +210,32 @@ article.parallaxRideau h2 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-article.parallaxRideau li {
+.parallaxRideau li {
   list-style: none;
+}
+#bdAccueil {
+  background-image: url('../img/commun/bdAccueil.jpg');
+  height: 200vh;
+}
+#bdLaLibrairie {
+  background-image: url('../img/commun/bdLaLibrairie.jpg');
+  height: 200vh;
+}
+#texteAccueil {
+  width: 50%;
+  height: 100%;
+}
+#nos3Espaces {
+  margin: 20% 15%;
+}
+#espaceAdulte {
+  margin: 2.5%;
+}
+#espaceJeunesse {
+  margin: 2.5%;
+}
+#espacePapeterie {
+  margin: 2.5%;
 }
 .col-xs-12,
 .col-sm-11 {
