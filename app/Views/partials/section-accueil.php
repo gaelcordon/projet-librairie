@@ -6,19 +6,24 @@
 							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 							<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
 							<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+							<li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
 						</ol>
 									
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-									<img src="<?php echo $this->assetUrl('img/carousel/DSC_0049.JPG'); ?>" alt="..." />
+									<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_cetteTerrePromise.jpg'); ?>" alt="..." />
 							</div>
 							<div class="item ">
-									<img src="<?php echo $this->assetUrl('img/carousel/DSC_0056.JPG'); ?>" alt="..." />
+									<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_histoireMondialeDeLaFrance.jpg'); ?>" alt="..." />
 							</div>
 							<div class="item ">
-									<img src="<?php echo $this->assetUrl('img/carousel/DSC_0072.JPG'); ?>" alt="..." />
+									<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_laDesobeissante.jpg'); ?>" alt="..." />
 							</div>
+							<div class="item ">
+									<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_toxique.jpg'); ?>" alt="..." />
+							</div>
+							
 						</div><!-- carousel-inner -->
 					
 						<!-- Controls -->
