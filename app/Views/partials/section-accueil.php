@@ -72,12 +72,11 @@
 		<section id="bgBottomAccueil" class="parallax">
 				<div id="adresseSection" class="row blocText">
 					<div class="col-xs-10 col-xs-offset-1 col-md-6">
-						<h2>Nous Trouver :</h2>
 						<iframe id="localisation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.2553174584305!2d5.125018715696843!3d44.05743623421457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ca76a77dea7fc5%3A0xefb2cbcce49b402f!2sLa+Gloire+De+Mon+P%C3%A8re+Mazan!5e0!3m2!1sfr!2sfr!4v1485903280277" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 					<div class="col-md-3 text-center">
 						<div id="adresse">
-							<h2>Adresse :</h2>
+							<h2>Nous Trouver</h2>
 							<address>
 								<strong>La Gloire De Mon Père</strong><br>
 								265 Avenue de l'Europe<br />
@@ -99,27 +98,27 @@
 
 				<div id="sectionVide" class="row">	
 				</div>
-
-				<div id="contactSection" class="row">
-					<div class="col-xs-10 col-xs-offset-1 col-md-4 cold-md-offset-4">
-						<div id="formContact" class="blocText">
-							<h2>Nous contacter :</h2>
-							<form method="GET" action="">
-								<div class="form-group">
-									<label for="nom">Nom</label>
-									<input type="text" id="nom" class="form-control" name="nom" placeholder="Nom" />
-								</div>
-								<div class="form-group">
-									<label for="email">Email</label>
-									<input type="email" id="email" class="form-control" name="email" placeholder="Votre adresse email" />
-								</div>
-								<div class="form-group">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" class="form-control" cols="30" rows="5">Saisir votre message...</textarea>
-								</div>
-								<button>Envoyer le message</button>
-							</form>
-						</div> <!--  id="formContact" -->
-					</div>
-				</div> <!-- id="contactSection" class="row" -->
 		</section> <!-- id="bdBottomAccueil" class="parallax container-fluid" -->
+
+		<div id="contactSection" class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-md-4 cold-md-offset-4">
+				<div id="formContact" class="blocText">
+					<h2>Nous contacter</h2>
+					<form method="GET" action="">
+						<div class="form-group">
+							<label for="nom">Nom</label>
+							<input type="text" id="nom" class="form-control" name="nom" placeholder="Nom" />
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" class="form-control" name="email" placeholder="Votre adresse email" />
+						</div>
+						<div class="form-group">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" class="form-control" cols="30" rows="5">Saisir votre message...</textarea>
+						</div>
+						<button>Envoyer le message</button>
+					</form>
+				</div> <!--  id="formContact" -->
+			</div>
+		</div> <!-- id="contactSection" class="row" -->
