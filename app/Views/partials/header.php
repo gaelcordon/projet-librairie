@@ -37,10 +37,10 @@
 <header>
 	
  	<div id="logo" class="container-fluid">
- 		<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
- 	</div>
-	<nav class="navbar" data-spy="affix" data-offset-top="100">
-		<div class="container-fluid">
+		 <div class="row">
+			<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="center-block" src="<?php echo $this->assetUrl('img/commun/logo-librairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
+		</div>
+		<nav class="navbar" data-spy="affix" data-offset-top="100">
 			<div id="zoneRecherche" class="container">
 				<div class="row">
 					<div class="col-md-4 col-md-push-4">
@@ -90,7 +90,9 @@
 					<li><a href="<?php echo $this->url('librairie_evenements_dedicaces'); ?>">Evènements/Dédicaces</a></li>
 				</ul><!-- class="nav navbar-nav" -->
 			</div><!-- id="navbar-collapse-1" -->	
-		</div> <!-- div class="container-fluid" -->
-	</nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
+		</nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
+	</div>
 </header>
 <main>
+	<div class="container-fluid">
+		<div class="row">
