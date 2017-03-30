@@ -1,38 +1,38 @@
-		<section id="carouselNouveautes">
+	
+		<section id="bgAccueil" class="parallax">
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-4">
-					<ul class="carousel">
-						<li class="items main-pos" id="1">
-						<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_amieProdigieuse.jpg')?>" alt="livre_amieProdigieuse" />	
-						</li>
-						<li class="items right-pos" id="2">
-						<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_cetteTerrePromise.jpg')?>" alt="livre_cetteTerrePromise" />
-						</li>
-						<li class="items back-pos" id="3">
-						<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_histoireMondialeDeLaFrance.jpg')?>" alt="livre_histoireMondialeDeLaFrance" />
-						</li>
-						<li class="items back-pos" id="4">
-						<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_laDesobeissante.jpg')?>" alt="livre_laDesobeissante" />
-						</li>
-						<li class="items back-pos" id="5">
-						<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_toxique.jpg')?>" alt="livre_toxique" />
-						</li>
-						<li class="items back-pos" id="6">
-						<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_lePlateau.jpg')?>" alt="livre_toxique" />
-						</li>
-						<li class="items left-pos" id="7">
-						<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_cePaysQuOnAssassine.jpg')?>" alt="livre_cePaysQuOnAssassine" />
-						</li>
-					</ul>
-					<span>
-						<input type="button" value="Prev" id="prev">
-						<input type="button" value="Next" id="next">
-					</span>
-				</div>
+					<div id="carouselNouveautes" class="parallaxRideau">
+						<ul class="carousel">
+							<li class="items main-pos" id="1">
+							<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_amieProdigieuse.jpg')?>" alt="livre_amieProdigieuse" />	
+							</li>
+							<li class="items right-pos" id="2">
+							<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_cetteTerrePromise.jpg')?>" alt="livre_cetteTerrePromise" />
+							</li>
+							<li class="items back-pos" id="3">
+							<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_histoireMondialeDeLaFrance.jpg')?>" alt="livre_histoireMondialeDeLaFrance" />
+							</li>
+							<li class="items back-pos" id="4">
+							<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_laDesobeissante.jpg')?>" alt="livre_laDesobeissante" />
+							</li>
+							<li class="items back-pos" id="5">
+							<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_toxique.jpg')?>" alt="livre_toxique" />
+							</li>
+							<li class="items back-pos" id="6">
+							<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_lePlateau.jpg')?>" alt="livre_toxique" />
+							</li>
+							<li class="items left-pos" id="7">
+							<img src="<?php echo $this->assetUrl('img/carouselTempo/livre_cePaysQuOnAssassine.jpg')?>" alt="livre_cePaysQuOnAssassine" />
+							</li>
+						</ul>
+						<span>
+							<input type="button" value="Prev" id="prev">
+							<input type="button" value="Next" id="next">
+						</span>
+					</div>
+				</div> <!-- id="carouselNouveautes" -->
 			</div> <!-- class="row" -->
-		</section><!-- id="carouselNouveautes" -->
-		
-		<section id="bgAccueil" class="parallax">
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
 					<div id="texteAccueil" class="text-center blocText parallaxRideau">
