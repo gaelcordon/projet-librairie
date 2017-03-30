@@ -1,9 +1,8 @@
-<section class="container-fluid">
-        <article class="container">
-            <div class="row">   
-                <div col-xd-4 col-lg-4>
-                    <h3>Ceci est la future page "Ateliers"</h3>
-                </div>
+<section id="ateliers">
+	<div class="row">   
+		<div col-xd-4 col-lg-4>
+			<h3>Ceci est la future page "Ateliers"</h3>
+		</div>
 
 <?php 
 	$objetEvenementsModel = new \Model\EvenementsModel;
@@ -36,6 +35,5 @@ CODEHTML;
 	}
 
 ?>
-            </div>
-        </article>
-</section>  <!-- section container-fluid-->
+    </div>
+</section>
