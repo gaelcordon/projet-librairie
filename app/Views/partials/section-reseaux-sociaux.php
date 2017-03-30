@@ -6,4 +6,4 @@
                 </div>
             </div>
         </section>
-</section>  <!-- section container-fluid
+</section>  <!-- section container-fluid -->
