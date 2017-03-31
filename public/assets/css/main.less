@@ -75,7 +75,7 @@ input.erreur {
 body {
 
 	font-family: 'champagneLimousine',Helvetica, sans-serif;
-	color: black;
+	color: deeppink;
 	background-color: @beige;
 }
 
@@ -229,11 +229,80 @@ nav {
 //
 
 #carouselNouveautes {
-  .carousel-inner {
-	height: 500px;
-}
-	.carousel-indicators {
-		z-index: -1;
+	height: 600px;
+	z-index: -1;
+
+	section {
+	width: 80%;
+	height: 25em;
+	margin: 0 auto;
+	position: relative;
+	}
+
+	li {
+	// width: 500px;
+	// height: 281px;
+	background: #333;
+	display: inline-block;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	overflow: hidden;
+	}
+
+	img {
+		transform: scale(1);
+	}
+
+	li p {
+	color: white;
+	font-weight: bold;
+	font-size: 5em;
+	text-align: center;
+	margin-top: 1.175em;
+	}
+
+	.items {
+	position: absolute;
+	}
+
+	.main-pos {
+	margin-left: 2em !important;
+	z-index: 3000;
+	/*background-image: url('http://dl.dropbox.com/u/32649907/imgs/shadow.png');*/
+	}
+
+	.left-pos {
+	opacity: .3;
+	margin-left: -17em !important;
+	z-index: 1000;
+	-webkit-transform: scale(.75);
+	-moz-transform: scale(.75);
+	transform: scale(.75);
+	}
+
+	.back-pos {
+	margin-left: 2em !important;
+	opacity: .05;
+	-webkit-transform: scale(.5);
+	-moz-transform: scale(.5);
+	transform: scale(.5);
+	}
+
+	.right-pos {
+	opacity: .3;
+	margin-left:  21em !important;
+	z-index: 1000;
+	-webkit-transform: scale(.75);
+	-moz-transform: scale(.75);
+	transform: scale(.75);
+	}
+
+	span {
+	position: relative;
+	margin: 0 auto;
+	left: 17em;
+	top: 40em;
 	}
 }
 
@@ -258,11 +327,16 @@ nav {
 
 .parallaxRideau {
 	background-color: @bleuHover;
-	color: white;
+	color: white !important;
 	opacity:0.9;
-  	font-family: 'champagneLimousine', Helvetica, sans-serif;
-  	font-size: 2vh; //https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.mammo425g
+    padding: 1% 2%;
+  	
+}
 
+.blocText {
+	font-family: 'champagneLimousine', Helvetica, sans-serif;
+  	font-size: 2vh;
+	color: @grisClair;
 	h2 {
 		font-family: 'erazure', cursive, sans-serif;
 		font-size: 4vh;
@@ -271,79 +345,60 @@ nav {
   		margin-top: 1.5rem;
   		margin-bottom: 1rem;
 	}
+	label {
+		font-size: 2vh;
+		color:@grisClair;
+		font-weight: bold;
+	}
+
+	ul {
+		padding:0;
+	}
 
 	li {
 		list-style: none;
 	}
 }
 
-
-#bdAccueil {
+#bgAccueil {
 	background-image: url('../img/commun/bdAccueil.jpg');
-	height:100vh;
 
 }
 
-#bdBottomAccueil {
+#bgBottomAccueil {
 	background-image: url('../img/commun/vueCpFacade.jpg');
 	height: 190vh;
 }
 
-#bdLaLibrairie {
+#bgLaLibrairie {
 	background-image: url('../img/commun/bdLaLibrairie.jpg');
 	height:200vh;
 }
 
 
 #texteAccueil {
-    width:50%;
-	height:100%;
-	margin: 20vh auto;
-	padding: 3vh 0;
+	margin: 15% 0;
 }
 
-#nos3Espaces {
 
-	margin: 20vh 15vh;
-	padding: 5vh 0;
+.nosEspaces {
+
+	padding-top:10%;
 
 }
 
-#espaceAdulte {
-	margin:2.5%;
-	padding: 1%;
-	ul {
-		padding:0;
-	}
-
+.videTempo {
+	height:250px;
 }
 
-#espaceJeunesse {
-	margin:2.5%;
-	padding: 1%;
-	ul {
-		padding:0;
-	}
-
-}
-
-#espacePapeterie {
-	margin:2.5%;
-	padding: 1%;
-	ul {
-		padding:0;
-	}
-
-}
-
+/*
 .col-xs-12,.col-sm-11 {
 	// surcharge Bootstrap : pas de padding gauche ni droite
 	padding-right: 0;
     padding-left: 0;
 	}
 
-
-
+*/
 
 
 /*************************************************************************************************
@@ -466,60 +521,31 @@ footer {
 *************************************************************/
 
 #adresseSection iframe {
-	height: 300px;
+	min-height: 40vh;
 	padding-left: 0px;
 	padding-bottom: 20px;
 }
 
 #adresseSection {
+<<<<<<< HEAD
 	margin-bottom: 30px;
 	color : @orange;
+=======
+	padding: 2vh 0;
+>>>>>>> refs/remotes/origin/master
 	background-color: @bleuNavbar;
 }
 
-#adresse {
-	address {
-		margin-top: 20px;
-	}
-}
-
-#horaire {
-	margin-top: 80px;
-	ul {
-		margin-top: 20px;
-		padding-left: 0px;
-		li {
-			list-style-type: none;
-		}
-	}
-}
 
 #sectionVide {
-	height: 100vh;
+	height: 50vh;
 }
 
 #contactSection {
-	color: #9d9d9d;
-	background-color: #25383A;
-	height: 450px;
+
+	background-color: @bleuHover;
+	padding-bottom: 3vh;
 }
-
-#containerContact {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-#formContact {
-	height: 250px;
-}
-
-
-#infoAdresseSection h3{
-	padding-bottom: 15px;
-}
-
-
-
 
 
 
