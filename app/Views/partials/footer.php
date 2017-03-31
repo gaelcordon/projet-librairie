@@ -1,28 +1,29 @@
-        </div> <!-- class="row"-->
-    </div> <!-- class="container-fluid"-->
-</main>
-
+            </div> <!-- id="mainBody" class="container-fluid"-->
+        </div>
+    </main>
 <footer>
-    <nav class="navbar">
-        <div class="container-fluid">   
-             <!-- On récupère les liens de navigations pour les réduire en responsive design -->
-                <ul class="nav navbar-nav">
-                    <li>&copy; A la gloire de mon père 2017</li>
-                </ul><!-- class="nav navbar-nav" -->
-                <!--
-                    <form>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Rechercher">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                -->
-        </div> <!-- div class="container-fluid" -->
-    </nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
+    <div class="container-fluid">
+        <div class="row"> 
+            <nav class="navbar">
+                    <!-- On récupère les liens de navigations pour les réduire en responsive design -->
+                        <ul class="nav navbar-nav">
+                            <li>&copy; A la gloire de mon père 2017</li>
+                        </ul><!-- class="nav navbar-nav" -->
+                        <!--
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Rechercher">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        -->
+            </nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
+        </div>
+    </div> <!-- div class="container-fluid" -->
 </footer>
 
             <!--On construit l'url à partir du nom de la route grâce à l'objet $this

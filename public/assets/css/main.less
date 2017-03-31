@@ -97,10 +97,7 @@ header {
 #logo {
 	
 	z-index: 1;
-
-	img {
-		margin: 0.7rem auto;
-	}
+	margin: 1vh;
 }
 
 
@@ -141,8 +138,10 @@ nav {
 	// background-color: @gris;
 	// surcharge à Bootstrap : positionnement à gauche du menu sandwich
 	.navbar-toggle {
-		float: left;
-		margin-left: 15px;
+		float: right;
+		margin-top: 3vh;
+		margin-right: 2.5vh;
+		margin-bottom: 3vh;
 			.icon-bar {
 			background-color:@orange;
 			}
@@ -205,11 +204,22 @@ nav {
 			    
 	}
 }
+	div#zoneRecherche {
+		margin-top: 3vh;
+		// Couleur orange pour le symbole de la loupe dans le champ de recherche
+		.glyphicon-search:before {
+			color:@orange;
+			}
 
-// Couleur orange pour le symbole de la loupe dans le champ de recherche
-.glyphicon-search:before {
-	color:@orange;
 }
+
+
+#mainSection {
+  position:relative;
+  top:10vh;
+
+}
+
 // postionnement de la barre de navigation 
 // le logo disparaît quand on scroll down 
 // et le menu de navigation reste visible
@@ -220,6 +230,7 @@ nav {
 //
 
 #carouselNouveautes {
+	margin-top: 3vh;
 	height: 600px;
 	z-index: -1;
 
@@ -382,14 +393,6 @@ nav {
 	height:250px;
 }
 
-/*
-.col-xs-12,.col-sm-11 {
-	// surcharge Bootstrap : pas de padding gauche ni droite
-	padding-right: 0;
-    padding-left: 0;
-	}
-
-*/
 
 
 /*************************************************************************************************
