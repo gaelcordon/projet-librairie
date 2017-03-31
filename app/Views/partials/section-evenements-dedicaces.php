@@ -1,5 +1,4 @@
-<section class="container-fluid">
-        <article class="container">
+<article class="container">
             <div class="row">   
                 <div>
                     <h3>Ceci est la future page "Evènements/Dédicaces"</h3>
@@ -36,6 +35,5 @@ CODEHTML;
 	}
 
 ?>
-            </div>
-        </article>
-</section>  <!-- section container-fluid-->
+	</div>
+</article> <!-- section container-->
