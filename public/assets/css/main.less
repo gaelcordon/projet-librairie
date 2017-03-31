@@ -528,18 +528,19 @@ footer {
 
 #adresseSection {
 	padding: 2vh 0;
-	background-color: @bleuNavbar;
-}
-
-
-#sectionVide {
-	height: 50vh;
-}
-
-#contactSection {
-
 	background-color: @bleuHover;
-	padding-bottom: 3vh;
+}
+
+#divIframe {
+	padding-top: 6vh;
+	height : 600px;
+}
+
+#sectionFormContact {
+	padding: 0px;
+	h2 {
+		text-align: center;
+	}
 }
 
 
@@ -553,7 +554,10 @@ footer {
 		Breakpoint 1 : sur téléphone (petit écran)
 *************************************************************/
 @media only screen and (max-width: 768px) {
-	
+	#divIframe {
+		padding-top: 6vh;
+		height : auto;
+	}
 }
 
 
