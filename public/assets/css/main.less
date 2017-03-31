@@ -523,21 +523,25 @@ footer {
 #adresseSection iframe {
 	min-height: 40vh;
 	padding-left: 0px;
+	padding-bottom: 20px;
 }
 
 #adresseSection {
 	padding: 2vh 0;
-	background-color: @bleuNavbar;
-}
-
-
-#contactSection {
-
 	background-color: @bleuHover;
-	padding-bottom: 3vh;
 }
 
+#divIframe {
+	padding-top: 2vh;
+	height : 650px;
+}
 
+#sectionFormContact {
+	padding: 0px;
+	h2 {
+		text-align: center;
+	}
+}
 
 /*************************************************************************************************
 		réglages particuliers des Breakpoints pour les différents périphériques 
@@ -549,10 +553,16 @@ footer {
 *************************************************************/
 @media only screen and (max-width: 768px) {
 
+	#divIframe {
+		padding-top: 5vh;
+		height : auto;
+	}
+
 		.nav > li > a > img {
 		max-width: 70%;
 	}
 	
+
 }
 
 
@@ -574,9 +584,12 @@ footer {
 		Breakpoint 3 : sur tablette (styles généraux)
 *************************************************************/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-	
-	
+		#divIframe {
+		padding-top: 5vh;
+		height : auto;
+	}
 }
+	
 
 /*************************************************************
 		Breakpoint 4 : sur ordinateur de bureau
