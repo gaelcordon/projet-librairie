@@ -97,7 +97,7 @@ header {
 #logo {
 	
 	z-index: 1;
-	margin: 1vh;
+	margin: 2vh;
 }
 
 
@@ -114,6 +114,15 @@ header {
   z-index: 10;
 }
 
+/*************************************************************************************************
+		surcharge bootstrap pour permettre de centrer une div dans la largeur
+*************************************************************************************************/
+//
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
 
 nav {
 	background-color: @bleuNavbar;
@@ -146,7 +155,7 @@ nav {
 	.navbar-toggle {
 		float: right;
 		margin-top: 3vh;
-		margin-right: 2.5vh;
+		margin-right: 3vh;
 		margin-bottom: 3vh;
 			.icon-bar {
 			background-color:@orange;
@@ -177,6 +186,9 @@ nav {
 					background-color: @bleuHover;
 				}
 	 	}
+	 	i.fa.fa-facebook-square {
+    	font-size: 120%;
+		}
 	 }
 
 	.input-group {
@@ -375,7 +387,7 @@ nav {
 
 #bgBottomAccueil {
 	background-image: url('../img/commun/vueCpFacade.jpg');
-	height: 80vh;
+	height: 140vh;
 }
 
 #bgLaLibrairie {
@@ -592,7 +604,8 @@ footer {
 	
 
 /*************************************************************
-		Breakpoint 4 : sur ordinateur de bureau
+		Breakpoint 4 : sur ordinateur de bureau "lg"
+		.0
 *************************************************************/
 @media only screen and (min-width: 1280px) {
 	

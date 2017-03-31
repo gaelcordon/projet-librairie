@@ -50,7 +50,7 @@
 							<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="img-responsive center-block" src="<?php echo $this->assetUrl('img/commun/logoLibrairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
 						</div>
 						<div id="zoneRecherche">
-							<div class="col-xs-4">
+							<div class="col-xs-8 col-md-4 col-centered">
 								<form>
 									<div class="input-group">
 										<input type="text" class="form-control" placeholder="Rechercher">
@@ -73,20 +73,16 @@
 						<li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
 						<li><a href="<?php echo $this->url('librairie_ateliers'); ?>">Ateliers</a></li>
 						<li><a href="<?php echo $this->url('librairie_evenements_dedicaces'); ?>">Evènements/Dédicaces</a></li>
+						<li><a href="#!"><span class="glyphicon glyphicon-envelope"></span></a></li>
+						<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+						<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
+						<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
+						<li><a href="<?php echo $this->url('admin_administration'); ?>"><span class="glyphicon glyphicon-cog"></span></a></li>
+						<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-log-out"></span></a></li>
+						<?php else: ?>			        
+						<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
+						<?php endif; ?>
 					</ul><!-- class="nav navbar-nav" -->
-					<div id="iconNavBar">
-						<ul class="nav navbar-nav">
-							<li><a href="#!"><span class="glyphicon glyphicon-envelope"></span></a></li>
-							<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-							<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
-							<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
-							<li><a href="<?php echo $this->url('admin_administration'); ?>"><span class="glyphicon glyphicon-cog"></span></a></li>
-							<li><a href="<?php echo $this->url('logout'); ?>"><span class="glyphicon glyphicon-log-out"></span></a></li>
-							<?php else: ?>			        
-							<li><a href="<?php echo $this->url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span></a></li>
-							<?php endif; ?>
-						</ul><!-- class="nav navbar-nav" -->
-					</div>	
 				</div><!-- id="navbar-collapse-1" -->
 			<div>
 		</nav> <!-- class="navbar navbar-default navbar-fixed-top" -->

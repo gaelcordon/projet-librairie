@@ -5,7 +5,7 @@
     <nav class="navbar">
         <div class="container-fluid">
         <!-- On récupère les liens de navigations pour les réduire en responsive design -->
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav col-centered">
                 <li>&copy; A la gloire de mon père 2017</li>
             </ul><!-- class="nav navbar-nav" -->
         </div> <!-- div class="container-fluid" -->
