@@ -110,7 +110,7 @@ header {
 
 .affix{
   width:100%;
-  top:0;
+  top:-140px;
   z-index: 10;
 }
 
@@ -133,9 +133,8 @@ nav {
 	position: fixed;
 	z-index: 1;
 
+
 	form {
-    /* min-width: 15rem; */
-    /* max-width: 50rem; */
     margin-top: 3vh;
     margin-bottom: 1vh;
 	}
@@ -152,6 +151,8 @@ nav {
 	// surcharge à Bootstrap : pas de border et couleur différente
 	border-color: rgba(255, 255, 255, 0);
 	margin-bottom: 0px;
+	padding-bottom: 2px;
+	border-radius: 0;
 	// background-color: @gris;
 	// surcharge à Bootstrap : positionnement à gauche du menu sandwich
 	.navbar-toggle {
@@ -650,7 +651,14 @@ footer {
 	.navbar .navbar-nav > li {
     float: none;
     display: block;
+    border-radius: 0;
+	}
+	.affix{
+	top:0px;
+	z-index: 10;
+	max-height: 230px;
 }
+
 
 }
 

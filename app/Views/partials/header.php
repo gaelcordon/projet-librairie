@@ -47,10 +47,10 @@
 							<span class="icon-bar"></span>
 						</button>
 						<div id="logo" class="col-xs-3 col-sm-12" >
-							<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="img-responsive center-block" src="<?php echo $this->assetUrl('img/commun/logoLibrairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
+								<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="img-responsive center-block" src="<?php echo $this->assetUrl('img/commun/logoLibrairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
 						</div>
 						<div id="zoneRecherche">
-							<div class="col-xs-5 col-sm-5 col-md-5 col-lg-4 col-centered">
+							<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-centered">
 								<form>
 									<div class="input-group">
 										<input type="text" class="form-control" placeholder="Rechercher">
