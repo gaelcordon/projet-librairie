@@ -15,12 +15,7 @@ $(function(){
     // SINON, ON AFFICHE UN MESSAGE D'ERREUR
 
 
-    //affix
-
-        $('#navbar').affix({
-          offset: top:140px;
-        });
-
+    
     // Dropdown bouton accueil
     $('.btn-group').hover(function() {
     $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();

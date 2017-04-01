@@ -1,5 +1,5 @@
-        </div> <!-- id="mainBody" class="container-fluid"-->
-    </div>
+        </div> 
+    </div><!-- id="mainBody" class="container-fluid"-->
 </main>
 <footer>
     <nav class="navbar">

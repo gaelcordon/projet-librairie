@@ -1,6 +1,6 @@
 		<section id="bgAccueil" class="parallax">
 			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-4">
+				<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
 					<div id="carouselNouveautes" class="parallaxRideau">
 						<ul class="carousel">
 <?php
@@ -21,7 +21,7 @@
 
 ?>
 							<li class="items main-pos" id="<?php echo $i; ?>">
-							<img src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
+							<img class="img-responsive" src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
 							</li>
 <?php
 	}

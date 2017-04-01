@@ -35,20 +35,19 @@
 </head>
 <body>
 	<header>
-		<nav id="#navbar" class="navbar" data-spy="affix">
-			<div class="container-fluid">
+		<nav class="navbar">
 				<!-- Menu sandwich -->
 				<div class="navbar-header col-centered">
 					<div class="row">
+						<div id="logo" class="col-xs-3 col-sm-12" >
+							<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="img-responsive center-block" src="<?php echo $this->assetUrl('img/commun/logoLibrairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
+						</div>
 						<button type="button" class="col-xs-1 navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<div id="logo" class="col-xs-3 col-sm-12" >
-								<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="img-responsive center-block" src="<?php echo $this->assetUrl('img/commun/logoLibrairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
-						</div>
 						<div id="zoneRecherche">
 							<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-centered">
 								<form>

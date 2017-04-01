@@ -98,9 +98,8 @@ header {
 	
 	z-index: 1;
 	margin: 2vh;
+
 }
-
-
 
 	
 /*************************************************************************************************
@@ -108,15 +107,10 @@ header {
 *************************************************************************************************/
 //
 
-.affix{
-  width:100%;
-  z-index: 10;
-  top: 0;
-}
+// postionnement de la barre de navigation 
+// le logo disparaît quand on scroll down 
+// et le menu de navigation reste visible
 
- // .affix + #carouselNouveautes {
- //      padding-top: 140px;
- //  }
 
 
 /*************************************************************************************************
@@ -325,7 +319,7 @@ ul.dropdown-menu>li {
 //
 
 #carouselNouveautes {
-	margin-top: 5vh;
+	margin-top: 10vh;
 	height: 600px;
 	z-index: -1;
 
@@ -348,7 +342,7 @@ ul.dropdown-menu>li {
 	}
 
 	img {
-		transform: scale(1);
+		transform: scale(0.5);
 	}
 
 	li p {
@@ -665,12 +659,7 @@ footer {
     display: block;
     border-radius: 0;
 	}
-	.affix{
-	top:0px;
-	z-index: 10;
-}
-
-
+	
 }
 
 
@@ -679,7 +668,7 @@ footer {
 *************************************************************/
 @media only screen and (min-width: 769px) and (max-width: 992px) {
 		
-	
+
 	#logo {
 		z-index: 1;
 	}
