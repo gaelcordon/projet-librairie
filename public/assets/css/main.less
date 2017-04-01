@@ -110,9 +110,14 @@ header {
 
 .affix{
   width:100%;
-  top:-140px;
   z-index: 10;
+  top: 0;
 }
+
+ // .affix + #carouselNouveautes {
+ //      padding-top: 140px;
+ //  }
+
 
 /*************************************************************************************************
 		surcharge bootstrap pour permettre de centrer une div dans la largeur
@@ -141,8 +146,6 @@ nav {
 
 	
 	}
-
-// surcharge à Bootstrap pour éviter les arrondis sur la barre de menu de navigation
 
 
 
@@ -322,7 +325,7 @@ ul.dropdown-menu>li {
 //
 
 #carouselNouveautes {
-	margin-top: 3vh;
+	margin-top: 5vh;
 	height: 600px;
 	z-index: -1;
 
@@ -398,6 +401,15 @@ ul.dropdown-menu>li {
 	left: 17em;
 	top: 40em;
 	}
+}
+
+/*************************************************************************************************
+		corps principal
+*************************************************************************************************/
+//
+
+#mainBody {
+
 }
 
 /*************************************************************************************************
@@ -656,7 +668,6 @@ footer {
 	.affix{
 	top:0px;
 	z-index: 10;
-	max-height: 230px;
 }
 
 

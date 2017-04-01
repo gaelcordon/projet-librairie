@@ -35,7 +35,7 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar" data-spy="affix" data-offset-top="0">
+		<nav id="#navbar" class="navbar" data-spy="affix">
 			<div class="container-fluid">
 				<!-- Menu sandwich -->
 				<div class="navbar-header col-centered">

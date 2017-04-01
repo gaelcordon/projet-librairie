@@ -14,6 +14,23 @@ $(function(){
     // ALORS ON ENVOIE LE FORMULAIRE
     // SINON, ON AFFICHE UN MESSAGE D'ERREUR
 
+
+    //affix
+
+        $('#navbar').affix({
+          offset: top:140px;
+        });
+
+    // Dropdown bouton accueil
+    $('.btn-group').hover(function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+    }, function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).delay(500).slideUp();
+    });
+
+    // 
+
+
     $("#formUser").on("submit", function(event){
         // DEBUG
         alert("TU AS CLIQUE");
@@ -214,6 +231,7 @@ $(function(){
 
 });
 
+ 
 
 
 
