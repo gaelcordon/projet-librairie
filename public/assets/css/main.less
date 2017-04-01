@@ -121,7 +121,7 @@ header {
 
 .col-centered {
     float: none;
-    margin: 0 auto;
+    margin: 0vh auto;
 }
 
 nav {
@@ -134,8 +134,10 @@ nav {
 	z-index: 1;
 
 	form {
-		min-width: 15rem;
-		max-width: 50rem;
+    /* min-width: 15rem; */
+    /* max-width: 50rem; */
+    margin-top: 3vh;
+    margin-bottom: 1vh;
 	}
 
 	
@@ -155,7 +157,7 @@ nav {
 	.navbar-toggle {
 		float: right;
 		margin-top: 3vh;
-		margin-right: 3vh;
+		margin-right: 4vh;
 		margin-bottom: 3vh;
 			.icon-bar {
 			background-color:@orange;
@@ -166,7 +168,52 @@ nav {
 	}
 
 	.navbar-nav {
+
 		text-align: center;
+		.dropdown-menu  {
+			background-color: @bleuHover;
+			min-width: 60px;
+			max-width: 200px;
+			padding: 5px 0;
+    		margin: 5px 0 0;
+    		border: 1px solid @orange;
+    		border-radius: 6px;
+    		font-size: 2rem;
+
+			> li {
+
+				float: left;
+				display: block;
+		 		a {
+		 			color: @grisClair;
+		 			letter-spacing: 2px;
+					font-weight: bold;
+		
+		 		}
+		 		// écriture couleur orange lors de la sélection des menus
+		 		// background bleu
+		 		a:focus, a:hover{
+					color: @orange;
+		 			background-color: @bleuHover;
+		 			letter-spacing: 2px;
+					font-weight: bold;
+		 		}
+		 		}
+		 		>.active{
+					>a,>a:focus, >a:hover {
+						color:  @orange;
+						background-color: @bleuHover;
+						letter-spacing: 2px;
+    					font-weight: bold;
+					}
+		 		}
+			 	i.fa.fa-facebook-square {
+		    	font-size: 120%;
+
+				}
+		}
+
+
 	 	> li {
 			float: none;
 			display: inline-block;
@@ -222,6 +269,8 @@ nav {
 			    
 	}
 }
+
+
 	div#zoneRecherche {
 		margin-top: 3vh;
 		// Couleur orange pour le symbole de la loupe dans le champ de recherche
@@ -229,6 +278,30 @@ nav {
 			color:@orange;
 			}
 
+}
+
+// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
+
+.btn-group, .btn-group-vertical {
+
+    margin-top: 1vh;
+}
+
+// surcharge à Bootstrap : moins de padding
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+}
+
+div#navbar-collapse-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+ul.dropdown-menu>li {
+    text-align: center !important;
 }
 
 
@@ -560,9 +633,9 @@ footer {
 *************************************************************************************************/
 //
 
-/*************************************************************
-		Breakpoint 1 : sur téléphone (petit écran)
-*************************************************************/
+// /*************************************************************
+// 		Breakpoint 1 : sur téléphone (petit écran) XS
+// *************************************************************/
 @media only screen and (max-width: 768px) {
 
 	#divIframe {
@@ -573,40 +646,34 @@ footer {
 		.nav > li > a > img {
 		max-width: 70%;
 	}
-	
+
+	.navbar .navbar-nav > li {
+    float: none;
+    display: block;
+}
 
 }
 
 
 /*************************************************************
-		Breakpoint 2 : sur tablette (styles spécifiques)
+		Breakpoint 2 : sur tablette (styles généraux) SM
 *************************************************************/
-@media only screen and (min-width: 768px) {
-	
-	.navbar-header {
-		float: none;
-	}
-	#logo {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
 		
+	
+	#logo {
 		z-index: 1;
 	}
-}
 
-/*************************************************************
-		Breakpoint 3 : sur tablette (styles généraux)
-*************************************************************/
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-		#divIframe {
+	#divIframe {
 		padding-top: 5vh;
 		height : auto;
 	}
 }
 	
-
 /*************************************************************
-		Breakpoint 4 : sur ordinateur de bureau "lg"
-		.0
+		Breakpoint 3 : sur ordinateur de bureau MD et LG
 *************************************************************/
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 993px) {
 	
 }
