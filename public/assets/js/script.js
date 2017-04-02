@@ -115,18 +115,24 @@ $(function(){
     $('#espaceAdulte, #espaceJeunesse, #espacePapeterie').matchHeight();
     });
 
+
+/*************************************************************************************************
+        Carousel pour les nouveautés
+*************************************************************************************************/
+//
+
     // Carousel
 
         //slideshow style interval
         var autoSwap = setInterval( swap,3500);
 
         //pause slideshow and reinstantiate on mouseout
-        $('ul, span').hover(
-        function () {
+        $('ul, button').hover(
+            function () {
             clearInterval(autoSwap);
-        }, 
-        function () {
-        autoSwap = setInterval( swap,3500);
+            }, 
+            function () {
+            autoSwap = setInterval( swap,3500);
         });
 
         //global variables
@@ -144,64 +150,64 @@ $(function(){
 
         //swap images function
         function swap(action) {
-        var direction = action;
-        
-        //moving carousel backwards
-        if(direction == 'counter-clockwise') {
-            var leftitem = $('.left-pos').attr('id') - 1;
-            if(leftitem == 0) {
-            leftitem = itemCount;
-            }
+            var direction = action;
             
-            $('.right-pos').removeClass('right-pos').addClass('back-pos');
-            $('.main-pos').removeClass('main-pos').addClass('right-pos');
-            $('.left-pos').removeClass('left-pos').addClass('main-pos');
-            $('#'+leftitem+'').removeClass('back-pos').addClass('left-pos');
-            
-            startItem--;
-            if(startItem < 1) {
-            startItem = itemCount;
-            }
-        }
-        
-        //moving carousel forward
-        if(direction == 'clockwise' || direction == '' || direction == null ) {
-            function pos(positionvalue) {
-            if(positionvalue != 'leftposition') {
-                //increment image list id
-                position++;
+            //moving carousel backwards
+            if(direction == 'counter-clockwise') {
+                var leftitem = $('.left-pos').attr('id') - 1;
+                if(leftitem == 0) {
+                leftitem = itemCount;
+                }
                 
-                //if final result is greater than image count, reset position.
-                if((startItem+position) > resetCount) {
-                position = 1-startItem;
-                }
-            }
-            
-            //setting the left positioned item
-            if(positionvalue == 'leftposition') {
-                //left positioned image should always be one left than main positioned image.
-                position = startItem - 1;
-            
-                //reset last image in list to left position if first image is in main position
-                if(position < 1) {
-                position = itemCount;
+                $('.right-pos').removeClass('right-pos').addClass('back-pos');
+                $('.main-pos').removeClass('main-pos').addClass('right-pos');
+                $('.left-pos').removeClass('left-pos').addClass('main-pos');
+                $('#'+leftitem+'').removeClass('back-pos').addClass('left-pos');
+                
+                startItem--;
+                if(startItem < 1) {
+                startItem = itemCount;
                 }
             }
         
-            return position;
-            }  
+            //moving carousel forward
+            if(direction == 'clockwise' || direction == '' || direction == null ) {
+                function pos(positionvalue) {
+                    if(positionvalue != 'leftposition') {
+                        //increment image list id
+                        position++;
+                        
+                        //if final result is greater than image count, reset position.
+                        if((startItem+position) > resetCount) {
+                        position = 1-startItem;
+                        }
+                    }
+            
+                    //setting the left positioned item
+                    if(positionvalue == 'leftposition') {
+                        //left positioned image should always be one left than main positioned image.
+                        position = startItem - 1;
+                    
+                        //reset last image in list to left position if first image is in main position
+                        if(position < 1) {
+                        position = itemCount;
+                        }
+                    }
         
-        $('#'+ startItem +'').removeClass('main-pos').addClass('left-pos');
-        $('#'+ (startItem+pos()) +'').removeClass('right-pos').addClass('main-pos');
-        $('#'+ (startItem+pos()) +'').removeClass('back-pos').addClass('right-pos');
-        $('#'+ pos('leftposition') +'').removeClass('left-pos').addClass('back-pos');
+                return position;
+                }  
+        
+                $('#'+ startItem +'').removeClass('main-pos').addClass('left-pos');
+                $('#'+ (startItem+pos()) +'').removeClass('right-pos').addClass('main-pos');
+                $('#'+ (startItem+pos()) +'').removeClass('back-pos').addClass('right-pos');
+                $('#'+ pos('leftposition') +'').removeClass('left-pos').addClass('back-pos');
 
-            startItem++;
-            position=0;
-            if(startItem > itemCount) {
-            startItem = 1;
+                startItem++;
+                position=0;
+                if(startItem > itemCount) {
+                startItem = 1;
+                }
             }
-        }
         }
 
         //next button click function
@@ -216,17 +222,47 @@ $(function(){
 
         //if any visible items are clicked
         $('li').click(function() {
-        if($(this).attr('class') == 'items left-pos') {
-            swap('counter-clockwise'); 
-        }
-        else {
-            swap('clockwise'); 
-        }
+            if($(this).attr('class') == 'items left-pos') {
+                swap('counter-clockwise'); 
+            }
+            else {
+                swap('clockwise'); 
+            }
         });
+
+/*************************************************************************************************
+        Carousel pour les coups de coeur
+*************************************************************************************************/
+//
+
+ // Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+  interval: 2000
+});
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+
+
+
+
 
 });
 
- 
+
 
 
 
