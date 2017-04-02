@@ -45,7 +45,8 @@
 @beige: #EEE6D3;
 @brun: #977F67;
 @gris: #5A5955;
-@grisClair: #9d9d9d;
+@grisNav: #9d9d9d;
+@grisClair: #e5e5e5;
 
 
 /*************************************************************************************************
@@ -75,7 +76,7 @@ input.erreur {
 body {
 
 	font-family: 'champagneLimousine',Helvetica, sans-serif;
-	color: deeppink;
+	color: black;
 	background-color: @beige;
 }
 
@@ -97,10 +98,9 @@ header {
 #logo {
 	
 	z-index: 1;
-	margin: 1vh;
+	margin: 2vh;
+
 }
-
-
 
 	
 /*************************************************************************************************
@@ -108,12 +108,21 @@ header {
 *************************************************************************************************/
 //
 
-.affix{
-  width:100%;
-  top:0;
-  z-index: 10;
-}
+// postionnement de la barre de navigation 
+// le logo disparaît quand on scroll down 
+// et le menu de navigation reste visible
 
+
+
+/*************************************************************************************************
+		surcharge bootstrap pour permettre de centrer une div dans la largeur
+*************************************************************************************************/
+//
+
+.col-centered {
+    float: none;
+    margin: 0vh auto;
+}
 
 nav {
 	background-color: @bleuNavbar;
@@ -122,17 +131,16 @@ nav {
 	font-weight: bold;
 	font-size: 2rem;
 	position: fixed;
-	z-index: 1;
+	z-index: 5000;
+
 
 	form {
-		min-width: 15rem;
-		max-width: 50rem;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
 	}
 
 	
 	}
-
-// surcharge à Bootstrap pour éviter les arrondis sur la barre de menu de navigation
 
 
 
@@ -141,12 +149,14 @@ nav {
 	// surcharge à Bootstrap : pas de border et couleur différente
 	border-color: rgba(255, 255, 255, 0);
 	margin-bottom: 0px;
+	padding-bottom: 1.5vh;
+	border-radius: 0;
 	// background-color: @gris;
 	// surcharge à Bootstrap : positionnement à gauche du menu sandwich
 	.navbar-toggle {
 		float: right;
 		margin-top: 3vh;
-		margin-right: 2.5vh;
+		margin-right: 4vh;
 		margin-bottom: 3vh;
 			.icon-bar {
 			background-color:@orange;
@@ -157,12 +167,57 @@ nav {
 	}
 
 	.navbar-nav {
+
 		text-align: center;
+		.dropdown-menu  {
+			background-color: @bleuHover;
+			min-width: 60px;
+			max-width: 200px;
+			padding: 5px 0;
+    		margin: 5px 0 0;
+    		border: 1px solid @orange;
+    		border-radius: 6px;
+    		font-size: 2rem;
+
+			> li {
+
+				float: left;
+				display: block;
+		 		a {
+		 			color: @grisNav;
+		 			letter-spacing: 2px;
+					font-weight: bold;
+		
+		 		}
+		 		// écriture couleur orange lors de la sélection des menus
+		 		// background bleu
+		 		a:focus, a:hover{
+					color: @orange;
+		 			background-color: @bleuHover;
+		 			letter-spacing: 2px;
+					font-weight: bold;
+		 		}
+		 		}
+		 		>.active{
+					>a,>a:focus, >a:hover {
+						color:  @orange;
+						background-color: @bleuHover;
+						letter-spacing: 2px;
+    					font-weight: bold;
+					}
+		 		}
+			 	i.fa.fa-facebook-square {
+		    	font-size: 120%;
+
+				}
+		}
+
+
 	 	> li {
 			float: none;
 			display: inline-block;
 	 		a {
-	 			color: @grisClair;
+	 			color: @grisNav;
 	 		}
 	 		// écriture couleur orange lors de la sélection des menus
 	 		// background bleu
@@ -177,6 +232,9 @@ nav {
 					background-color: @bleuHover;
 				}
 	 	}
+	 	i.fa.fa-facebook-square {
+    	font-size: 120%;
+		}
 	 }
 
 	.input-group {
@@ -210,6 +268,8 @@ nav {
 			    
 	}
 }
+
+
 	div#zoneRecherche {
 		margin-top: 3vh;
 		// Couleur orange pour le symbole de la loupe dans le champ de recherche
@@ -217,6 +277,31 @@ nav {
 			color:@orange;
 			}
 
+}
+
+// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
+
+.btn-group, .btn-group-vertical {
+
+    margin-top: 1vh;
+}
+
+// surcharge à Bootstrap : moins de padding
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+}
+
+div#navbar-collapse-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+ul.dropdown-menu>li {
+    text-align: center !important;
+    z-index: 6000;
 }
 
 
@@ -236,20 +321,19 @@ nav {
 //
 
 #carouselNouveautes {
-	margin-top: 3vh;
-	height: 600px;
+	margin-top: 5vh;
+	height: 55vh;
 	z-index: -1;
 
 	section {
-	width: 80%;
+	width: 100%;
 	height: 25em;
 	margin: 0 auto;
-	position: relative;
+	// position: relative;
 	}
 
 	li {
-	// width: 500px;
-	// height: 281px;
+
 	background: #333;
 	display: inline-block;
 	-webkit-transition: all .3s ease-in-out;
@@ -275,14 +359,13 @@ nav {
 	}
 
 	.main-pos {
-	margin-left: 2em !important;
 	z-index: 3000;
-	/*background-image: url('http://dl.dropbox.com/u/32649907/imgs/shadow.png');*/
+	left: 10vh !important;
 	}
 
 	.left-pos {
 	opacity: .3;
-	margin-left: -17em !important;
+	left: -5vh !important;
 	z-index: 1000;
 	-webkit-transform: scale(.75);
 	-moz-transform: scale(.75);
@@ -290,7 +373,7 @@ nav {
 	}
 
 	.back-pos {
-	margin-left: 2em !important;
+	left: 10vh !important;
 	opacity: .05;
 	-webkit-transform: scale(.5);
 	-moz-transform: scale(.5);
@@ -299,19 +382,35 @@ nav {
 
 	.right-pos {
 	opacity: .3;
-	margin-left:  21em !important;
+	right:  -5vh !important;
 	z-index: 1000;
 	-webkit-transform: scale(.75);
 	-moz-transform: scale(.75);
 	transform: scale(.75);
 	}
 
-	span {
-	position: relative;
-	margin: 0 auto;
-	left: 17em;
-	top: 40em;
-	}
+
+
+}
+/*************************************************************************************************
+		Carousel Coups de Coeur
+*************************************************************************************************/
+//
+
+#CarouselCoupsDeCoeur {
+    padding: 5vh;
+}
+
+
+
+
+/*************************************************************************************************
+		corps principal
+*************************************************************************************************/
+//
+
+#mainBody {
+
 }
 
 /*************************************************************************************************
@@ -335,15 +434,16 @@ nav {
 
 .parallaxRideau {
 	background-color: @bleuHover;
-	color: white !important;
 	opacity:0.9;
     padding: 1% 2%;
+    border-radius: 0.5vh;
   	
 }
 
 .blocText {
 	font-family: 'champagneLimousine', Helvetica, sans-serif;
   	font-size: 2vh;
+  	letter-spacing: 0.05vh;
 	color: @grisClair;
 	h2 {
 		font-family: 'erazure', cursive, sans-serif;
@@ -353,6 +453,18 @@ nav {
   		margin-top: 1.5rem;
   		margin-bottom: 1rem;
 	}
+
+	h3 {
+		font-family: 'erazure', cursive, sans-serif;
+		font-size: 3vh;
+		letter-spacing: 1px;
+		color:@orange;
+  		margin-top: 1.5rem;
+  		margin-bottom: 1rem;
+	}
+
+
+
 	label {
 		font-size: 2vh;
 		color:@grisClair;
@@ -368,6 +480,8 @@ nav {
 	}
 }
 
+
+
 #bgAccueil {
 	background-image: url('../img/commun/bdAccueil.jpg');
 
@@ -375,7 +489,7 @@ nav {
 
 #bgBottomAccueil {
 	background-image: url('../img/commun/vueCpFacade.jpg');
-	height: 80vh;
+	height: 140vh;
 }
 
 #bgLaLibrairie {
@@ -383,13 +497,27 @@ nav {
 	height:200vh;
 }
 
-
-#texteAccueil {
-	margin: 15% 0;
+#bgAteliers {
+	background-image: url('../img/commun/bgAtelier.jpg');
+	//height:vh;
 }
 
+#bgBottomAteliers {
+	background-image: url('../img/commun/bgBottomAtelier.jpg');
+	height:200vh;
+}
 
-.nosEspaces {
+#texteAccueil {
+	margin-bottom: 15%;
+}
+
+#photoAtelier > img {
+
+	// min-height: 300px;
+	max-height: 300px;
+}
+
+.paddingTop {
 
 	padding-top:10%;
 
@@ -548,9 +676,9 @@ footer {
 *************************************************************************************************/
 //
 
-/*************************************************************
-		Breakpoint 1 : sur téléphone (petit écran)
-*************************************************************/
+// /*************************************************************
+// 		Breakpoint 1 : sur téléphone (petit écran) XS
+// *************************************************************/
 @media only screen and (max-width: 768px) {
 
 	#divIframe {
@@ -561,39 +689,88 @@ footer {
 		.nav > li > a > img {
 		max-width: 70%;
 	}
-	
 
+	.navbar .navbar-nav > li {
+    float: none;
+    display: block;
+    border-radius: 0;
+	}
+	
 }
 
 
 /*************************************************************
-		Breakpoint 2 : sur tablette (styles spécifiques)
+		Breakpoint 2 : sur tablette (styles généraux) SM
 *************************************************************/
-@media only screen and (min-width: 768px) {
-	
-	.navbar-header {
-		float: none;
-	}
-	#logo {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
 		
+
+	#logo {
 		z-index: 1;
 	}
-}
 
-/*************************************************************
-		Breakpoint 3 : sur tablette (styles généraux)
-*************************************************************/
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-		#divIframe {
+	#divIframe {
 		padding-top: 5vh;
 		height : auto;
 	}
 }
 	
-
 /*************************************************************
-		Breakpoint 4 : sur ordinateur de bureau
+		Breakpoint 3 : sur ordinateur de bureau MD et LG
 *************************************************************/
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 993px) {
 	
 }
+
+
+
+
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 100ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
+
+// // non-related styling:
+// body{
+//   background: #333;
+//   color: #ddd;
+// }
+// h1{
+//   color: white;
+//   font-size: 2.25em;
+//   text-align: center;
+//   margin-top: 1em;
+//   margin-bottom: 2em;
+//   text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+// }
