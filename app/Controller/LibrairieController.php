@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Controller\Traitement\Recherches;
 
 class LibrairieController 		// ON HERITE DE LA CLASSE FormController 
       extends FormController	// QUI HERITE DE LA CLASSE W\Controller\Controller
@@ -94,6 +95,18 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 		// ON TRANSMET A LA VUE DES VARIABLES DEPUIS LE CONTROLEUR AVEC UN TABLEAU ASSOCIATIF
 		// LA CLE newsletterRetour VA ETRE TRANSFORME EN VARIABLE LOCALE $newsletterRetour
 		$this->show('pages/login', [ "loginRetour" => $GLOBALS["loginRetour"] ]);
+	}
+
+	public function resultatRecherche($slug)
+	{
+		$objetRecherche = new Recherches;
+		$tabLigne = $objetRecherche->recupRecherche($slug);
+
+		$GLOBALS['recherche'] = $tabLigne;
+
+		$nbResultat = count($tabLigne);
+
+		$this->show('pages/resultat-recherche', ['recherche' => $GLOBALS['recherche']]);
 	}
 
 }

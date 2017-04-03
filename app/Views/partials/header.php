@@ -49,9 +49,11 @@
 						</button>
 						<div id="zoneRecherche">
 							<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-centered">
-								<form>
+								<form method="POST">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Rechercher">
+										<input type="text" name="recherche" class="form-control" placeholder="Rechercher">
+										<input type="hidden" name="idFormClasse" value="Recherches">
+										<input type="hidden" name="idFormMethode" value="recherchesTraitement">
 										<div class="input-group-btn">
 											<button class="btn btn-default" type="submit">
 												<span class="glyphicon glyphicon-search"></span>
