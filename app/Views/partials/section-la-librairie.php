@@ -1,6 +1,6 @@
 <section id="bgLaLibrairie" class="parallax">
 
-		<div class="row nosEspaces">
+		<div class="row paddingTop">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
 				<div id="espaceAdulte" class="text-center blocText parallaxRideau">
 					<ul>
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row nosEspaces">
+		<div class="row paddingTop">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
 				<div id="espaceJeunesse" class="text-center blocText parallaxRideau">
 					<ul>
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row nosEspaces">	
+		<div class="row paddingTop">	
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
 				<div id="espacePapeterie" class="text-center blocText parallaxRideau">
 					<ul>
