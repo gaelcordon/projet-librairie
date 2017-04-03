@@ -1,5 +1,5 @@
 <section id="bgLaLibrairie" class="parallax">
-
+	<div class="container">
 		<div class="row paddingTop">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
 				<div id="espaceAdulte" class="text-center blocText parallaxRideau">
@@ -57,4 +57,5 @@
 				</div>
 			</div>
 		</div>
+	</div>
 </section> <!-- id="bgLaLibrairie" class="parallax" -->

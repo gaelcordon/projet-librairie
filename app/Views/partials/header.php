@@ -60,7 +60,7 @@
 									</div>
 								</form>
 							</div>
-						</div><!-- div id="zoneRecherche"--> -->
+						</div><!-- div id="zoneRecherche"-->
 				</div> <!-- div class="navbar-header" -->
 				<!-- On récupère les liens de navigations pour les réduire en responsive design -->
 				<div class="collapse navbar-collapse" id="navbar-collapse-1">

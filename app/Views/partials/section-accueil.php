@@ -5,73 +5,75 @@
 						<h2>Nouveautés</h2>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-xs-10 col-md-6 col-centered">
+						<div id="carouselNouveautes">
+							<ul class="carousel">
+							<?php
+								$objetLivresModel = new \Model\LivresModel;
+
+								$tabLigne = $objetLivresModel->findAll($orderBy = "dateParution", $orderDir = "DESC", $limit = 7);
+
+								$i = 0;
+								foreach ($tabLigne as $LigneCourante)
+								{
+									$i++;
+									$couverture = "img/livres/";
+									$couverture .= $LigneCourante["couverture"];
+
+									$alt = "livre_";
+									$alt .= $LigneCourante["titreLivre"];
+
+
+							?>
+								<li class="items main-pos" id="<?php echo $i; ?>">
+								<img class="img-responsive" src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
+								</li>
+							<?php
+								}
+							?>
+							</ul>
+						</div><!-- id="carouselNouveautes" -->
+					</div> 
+				</div> <!-- class="row" -->
+				<!-- <div id="buttonCarousel" class="row text-center">
+					<input type="button" value="Prev" id="prev">
+					<input type="button" value="Next" id="next">
+				</div> -->
+			</div><!--id="nouveautes"-->
+			<div class="container">
+				<div class="row paddingTop">
+					<div class="col-xs-10 col-sm-8 col-md-8 col-centered">
+						<div id="texteAccueil" class="text-center blocText parallaxRideau">
+							<div id="ilEtaitUneFois">
+								<h2>Il était une fois...</h2>
+								<p>
+									Les portes de la librairie, "A la gloire de mon père", se sont ouvertes, la première<br />
+								fois, le 18 avril 2009 grâce à la détermination de sa propriétaire Eve Arnoux.<br />
+								En dépit d’un contexte peu favorable face à une concurrence non spécialisée<br />
+								présente sur Internet, la preuve est faite qu’une librairie généraliste<br />
+								indépendante a su trouver sa place au sein d’un petit village du Vaucluse.<br />
+								<br />
+								Située non loin de la place de la mairie de Mazan, ce sont près de 3500 titres en<br />
+								stock que nous vous proposons sur une surface d’environ 120 m<sup>2</sup>.
+								</p>
+							</div>											
+							<div id="vousAccompagner">
+								<h2>Pour vous accompagner</h2>
+								<p>
+									Deux Libraires sont présentes pour vous conseiller et vous accompagner dans vos recherches.<br />
+								Vous pourrez trouver ici et là nos coups de cœur, n’hésitez pas à nous solliciter…<br />
+								Commerce de proximité, nous privilégions les relations humaines, <br />
+								aimons échanger sur nos et vos dernières lectures…<br />
+								Partage, échange, convivialité sont les maîtres mots.<br />
+								<br />
+								Parfois nous nous plaisons à recevoir un auteur pour une rencontre et dédicace.<br />
+								Vous pouvez également nous rencontrer au cours de Salons, festivals.</p>
+							</div>
+						</div><!--id="texteAccueil"-->
+					</div>
+				</div> <!-- class="row" -->
 			</div>
-					<div class="row">
-						<div class="col-xs-10 col-md-6 col-centered">
-							<div id="carouselNouveautes">
-								<ul class="carousel">
-								<?php
-									$objetLivresModel = new \Model\LivresModel;
-
-									$tabLigne = $objetLivresModel->findAll($orderBy = "dateParution", $orderDir = "DESC", $limit = 7);
-
-									$i = 0;
-									foreach ($tabLigne as $LigneCourante)
-									{
-										$i++;
-										$couverture = "img/livres/";
-										$couverture .= $LigneCourante["couverture"];
-
-										$alt = "livre_";
-										$alt .= $LigneCourante["titreLivre"];
-
-
-								?>
-									<li class="items main-pos" id="<?php echo $i; ?>">
-									<img class="img-responsive" src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
-									</li>
-								<?php
-									}
-								?>
-								</ul>
-							</div><!-- id="carouselNouveautes" -->
-						</div> 
-					</div> <!-- class="row" -->
-					<!-- <div id="buttonCarousel" class="row text-center">
-						<input type="button" value="Prev" id="prev">
-						<input type="button" value="Next" id="next">
-					</div> -->
-					<div class="row paddingTop">
-						<div class="col-xs-10 col-sm-8 col-md-8 col-centered">
-							<div id="texteAccueil" class="text-center blocText parallaxRideau">
-								<div id="ilEtaitUneFois">
-									<h2>Il était une fois...</h2>
-									<p>
-										Les portes de la librairie, "A la gloire de mon père", se sont ouvertes, la première<br />
-									fois, le 18 avril 2009 grâce à la détermination de sa propriétaire Eve Arnoux.<br />
-									En dépit d’un contexte peu favorable face à une concurrence non spécialisée<br />
-									présente sur Internet, la preuve est faite qu’une librairie généraliste<br />
-									indépendante a su trouver sa place au sein d’un petit village du Vaucluse.<br />
-									<br />
-									Située non loin de la place de la mairie de Mazan, ce sont près de 3500 titres en<br />
-									stock que nous vous proposons sur une surface d’environ 120 m<sup>2</sup>.
-									</p>
-								</div>											
-								<div id="vousAccompagner">
-									<h2>Pour vous accompagner</h2>
-									<p>
-										Deux Libraires sont présentes pour vous conseiller et vous accompagner dans vos recherches.<br />
-									Vous pourrez trouver ici et là nos coups de cœur, n’hésitez pas à nous solliciter…<br />
-									Commerce de proximité, nous privilégions les relations humaines, <br />
-									aimons échanger sur nos et vos dernières lectures…<br />
-									Partage, échange, convivialité sont les maîtres mots.<br />
-									<br />
-									Parfois nous nous plaisons à recevoir un auteur pour une rencontre et dédicace.<br />
-									Vous pouvez également nous rencontrer au cours de Salons, festivals.</p>
-								</div>
-							</div><!--id="texteAccueil"-->
-						</div>
-					</div> <!-- class="row" -->
 		</section> <!-- id="bdAccueil" class="parallax" -->
 
 		<section id="bgBottomAccueil" class="parallax">
@@ -123,5 +125,5 @@
 						</div>
 					</div>
 				</div><!-- id="adresseSection" class="row" -->
-			<div class="container">
+			</div><!-- class="container-fluid"-->
 		</section> <!-- id="bdBottomAccueil" class="parallax container-fluid" -->
