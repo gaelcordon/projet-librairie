@@ -16,88 +16,32 @@
 			</button>
 		</div>
 	</div>
+	<div id="afficheRetour" class="row">
+<?php
 
-	<!--<div id="formBook" class="row">
-		<div class="col-lg-push-3 col-lg-5">
-			<h3>Formulaire de saisie de livres</h3>
-			<form method="GET" action="">
-				<div>
-					<input type="text" name="titreLivre" required placeholder="Titre du Livre">
-				</div>
-				<div>
-		            <select name="auteur" id="auteur">
-		            <option value="0" selected disabled>Sélectionnez l'auteur</option>
-		            <option value="2">Pier</option>
-		                <?php /*
-		                foreach($listeAuteurs as $auteur)
-		                {
-		                    echo '<option value="'.$auteur['id'].'">'.$auteur['prenom'].' '.$auteur['nom'].'</option>';
-		                }*/
-		                ?> 
-		            </select>
-		        </div>
-	            <div><a href="#">ajoutez un auteur non listé</a></div>
-	            <div>
-		            <label>Coup de Coeur ?</label>
-		            <input type="checkbox" name="coupDeCoeur" value="oui">
-		        </div>
-		        <div>
-	            	<input type="text" name="isbn" placeholder="ISBN">
-	            </div>
-	            <div>
-	            	<input type="text" name="prix" required placeholder="Prix public en Euros">
-	            </div>
-	            <div>
-	            	<input type="text" class="datePicker" name="dateParution" placeholder="Date de Parution">
-	            </div>
-	            <div>
-	            	<input type="text" name="nbPage" placeholder="Nbre de pages">
-	            </div>
-	            <div>
-		            <select name="editeur" id="editeur">
-		                <option value="0" selected disabled>Sélectionnez l'éditeur</option>
-		                <option value="2">PierEdition</option>
-		                <?php/*
-		                foreach($listeEditeurs as $editeur)
-		                {
-		                    echo '<option value="'.$editeur['id'].'">'.$editeur['libelle'].'</option>';
-		                }*/
-		                ?>
-		            </select>
-		        </div>
-				<div>
-	            <select name="genre" id="genre">
-	                <option value="0" selected disabled>Sélectionnez un genre...</option>
-	                <option value="2">Roman</option>
-	                <?php/*
-	                foreach($listeGenres as $genre)
-	                {
-	                    echo '<option value="'.$genre['id'].'">'.$genre['libelle'].'</option>';
-	                }*/
-	                ?>
-	            </select>
-	            </div>
-	            <div>
-		            <select name="sgenre" id="sgenre">
-		            	<option value="0" selected>Sous-Genre 1</option>
-		            	<option value="8" selected>Fantastique</option>
-		            </select>
-		        </div>
-		        <div>
-	            	<textarea name="resume" rows="10" cols="50">Résumé</textarea>
-	            </div>
-	            <div>
-	            	<input type="text" name="couverture" placeholder="Adresse Image">
-	            </div>
-	            <button type="submit">Ajouter le livre</button>-->
-	            <!-- INFOS TECHNIQUES -->
-	            <!--<input type="hidden" name="idForm" value="ajoutLivre"/>	
-	            <div class="retour">
-	<?php if(isset($livreCreateRetour)) echo $livreCreateRetour ; ?>            	
-	            </div>
-			</form>
-		</div>
-	</div>-->
+$objetAuteursModel = new \Model\AuteursModel;
+$listeAuteurs = $objetAuteursModel->findAll();
+
+$objetEditeursModel = new \Model\EditeursModel;
+$listeEditeurs = $objetEditeursModel->findAll();
+
+$objetCollectionsModel = new \Model\CollectionsModel;
+$listeCollections = $objetCollectionsModel->findAll();
+
+$objetGenresModel = new \Model\GenresModel;
+$listeGenres = $objetGenresModel->findAll();
+
+$objetSousgenresModel = new \Model\SousgenresModel;
+$listeSousgenres = $objetSousgenresModel->findAll();
+
+$objetFormatsModel = new \Model\FormatsModel;
+$listeFormats = $objetFormatsModel->findAll();
+
+$objetPresentationsModel = new \Model\PresentationsModel;
+$listePresentations = $objetPresentationsModel->findAll();
+
+?>
+	</div>
 
 	<div class="modal fade" id="modalBook" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   		<div class="modal-dialog" role="document">
@@ -107,112 +51,134 @@
         			<h4 class="modal-title" id="myModalLabel">Formulaire de saisie de livres</h4>
       			</div>
       			<div class="modal-body">
-        			<form method="GET" action="">
-						<div class="form-group">
-							<input type="text" class="form-control" name="titreLivre" required placeholder="Titre du Livre">
+        			<form method="get" action="">
+        				<div class="form-group">
+                        	<input class="form-control" type="text" name="titreLivre" required placeholder="Titre">
 						</div>
 						<div class="form-group">
-				            <select name="auteur" class="form-control" id="auteur">
-				            <option value="0" selected disabled>Sélectionnez l'auteur</option>
-				            <option value="2">Pier</option>
-				                <?php /*
-				                foreach($listeAuteurs as $auteur)
-				                {
-				                    echo '<option value="'.$auteur['id'].'">'.$auteur['prenom'].' '.$auteur['nom'].'</option>';
-				                }*/
-				                ?> 
-				            </select>
-				        </div>
-			            <div><a href="#">ajoutez un auteur non listé</a></div>
-			            <div class="form-group">
-				            <label>Coup de Coeur ?</label>
-				            <input type="checkbox" class="form-control" name="coupDeCoeur" value="oui">
-				        </div>
-				        <div class="form-group">
-			            	<input type="text" class="form-control" name="isbn" placeholder="ISBN">
-			            </div>
-			            <div class="form-group">
-			            	<input type="text" class="form-control" name="prix" required placeholder="Prix public en Euros">
-			            </div>
-			            <div class="form-group">
-			            	<input type="text" class="datePicker form-control" name="dateParution" placeholder="Date de Parution">
-			            </div>
-			            <div class="form-group">
-			            	<input type="text" class="form-control" name="nbPage" placeholder="Nbre de pages">
-			            </div>
-			            <div class="form-group">
-				            <select name="editeur" class="form-control" id="editeur">
-				                <option value="0" selected disabled>Sélectionnez l'éditeur</option>
-				                <option value="2">PierEdition</option>
-				                <?php/*
-				                foreach($listeEditeurs as $editeur)
-				                {
-				                    echo '<option value="'.$editeur['id'].'">'.$editeur['libelle'].'</option>';
-				                }*/
-				                ?>
-				            </select>
-				        </div>
+	                        <select class="form-control" name="auteur" id="auteur">
+	                            <option value="0" selected disabled>Auteur...</option>
+	                            <?php
+	                            foreach($listeAuteurs as $auteur)
+	                            {
+	                                echo '<option value="'.$auteur['id'].'">'.$auteur['libelle'].'</option>
+	                            ';
+	                            }
+	                            ?>
+	                        </select>
+                        	<a href="#">Ajouter</a>
+                        </div>
+                        <div class="form-group">
+	                        <select class="form-control" name="editeur" id="editeur">
+	                            <option value="0" selected disabled>Editeur...</option>
+	                            <?php
+	                            foreach($listeEditeurs as $editeur)
+	                            {
+	                                echo '<option value="'.$editeur['id'].'">'.$editeur['libelle'].'</option>
+	                            ';
+	                            }
+	                            ?>
+	                        </select>
+	                    </div>
+                        <div class="form-group">
+	                        <select class="form-control" name="collection" id="collection">
+	                            <option value="0" selected disabled>Collection...</option>
+	                            <?php
+	                            foreach($listeCollections as $collection)
+	                            {
+	                                echo '<option value="'.$collection['id'].'">'.$collection['libelle'].'</option>
+	                            ';
+	                            }
+	                            ?>
+	                        </select>
+	                    </div>
+	                    <div class="form-group">
+	                        <select class="form-control" name="genre" id="genre">
+	                            <option value="0" selected disabled>Genre...</option>
+	                            <?php
+	                            foreach($listeGenres as $genre)
+	                            {
+	                                echo '<option value="'.$genre['id'].'">'.$genre['libelle'].'</option>
+	                            ';
+	                            }
+	                            ?>
+	                        </select>
+	                    </div>
+	                    <div class="form-group">
+	                        <select class="form-control" name="sgenre" id="sgenre">
+	                        	<option value="0" selected disabled>Sous-Genre...</option>
+	                            <?php
+	                            foreach($listeSousgenres as $sousgenre)
+	                            {
+	                                echo '<option value="'.$sousgenre['id'].'">'.$sousgenre['libelle'].'</option>
+	                            ';
+	                            }
+	                            ?>
+	                        </select>
+	                    </div>
 						<div class="form-group">
-				            <select name="genre" class="form-control" id="genre">
-				                <option value="0" selected disabled>Sélectionnez un genre...</option>
-				                <option value="2">Roman</option>
-				                <?php/*
-				                foreach($listeGenres as $genre)
-				                {
-				                    echo '<option value="'.$genre['id'].'">'.$genre['libelle'].'</option>';
-				                }*/
-				                ?>
-				            </select>
-			            </div>
-			            <div class="form-group">
-				            <select name="sgenre" class="form-control" id="sgenre">
-				            	<option value="0" selected>Sous-Genre 1</option>
-				            	<option value="8" selected>Fantastique</option>
-				            </select>
-				        </div>
-				        <div class="form-group">
-			            	<textarea name="resume" class="form-control" rows="10" cols="50">Résumé</textarea>
-			            </div>
-			            <div class="form-group">
-			            	<input type="text" class="form-control" name="couverture" placeholder="Adresse Image">
-			            </div>
+                        	<input class="form-control" type="text" class="datePicker" name="dateParution" placeholder="Date de Parution">
+                       	</div>
+						<div class="form-group">
+                        	<input class="form-control" type="text" name="isbn" placeholder="ISBN">
+                        </div>
+                        <div class="form-group">
+	                        <select class="form-control" name="format" id="format">
+	                            <option value="0" selected disabled>Format...</option>
+	                            <?php
+	                            foreach($listeFormats as $format)
+	                            {
+	                                echo '<option value="'.$format['id'].'">'.$format['libelle'].'</option>
+	                            ';
+	                            }
+	                            ?>
+	                        </select>
+	                    </div>
+                        <div class="form-group">
+	                        <select class="form-control" name="presentation" id="presentation">
+	                            <option value="0" selected disabled>Présentation...</option>
+	                            <?php
+	                            foreach($listePresentations as $presentation)
+	                            {
+	                                echo '<option value="'.$presentation['id'].'">'.$presentation['libelle'].'</option>
+	                            ';
+	                            }
+	                            ?>
+	                        </select>
+	                    </div>
+	                    <div class="form-group">
+                        	<input class="form-control" type="number" name="nbPage" placeholder="Nbre de pages"/>
+                        </div>
+                        <div class="form-group">
+                        	<input class="form-control" type="text" name="poids" placeholder="Poids"/>
+                        </div>
+                        <div class="form-group">
+                        	<input class="form-control" type="text" name="dimensions" placeholder="Dimensions"/>
+                        </div>
+                        <div class="form-group">
+                        	<textarea class="form-control" name="resume" rows="10" cols="50">Résumé</textarea>
+                        </div>
+                        <div class="form-group">
+                        	<input class="form-control" type="text" name="couverture" placeholder="Adresse image de couverture"/>
+                        </div>
+                        <div class="form-group">
+                        	<input class="form-control" type="number" name="prix" placeholder="Prix pubic en Euros"/>
+                        </div>
+                        <div class="form-group">
+                        	<label>Coup de Coeur ?</label>
+                        	<input class="form-control" type="checkbox" name="coupDeCoeur" value="non"/>
+                        </div>
+			            <input type="hidden" name="idFormClasse" value="Livres">
+						<input type="hidden" name="idFormMethode" value="livreCreateTraitement">
+	        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    	    			<button type="submit" class="btn btn-primary">Ajouter ce livre</button>
 					</form>
 		      	</div>
       			<div class="modal-footer">
-        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        			<button type="button" class="btn btn-primary">Ajouter cet utilisateur</button>
       			</div>
     		</div>
   		</div>
 	</div>
-
-	<!--<div id="formEvent" class="row">
-        <h3>Formulaire de saisie d'évènements</h3>
-        <form method="POST" action="">
-        	<div>
-            	<input type="text" name="titreEvent" required placeholder="Titre de l'évènement">
-			</div>
-			<div>
-            	<input type="text" class="datePicker" name="dateEvent" required placeholder="Date de l'évènement">
-			</div>
-			<div>
-            	<input type="text" class="timePicker" name="heureEvent" required placeholder="Heure de l'évènement">
-			</div>
-			<div>
-            	<textarea name="description" rows="10" cols="50">Description</textarea>
-			</div>
-			<div>
-            	<input type="text" name="photo" placeholder="Url de la photo">
-            </div>
-            <button type="submit">Publier cet évènement</button>-->
-            <!-- INFOS TECHNIQUES -->
-            <!--<input type="hidden" name="idForm" value="ajoutEvent"/>
-            <div class="retour">
-<?php if(isset($eventCreateRetour)) echo $eventCreateRetour ; ?>            	
-            </div>
-        </form>
-	</div>-->
-
 
 	<div class="modal fade" id="modalEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   		<div class="modal-dialog" role="document">
@@ -238,39 +204,17 @@
 						<div class="form-group">
 			            	<input type="text" class="form-control" name="photo" placeholder="Url de la photo">
 			            </div>
+			            <input type="hidden" name="idFormClasse" value="Evenements">
+						<input type="hidden" name="idFormMethode" value="eventCreateTraitement">
+	        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        			<button type="submit" class="btn btn-primary">Ajouter cet évènement</button>
 					</form>
       			</div>
       			<div class="modal-footer">
-        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        			<button type="button" class="btn btn-primary">Ajouter cet utilisateur</button>
       			</div>
     		</div>
   		</div>
 	</div>
-
-	<!--<div id="formUser" class="row">
-		<h3>Formulaire d'ajout d'utilisateurs</h3>
-		<form method="POST" action="">
-			<div>
-				<input type="text" name="username" required placeholder="Nom d'utilisateur">
-			</div>
-			<div>
-				<input type="email" name="email" required placeholder="Adresse email">
-			</div>
-			<div>
-				<input type="password" name="password1" required placeholder="Mot de passe" title="au moins 3 caractères" />
-			</div>
-			<div>
-				<input type="password" name="password2" required placeholder="Confirmez le mot de passe" title="au moins 3 caractères" />
-			</div>
-			<input type="hidden" name="idFormClasse" value="Utilisateurs">
-			<input type="hidden" name="idFormMethode" value="UtilisateursTraitement">
-			<button>Ajouter cet utilisateur</button>
-			<div class="retour">
-			<?php if (isset($GLOBALS["ajoutUtilisateurRetour"])) echo $GLOBALS["ajoutUtilisateurRetour"]; ?>
-			</div>	
-		</form>		
-	</div>-->
 
 	<div class="modal fade" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   		<div class="modal-dialog" role="document">
@@ -295,11 +239,11 @@
 						</div>
 						<input type="hidden" name="idFormClasse" value="Utilisateurs">
 						<input type="hidden" name="idFormMethode" value="UtilisateursTraitement">
+	        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    	    			<button type="submit" class="btn btn-primary">Ajouter cet utilisateur</button>
 					</form>
       			</div>
       			<div class="modal-footer">
-        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        			<button type="button" class="btn btn-primary">Ajouter cet utilisateur</button>
       			</div>
     		</div>
   		</div>
