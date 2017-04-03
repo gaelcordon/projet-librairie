@@ -38,7 +38,6 @@
 		<nav class="navbar">
 				<!-- Menu sandwich -->
 				<div class="navbar-header col-centered">
-					<div class="row">
 						<div id="logo" class="col-xs-3 col-sm-12" >
 							<a href="<?php echo $this->url('librairie_accueil'); ?>"><img class="img-responsive center-block" src="<?php echo $this->assetUrl('img/commun/logoLibrairie.png')?>" alt="logo-librairie-a-la-gloire-de-mon-pere-Mazan"></a>
 						</div>
@@ -62,7 +61,6 @@
 								</form>
 							</div>
 						</div><!-- div id="zoneRecherche"-->
-					</div><!-- div class="row" -->
 				</div> <!-- div class="navbar-header" -->
 				<!-- On récupère les liens de navigations pour les réduire en responsive design -->
 				<div class="collapse navbar-collapse" id="navbar-collapse-1">
@@ -90,5 +88,3 @@
 		</nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
 	</header>
 <main>
-	<div id="mainBody" class="container-fluid">
-		<div class="row">
