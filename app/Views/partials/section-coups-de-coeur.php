@@ -87,6 +87,28 @@
 
 		if ($coupDeCoeur == "oui")
 		{
+			$objetAuteursModel = new \Model\AuteursModel;
+			$auteur = $objetAuteursModel->find($id_auteur);
+
+			$objetEditeursModel = new \Model\EditeursModel;
+			$editeur = $objetEditeursModel->find($id_editeur);
+
+			$objetCollectionsModel = new \Model\CollectionsModel;
+			$collection = $objetCollectionsModel->find($id_collection);
+
+			$objetGenresModel = new \Model\GenresModel;
+			$genre = $objetGenresModel->find($id_genre);
+
+			$objetSousgenresModel = new \Model\SousgenresModel;
+			$sousgenre = $objetSousgenresModel->find($id_sousgenre);
+
+			$objetFormatsModel = new \Model\FormatsModel;
+			$format = $objetFormatsModel->find($id_format);
+
+			$objetPresentationsModel = new \Model\PresentationsModel;
+			$presentation = $objetPresentationsModel->find($id_presentation);
+
+
 			echo
 <<<CODEHTML
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal$id">
@@ -109,15 +131,15 @@ CODEHTML;
 <<<CODEHTML
 				' alt='couverture' />
 				<p>Crée le : $dateCrea</p>
-				<p>Auteur : $id_auteur</p>
-				<p>Editeur : $id_editeur</p>
-				<p>Collection : $id_collection</p>
-				<p>Genre : $id_genre</p>
-				<p>Sous-Genre : $id_sousgenre</p>
+				<p>Auteur : $auteur[libelle]</p>
+				<p>Editeur : $editeur[libelle]</p>
+				<p>Collection : $collection[libelle]</p>
+				<p>Genre : $genre[libelle]</p>
+				<p>Sous-Genre : $sousgenre[libelle]</p>
 				<p>Date de parution : $dateParution</p>
 				<p>ISBN : $isbn</p>
-				<p>Format : $id_format</p>
-				<p>Présentation : $id_presentation</p>
+				<p>Format : $format[libelle]</p>
+				<p>Présentation : $presentation[libelle]</p>
 				<p>Nombre de pages : $nbPage</p>
 				<p>Poids : $poids</p>
 				<p>dimension : $dimensions</p>
