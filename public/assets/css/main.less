@@ -268,15 +268,52 @@ nav {
 			    
 	}
 }
+/*************************************************************************************************
+		Zone de recherche expanded
+*************************************************************************************************/
+//
 
+div#zoneRecherche {
+	margin-top: 3vh;
+	// Couleur orange pour le symbole de la loupe dans le champ de recherche
+	.glyphicon-search:before {
+		color:@orange;
+		}
+	> #searchIcon {
+	  display: inline-block;
+	  float: left;
+	  width: 33.333333333%;
+	  background-color: @bleuNavbar;
+	  text-align: center;
+	  padding: 5px 0;
+	  border: 1px solid #ccc;
+	  cursor: pointer;
+	  &:hover {
+	    background-color: @bleuHover;
+	    color: #fff;
+	   }
+	  // span {
+	  //   display: block;
+	  // }
+	}
 
-	div#zoneRecherche {
-		margin-top: 3vh;
-		// Couleur orange pour le symbole de la loupe dans le champ de recherche
-		.glyphicon-search:before {
-			color:@orange;
-			}
-
+	.search-form {
+    padding: 5px 15px;
+	}
+	.search-bar {
+	  background-color: #ccc;
+	  #search-text {
+	    float: left;
+	    width: -moz-calc(100% - 40px);
+	    width: -webkit-calc(100% - 40px);
+	    width: -o-calc(100% - 40px);
+	    width: calc(100% - 50px);
+	  }
+	  .search-btn {
+	    display: inline-block;
+	    margin-left: 10px;
+	  }
+	}
 }
 
 // surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
@@ -305,11 +342,7 @@ ul.dropdown-menu>li {
 }
 
 
-// #mainSection {
-//   position:relative;
-//   top:10vh;
 
-// }
 
 // postionnement de la barre de navigation 
 // le logo disparaît quand on scroll down 
