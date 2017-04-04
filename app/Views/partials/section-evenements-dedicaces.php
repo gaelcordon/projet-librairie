@@ -1,7 +1,7 @@
 <section id="bgEvenements" class="parallax">
 	<div id="Evenements" class="container paddingBottom">
 		<div class="row paddingTop">
-			<div class="blocText parallaxRideau col-centered text-center col-md-8">
+			<div class="blocText parallaxRideau col-centered text-center col-md-10">
 				<h2>Les évènements / Dédicaces</h2>
 				<p>
 					Bienvenue dans cet espace réservé à une sélection d'actualités culturelles.<br />

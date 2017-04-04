@@ -88,7 +88,7 @@
 									<strong>La Gloire De Mon Père</strong><br>
 									265 Avenue de l'Europe<br />
 									84380 Mazan<br />
-									<abbr title="Phone">Tel :</abbr> 04 90 30 94 99
+									<abbr title="Phone"> 04 90 30 94 99 </abbr>
 								</address>
 							</div>
 						</div>
