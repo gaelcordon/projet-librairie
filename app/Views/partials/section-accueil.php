@@ -5,8 +5,8 @@
 						<h2>Nouveautés</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-10 col-md-6 col-centered">
+				<div class="row parallaxRideau">
+					<div class="col-centered">
 						<div id="carouselNouveautes">
 							<ul class="carousel">
 							<?php
@@ -27,7 +27,7 @@
 
 							?>
 								<li class="items main-pos" id="<?php echo $i; ?>">
-								<img class="img-responsive" src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
+									<img src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
 								</li>
 							<?php
 								}
@@ -42,9 +42,9 @@
 				</div> -->
 			</div><!--id="nouveautes"-->
 			<div class="container">
-				<div class="row">
+				<div class="row parallaxRideau">
 					<div class="col-xs-10 col-sm-8 col-md-8 col-centered">
-						<div class="text-center blocText parallaxRideau">
+						<div class="text-center blocText">
 							<div id="ilEtaitUneFois">
 								<h2>Il était une fois...</h2>
 								<p>
