@@ -69,7 +69,7 @@
 								<a href="<?php echo $this->url('librairie_accueil'); ?>"><img src="<?php echo $this->assetUrl('img/commun/iconAccueil.png')?>" alt="icon-accueil-librairie-Mazan"></a>
 								<ul class="dropdown-menu">
 									<li><a href="#!"><span class="glyphicon glyphicon-envelope"></span>  contacter</a></li>
-									<li><a href="<?php echo $this->url('librairie_reseaux_sociaux'); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i>  Suivez-nous</a></li>
+									<li><a href="https://www.facebook.com/librairiegloire/?ref=ts&fref=ts" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i>  Suivez-nous</a></li>
 									<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
 									<?php if ( isset($w_user["id"]) && ($w_user["id"] > 0) ) : ?>
 									<li><a href="<?php echo $this->url('admin_administration'); ?>"><span class="glyphicon glyphicon-cog"></span>  Admin</a></li>
