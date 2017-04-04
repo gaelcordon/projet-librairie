@@ -77,7 +77,7 @@
       		</div>
       		<div class="modal-body">
 				<h3><?php echo $titreLivre; ?></h3>
-				<img src='<?php echo $this->assetUrl($couverture); ?>' alt='couverture' />
+				<img class="img-responsive" src='<?php echo $this->assetUrl($couverture); ?>' alt='couverture' />
 				<p>Crée le : <?php echo $dateCrea; ?></p>
 				<p>Auteur : <?php echo $auteur["libelle"]; ?></p>
 				<p>Editeur : <?php echo $editeur["libelle"]; ?></p>
@@ -122,7 +122,7 @@
 <div class="col-md-push-3 col-md-6 row parallaxRideauRecherche">
 	<div class="blocText col-md-12 col-same-height divRecherche">
 		<h3><?php echo $titreEvent; ?></h3>
-		<img src='<?php echo $this->assetUrl($photo); ?>' alt='photo' />
+		<img class="img-responsive" src='<?php echo $this->assetUrl($photo); ?>' alt='photo' />
 		<p>Date de l'évènement : <?php echo $dateEvent; ?> à <?php echo $heureEvent; ?></p>
 		<p><?php echo $description; ?></p>
 	</div>

@@ -92,6 +92,107 @@ $(function(){
         $('.afficheEvent').show("fast");
     });
 
+    ////////////////// JS Librairie ////////////////////
+
+    // Section Adulte
+
+    $('#française').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieAdulte').hide();
+        $('#divGeneralAdulte').hide();
+        $('#divFrançaise').show("fast");
+    })
+
+    $('#etrangere').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieAdulte').hide();
+        $('#divGeneralAdulte').hide();
+        $('#divEtrangere').show("fast");
+    })
+
+    $('#thriller').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieAdulte').hide();
+        $('#divGeneralAdulte').hide();
+        $('#divPoliciere').show("fast");
+    })
+
+    $('#albums').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieAdulte').hide();
+        $('#divGeneralAdulte').hide();
+        $('#divBDAdulte').show("fast");
+    })
+
+    $('#developpement').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieAdulte').hide();
+        $('#divGeneralAdulte').hide();
+        $('#divSante').show("fast");
+    })
+
+    $('#cuisine').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieAdulte').hide();
+        $('#divGeneralAdulte').hide();
+        $('#divCuisine').show("fast");
+    })
+
+    // Section Jeunesse
+
+    $('#documentaire').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieJeunesse').hide();
+        $('#divGeneralJeunesse').hide();
+        $('#divDocumentaire').show("fast");
+    })
+
+    $('#premiere').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieJeunesse').hide();
+        $('#divGeneralJeunesse').hide();
+        $('#divPremiere').show("fast");
+    })
+
+    $('#preados').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieJeunesse').hide();
+        $('#divGeneralJeunesse').hide();
+        $('#divPreados').show("fast");
+    })
+
+    $('#young').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieJeunesse').hide();
+        $('#divGeneralJeunesse').hide();
+        $('#divYoung').show("fast");
+    })
+
+    $('#manga').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieJeunesse').hide();
+        $('#divGeneralJeunesse').hide();
+        $('#divManga').show("fast");
+    })
+
+    $('#panini').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieJeunesse').hide();
+        $('#divGeneralJeunesse').hide();
+        $('#divPanini').show("fast");
+    })
+
+    $('#creatifs').click(function(event){
+        event.preventDefault();
+        $('.divLibrairieJeunesse').hide();
+        $('#divGeneralJeunesse').hide();
+        $('#divCreatifs').show("fast");
+    })
+
+
+
+    ////////////////////////////////////////////////////
+
     // Effet Parallax
 
     $(window).scroll(function(e){
