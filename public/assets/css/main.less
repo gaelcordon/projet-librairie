@@ -132,7 +132,7 @@ nav {
 	font-weight: bold;
 	font-size: 2rem;
 	position: fixed;
-	z-index: 5000;
+	z-index: 10;
 
 
 	form {
@@ -339,7 +339,7 @@ div#navbar-collapse-1 {
 
 ul.dropdown-menu>li {
     text-align: center !important;
-    z-index: 6000;
+    z-index: 50;
 }
 
 
@@ -394,14 +394,14 @@ ul.dropdown-menu>li {
 	}
 
 	.main-pos {
-	z-index: 3000;
+	z-index: 5;
 	left: 10vh !important;
 	}
 
 	.left-pos {
 	opacity: .3;
 	left: -5vh !important;
-	z-index: 1000;
+	z-index: 0;
 	-webkit-transform: scale(.75);
 	-moz-transform: scale(.75);
 	transform: scale(.75);
@@ -418,7 +418,7 @@ ul.dropdown-menu>li {
 	.right-pos {
 	opacity: .3;
 	right:  -5vh !important;
-	z-index: 1000;
+	z-index: 0;
 	-webkit-transform: scale(.75);
 	-moz-transform: scale(.75);
 	transform: scale(.75);
@@ -448,7 +448,6 @@ ul.dropdown-menu>li {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	z-index: -1; // permet à l'image de passer sous le logo et la barre de navigation
 }
 
 /*************************************************************************************************
@@ -527,6 +526,10 @@ ul.dropdown-menu>li {
 	height:200vh;
 }
 
+#bgCoupsDeCoeur {
+	background-image: url('../img/commun/bgCoupsDeCoeur.jpg');
+}
+
 #bgAteliers {
 	background-image: url('../img/commun/bgAtelier.jpg');
 }
@@ -538,7 +541,7 @@ ul.dropdown-menu>li {
 
 #bgBottomAteliers {
 	background-image: url('../img/commun/bgBottomAtelier.jpg');
-	// height:100vh;
+	height:100vh;
 }
 
 #bgAdmin {
@@ -653,17 +656,9 @@ footer {
 }
 
 #menuAdmin {
-	max-width: 70%;
 
-	.btn-primary {
-
-    border-color: @orange;
-	}
-
-	.btn-primary:hover {
-
-    border-color: @grisClair;
-	}
+	padding: 1% 2%;
+    margin: 10vh 2vh;
 }
 
 #menuAdmin div {
@@ -732,17 +727,40 @@ footer {
 .modal-body, .modal-header, .modal-footer {
 	background-color: @bleuNavbar;
 	color: @orange;
+	border-bottom: 1px solid @orange;
+	border-top: 0;
+	 a {
+		color: @orange;
+		}
 }
-
 .btn-primary {
 	background-color: @bleuNavbar;
 	color: @grisClair;
+	border-color: @orange;
 }
 
 .btn-primary:hover, .btn-primary:focus {
 	background-color: @bleuHover !important;
 	color: @orange !important;
+    border-color: @grisClair;
+
 }
+
+.btn-default {
+    color: @orange;
+    font-weight: bold;
+    background-color: @bleuNavbar;
+    border-color: @orange;
+}
+#modalBook, #modalEvent, #modalUser {
+
+	.modal-content {
+	top:40vh;
+
+			}
+}
+
+
 /*************************************************************************************************
 		réglages particuliers des Breakpoints pour les différents périphériques 
 *************************************************************************************************/

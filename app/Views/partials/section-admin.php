@@ -1,6 +1,6 @@
 <section id="bgAdmin" class="parallax">
 	<div class="container">
-		<div id="menuAdmin" class="row parallaxRideau">
+		<div id="menuAdmin" class="row">
 
 				<div class="col-sm-4">
 					<button type="button" id="addBook" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalBook">

@@ -1,4 +1,4 @@
-<section id="notreSelectionCoupDeCoeur" class="parallax">
+<section id="bgCoupsDeCoeur" class="parallax">
 	<div class="container">
 		<div class="row parallaxRideau">
 			<div class="blocText col-centered text-center col-md-8">
@@ -48,68 +48,68 @@
 		      </div>
 		    </div>
 		  </div> -->
-</section>
 
 
-<article class="container">
-	<div class="row">   
-		<div class="col-xd-4 col-lg-2">
-                
-<?php 
-	$objetEvenementsModel = new \Model\LivresModel;
 
-	$tabLignes = $objetEvenementsModel->findAll("id", "DESC");
+	<div class="container">
+		<div class="row">   
+			<div class="col-xd-4 col-lg-2">
+	                
+	<?php 
+		$objetEvenementsModel = new \Model\LivresModel;
 
-	foreach($tabLignes as $LigneCourante)
-	{
-		$id = $LigneCourante["id"];
-		$titreLivre = $LigneCourante["titreLivre"];
-		$id_auteur = $LigneCourante["id_auteur"];
-		$id_editeur = $LigneCourante["id_editeur"];
-		$id_collection = $LigneCourante["id_collection"];
-		$id_genre = $LigneCourante["id_genre"];
-		$id_sousgenre = $LigneCourante["id_sousgenre"];
-		$dateParution = $LigneCourante["dateParution"];
-		$isbn = $LigneCourante["isbn"];
-		$id_format = $LigneCourante["id_format"];
-		$id_presentation = $LigneCourante["id_presentation"];
-		$nbPage = $LigneCourante["nbPage"];
-		$poids = $LigneCourante["poids"];
-		$dimensions = $LigneCourante["dimensions"];
-		$resume = $LigneCourante["resume"];
+		$tabLignes = $objetEvenementsModel->findAll("id", "DESC");
 
-		$couverture = "img/livres/";
-		$couverture .= $LigneCourante["couverture"];
-
-		$prix = $LigneCourante["prix"];
-		$coupDeCoeur = $LigneCourante["coupDeCoeur"];
-		$dateCrea = $LigneCourante["dateCrea"];
-
-		if ($coupDeCoeur == "oui")
+		foreach($tabLignes as $LigneCourante)
 		{
-			$objetAuteursModel = new \Model\AuteursModel;
-			$auteur = $objetAuteursModel->find($id_auteur);
+			$id = $LigneCourante["id"];
+			$titreLivre = $LigneCourante["titreLivre"];
+			$id_auteur = $LigneCourante["id_auteur"];
+			$id_editeur = $LigneCourante["id_editeur"];
+			$id_collection = $LigneCourante["id_collection"];
+			$id_genre = $LigneCourante["id_genre"];
+			$id_sousgenre = $LigneCourante["id_sousgenre"];
+			$dateParution = $LigneCourante["dateParution"];
+			$isbn = $LigneCourante["isbn"];
+			$id_format = $LigneCourante["id_format"];
+			$id_presentation = $LigneCourante["id_presentation"];
+			$nbPage = $LigneCourante["nbPage"];
+			$poids = $LigneCourante["poids"];
+			$dimensions = $LigneCourante["dimensions"];
+			$resume = $LigneCourante["resume"];
 
-			$objetEditeursModel = new \Model\EditeursModel;
-			$editeur = $objetEditeursModel->find($id_editeur);
+			$couverture = "img/livres/";
+			$couverture .= $LigneCourante["couverture"];
 
-			$objetCollectionsModel = new \Model\CollectionsModel;
-			$collection = $objetCollectionsModel->find($id_collection);
+			$prix = $LigneCourante["prix"];
+			$coupDeCoeur = $LigneCourante["coupDeCoeur"];
+			$dateCrea = $LigneCourante["dateCrea"];
 
-			$objetGenresModel = new \Model\GenresModel;
-			$genre = $objetGenresModel->find($id_genre);
+			if ($coupDeCoeur == "oui")
+			{
+				$objetAuteursModel = new \Model\AuteursModel;
+				$auteur = $objetAuteursModel->find($id_auteur);
 
-			$objetSousgenresModel = new \Model\SousgenresModel;
-			$sousgenre = $objetSousgenresModel->find($id_sousgenre);
+				$objetEditeursModel = new \Model\EditeursModel;
+				$editeur = $objetEditeursModel->find($id_editeur);
 
-			$objetFormatsModel = new \Model\FormatsModel;
-			$format = $objetFormatsModel->find($id_format);
+				$objetCollectionsModel = new \Model\CollectionsModel;
+				$collection = $objetCollectionsModel->find($id_collection);
 
-			$objetPresentationsModel = new \Model\PresentationsModel;
-			$presentation = $objetPresentationsModel->find($id_presentation);
+				$objetGenresModel = new \Model\GenresModel;
+				$genre = $objetGenresModel->find($id_genre);
+
+				$objetSousgenresModel = new \Model\SousgenresModel;
+				$sousgenre = $objetSousgenresModel->find($id_sousgenre);
+
+				$objetFormatsModel = new \Model\FormatsModel;
+				$format = $objetFormatsModel->find($id_format);
+
+				$objetPresentationsModel = new \Model\PresentationsModel;
+				$presentation = $objetPresentationsModel->find($id_presentation);
 
 
-			echo
+				echo
 <<<CODEHTML
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal$id">
 	 $titreLivre
@@ -120,18 +120,16 @@
     	<div class="modal-content">
       		<div class="modal-header">
         		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        		<h4 class="modal-title" id="myModalLabel">Formulaire d'ajout d'évènements</h4>
+        		<h3 class="modal-title" id="myModalLabel">$titreLivre</h3>
       		</div>
       		<div class="modal-body">
-				<h3>$titreLivre</h3>
 				<img src='
 CODEHTML;
-			echo $this->assetUrl($couverture);
-			echo 
+				echo $this->assetUrl($couverture);
+				echo 
 <<<CODEHTML
 				' alt='couverture' />
-				<p>Crée le : $dateCrea</p>
-				<p>Auteur : $auteur[libelle]</p>
+				<h3>Auteur : $auteur[libelle]</h3>
 				<p>Editeur : $editeur[libelle]</p>
 				<p>Collection : $collection[libelle]</p>
 				<p>Genre : $genre[libelle]</p>
@@ -141,11 +139,11 @@ CODEHTML;
 				<p>Format : $format[libelle]</p>
 				<p>Présentation : $presentation[libelle]</p>
 				<p>Nombre de pages : $nbPage</p>
-				<p>Poids : $poids</p>
+				<p>Poids : $poids Kg</p>
 				<p>dimension : $dimensions</p>
 				<p>Resume : $resume</p>
-				<p>Prix : $prix</p>
-				<p>Date de création : $dateCrea</p>
+				<p>Prix : $prix € TTC</p>
+				<!--<p>Date de création : $dateCrea</p>-->
 			</div>
 		</div>
       	<div class="modal-footer">
@@ -154,10 +152,12 @@ CODEHTML;
     </div>
 </div>
 CODEHTML;
+			}
 		}
-	}
 
-?>				
+	?>				
+			</div>
 		</div>
-	</div>
-</article>  <!-- section container-->
+	</div>  <!-- class="container"-->
+
+</section>
