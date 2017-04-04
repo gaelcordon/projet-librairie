@@ -92,9 +92,17 @@
 									</div>
 									<div class="clearfix"></div>
 									<div class="search-bar collapse" id="navbar-collapse-2">
-										<form class="form-control">
-											<input type="text" class="form-control" id="search-text" placeholder="Rechercher">
-											<button type="submit" class="btn btn-default search-btn"><span class="glyphicon glyphicon-ok-sign"></span></button>
+										<form class="form-control" method="POST">
+											<div class="input-group">
+												<input type="text" name="recherche" id="search-text" class="form-control" placeholder="Rechercher">
+												<input type="hidden" name="idFormClasse" value="Recherches">
+												<input type="hidden" name="idFormMethode" value="recherchesTraitement">
+												<div class="input-group-btn">
+													<button type="submit" class="btn btn-default search-btn">
+														<span class="glyphicon glyphicon-ok-sign"></span>
+													</button>
+												</div>
+											</div>
 										</form>
 									</div>
 								</div><!-- div id="zoneRecherche"-->

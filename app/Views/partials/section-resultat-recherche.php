@@ -1,7 +1,6 @@
-<section class="container">
-    <div class="row">   
-        <div col-xd-4 col-lg-4>
-            <h3>Ceci est la future page "Résultat de recherche"</h3>
+<section id="bgAteliers" class="parallax">
+	<div id="ateliers" class="container-fluid paddingBottom">
+	    <div class="row">   
 <?php
 
 	$tabLigne = $GLOBALS['recherche'];
@@ -55,43 +54,46 @@
 			$presentation = $objetPresentationsModel->find($id_presentation);
 
 
-			echo
-<<<CODEHTML
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal$id">
-	 $titreLivre
-</button>
+?>
+<div class="col-md-push-3 col-md-6 row parallaxRideauRecherche">
+	<div class="blocText col-md-12 col-same-height divRecherche">
+		<h3><?php echo $titreLivre; ?></h3>
+		<img src='<?php echo $this->assetUrl($couverture); ?> ' alt='couverture' />
+		<p>Auteur : <?php echo $auteur["libelle"]; ?></p>
+		<p>Editeur : <?php echo $editeur["libelle"]; ?></p>
+		<p>Date de parution : <?php echo $dateParution; ?></p>
+		<p>Resume : <?php echo $resume; ?></p>
+		<p>Prix : <?php echo $prix; ?> &euro;</p>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal<?php echo $id; ?>">
+	 		En savoir plus
+		</button>
 
-<div class="modal fade" id="modal$id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="modal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   	<div class="modal-dialog modal-lg" role="document">
     	<div class="modal-content">
       		<div class="modal-header">
         		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        		<h4 class="modal-title" id="myModalLabel">Formulaire d'ajout d'évènements</h4>
+        		<h4 class="modal-title" id="myModalLabel">Fiche de livre</h4>
       		</div>
       		<div class="modal-body">
-				<h3>$titreLivre</h3>
-				<img src='
-CODEHTML;
-			echo $this->assetUrl($couverture);
-			echo 
-<<<CODEHTML
-				' alt='couverture' />
-				<p>Crée le : $dateCrea</p>
-				<p>Auteur : $auteur[libelle]</p>
-				<p>Editeur : $editeur[libelle]</p>
-				<p>Collection : $collection[libelle]</p>
-				<p>Genre : $genre[libelle]</p>
-				<p>Sous-Genre : $sousgenre[libelle]</p>
-				<p>Date de parution : $dateParution</p>
-				<p>ISBN : $isbn</p>
-				<p>Format : $format[libelle]</p>
-				<p>Présentation : $presentation[libelle]</p>
-				<p>Nombre de pages : $nbPage</p>
-				<p>Poids : $poids</p>
-				<p>dimension : $dimensions</p>
-				<p>Resume : $resume</p>
-				<p>Prix : $prix</p>
-				<p>Date de création : $dateCrea</p>
+				<h3><?php echo $titreLivre; ?></h3>
+				<img src='<?php echo $this->assetUrl($couverture); ?>' alt='couverture' />
+				<p>Crée le : <?php echo $dateCrea; ?></p>
+				<p>Auteur : <?php echo $auteur["libelle"]; ?></p>
+				<p>Editeur : <?php echo $editeur["libelle"]; ?></p>
+				<p>Collection : <?php echo $collection["libelle"]; ?></p>
+				<p>Genre : <?php echo $genre["libelle"]; ?></p>
+				<p>Sous-Genre : <?php echo $sousgenre["libelle"]; ?></p>
+				<p>Date de parution : <?php echo $dateParution; ?></p>
+				<p>ISBN : <?php echo $isbn; ?></p>
+				<p>Format : <?php echo $format["libelle"]; ?></p>
+				<p>Présentation : <?php echo $presentation["libelle"]; ?></p>
+				<p>Nombre de pages : <?php echo $nbPage; ?></p>
+				<p>Poids : <?php echo $poids; ?></p>
+				<p>dimension : <?php echo $dimensions; ?></p>
+				<p>Resume : <?php echo $resume; ?></p>
+				<p>Prix : <?php echo $prix; ?></p>
+				<p>Date de création : <?php echo $dateCrea; ?></p>
 			</div>
 		</div>
       	<div class="modal-footer">
@@ -99,7 +101,10 @@ CODEHTML;
       	</div>
     </div>
 </div>
-CODEHTML;
+	</div>
+</div>
+
+<?php
 		}
 		else if (isset($LigneCourante['titreEvent']))
 		{
@@ -108,19 +113,21 @@ CODEHTML;
 			$dateEvent = $LigneCourante["dateEvent"];
 			$heureEvent = $LigneCourante["heureEvent"];
 			$description = $LigneCourante["description"];
-			$photo = $LigneCourante["photo"];
-			$dateCrea = $LigneCourante["dateCrea"];
 
-			echo
-<<<CODEHTML
-<div>
-	<h3>$titreEvent</h3>
-	<img src='$photo' alt='photo' />
-	<p>Crée le : $dateCrea</p>
-	<p>Date de l'évènement : $dateEvent à $heureEvent</p>
-	<p>$description</p>
+			$photo = "img/ateliers_evenements/";
+			$photo .= $LigneCourante["photo"];
+
+?>
+
+<div class="col-md-push-3 col-md-6 row parallaxRideauRecherche">
+	<div class="blocText col-md-12 col-same-height divRecherche">
+		<h3><?php echo $titreEvent; ?></h3>
+		<img src='<?php echo $this->assetUrl($photo); ?>' alt='photo' />
+		<p>Date de l'évènement : <?php echo $dateEvent; ?> à <?php echo $heureEvent; ?></p>
+		<p><?php echo $description; ?></p>
+	</div>
 </div>
-CODEHTML;
+<?php
 		}
 	}
 
