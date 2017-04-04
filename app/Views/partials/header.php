@@ -47,7 +47,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<div id="zoneRecherche">
+						<!-- <div id="zoneRecherche">
 							<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-centered">
 								<form method="POST">
 									<div class="input-group">
@@ -85,6 +85,20 @@
 							<li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
 							<li><a href="<?php echo $this->url('librairie_ateliers'); ?>">Ateliers</a></li>
 							<li><a href="<?php echo $this->url('librairie_evenements_dedicaces'); ?>">Evènements/Dédicaces</a></li>
+							<li>
+								<div id="zoneRecherche">
+									<div id="searchIcon" type="button" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="false" aria-controls="collapseExample">
+										<span class="glyphicon glyphicon-search"></span>
+									</div>
+									<div class="clearfix"></div>
+									<div class="search-bar collapse" id="navbar-collapse-2">
+										<form class="form-control">
+											<input type="text" class="form-control" id="search-text" placeholder="Rechercher">
+											<button type="submit" class="btn btn-default search-btn"><span class="glyphicon glyphicon-ok-sign"></span></button>
+										</form>
+									</div>
+								</div><!-- div id="zoneRecherche"-->
+							</li>
 						</ul><!-- class="nav navbar-nav" -->
 				</div><!-- id="navbar-collapse-1" -->
 		</nav> <!-- class="navbar navbar-default navbar-fixed-top" -->

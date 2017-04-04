@@ -42,6 +42,7 @@
 //@bleuHover: #558184;
 @bleuHover: #25383a;
 @bleuNavbar: #182526;
+@fondBloc: rgba(37,56,58,0.9);
 @beige: #EEE6D3;
 @brun: #977F67;
 @gris: #5A5955;
@@ -98,7 +99,7 @@ header {
 #logo {
 	
 	z-index: 1;
-	margin: 2vh;
+	margin-top: 1vh;
 
 }
 
@@ -268,15 +269,52 @@ nav {
 			    
 	}
 }
+/*************************************************************************************************
+		Zone de recherche expanded
+*************************************************************************************************/
+//
 
+div#zoneRecherche {
+	margin-top: 3vh;
+	// Couleur orange pour le symbole de la loupe dans le champ de recherche
+	.glyphicon-search:before {
+		color:@orange;
+		}
+	> #searchIcon {
+	  display: inline-block;
+	  float: left;
+	  width: 33.333333333%;
+	  background-color: @bleuNavbar;
+	  text-align: center;
+	  padding: 5px 0;
+	  border: 1px solid #ccc;
+	  cursor: pointer;
+	  &:hover {
+	    background-color: @bleuHover;
+	    color: #fff;
+	   }
+	  // span {
+	  //   display: block;
+	  // }
+	}
 
-	div#zoneRecherche {
-		margin-top: 3vh;
-		// Couleur orange pour le symbole de la loupe dans le champ de recherche
-		.glyphicon-search:before {
-			color:@orange;
-			}
-
+	.search-form {
+    padding: 5px 15px;
+	}
+	.search-bar {
+	  background-color: #ccc;
+	  #search-text {
+	    float: left;
+	    width: -moz-calc(100% - 40px);
+	    width: -webkit-calc(100% - 40px);
+	    width: -o-calc(100% - 40px);
+	    width: calc(100% - 50px);
+	  }
+	  .search-btn {
+	    display: inline-block;
+	    margin-left: 10px;
+	  }
+	}
 }
 
 // surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
@@ -305,11 +343,7 @@ ul.dropdown-menu>li {
 }
 
 
-// #mainSection {
-//   position:relative;
-//   top:10vh;
 
-// }
 
 // postionnement de la barre de navigation 
 // le logo disparaît quand on scroll down 
@@ -423,10 +457,10 @@ ul.dropdown-menu>li {
 
 
 .parallaxRideau {
-	background-color: @bleuHover;
-	opacity:0.9;
+	background-color: @fondBloc;
     padding: 1% 2%;
     border-radius: 0.5vh;
+    margin: 10vh 2vh;
   	
 }
 
@@ -468,6 +502,11 @@ ul.dropdown-menu>li {
 	li {
 		list-style: none;
 	}
+
+	span {
+		color:@orange;
+		font-weight: bold;
+	}
 }
 
 
@@ -489,32 +528,49 @@ ul.dropdown-menu>li {
 
 #bgAteliers {
 	background-image: url('../img/commun/bgAtelier.jpg');
-	//height:vh;
+}
+
+#bgEvenements {
+	background-image: url('../img/commun/bgEvenement.jpg');
+
 }
 
 #bgBottomAteliers {
 	background-image: url('../img/commun/bgBottomAtelier.jpg');
-	height:200vh;
+	height:100vh;
 }
 
-#texteAccueil {
-	margin-bottom: 15%;
+
+
+.selectionLivres {
+	background-color: red;
+
+}
+
+.espaceVide {
+	min-height: 100px;
+}
+
+.focusLivre {
+	background-color: blue;
+	height: 70px;
+	img {
+		max-width: 100px;
+	}
+
+	p {
+		padding-bottom: 50px;	
+	}
 }
 
 #photoAtelier > img {
 
-	// min-height: 300px;
-	max-height: 300px;
+
+	max-height: 50vh;
 }
 
-.paddingTop {
-
-	padding-top:10%;
-
-}
-
-.videTempo {
-	height:250px;
+#realisations {
+	background-color: @bleuHover;
 }
 
 
@@ -584,13 +640,12 @@ ul.dropdown-menu>li {
 *************************************************************************************************/
 //
 footer {
-	max-height: 5vh;
 	background-color: @bleuNavbar;
-	color: @orange;
+	p {
 
-	#sectionFooter {
-	display:inline;
+		margin: 1vh auto; //surcharge à Bootstrap
 	}
+	
 }
 
 
@@ -658,6 +713,10 @@ footer {
 	padding: 0px;
 	h2 {
 		text-align: center;
+	}
+	button {
+		color: @orange;
+		font-weight: bold;
 	}
 }
 
