@@ -1,14 +1,16 @@
-<section id="notreSelectionCoupDeCoeur">
-		<div class="row paddingTop">
-			<div class="parallaxRideau blocText col-centered text-center col-md-8">
+<section id="notreSelectionCoupDeCoeur" class="parallax">
+	<div class="container">
+		<div class="row parallaxRideau">
+			<div class="blocText col-centered text-center col-md-8">
 				<h2>Nos coups de Coeur du moment</h2>
 				<p>
 					La lecture fait naître en chacun d'entre nous des émotions différentes.<br />
-					Au fil des pages, notre esprit voyage et l'appréciation de tel ou tel ouvrage se forge. <br /> 
+					Au fil des pages, notre esprit voyage et l'appréciation de tel ou tel ouvrage se forge.
 					Nous partageons ici nous coups de coeurs afin de vous les faire découvrir avec le plus grand plaisir.
 				</p>
 			</div>
 		</div>
+	</div>
 	 
 			
 

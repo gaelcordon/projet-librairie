@@ -112,7 +112,7 @@ $(function(){
     //Redimensionnement hauteur des colonnes bootstrap matchHeight()
     
     $(function() {
-    $('#espaceAdulte, #espaceJeunesse, #espacePapeterie').matchHeight();
+    $('.col-same-height').matchHeight();
     });
 
 

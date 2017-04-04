@@ -42,6 +42,7 @@
 //@bleuHover: #558184;
 @bleuHover: #25383a;
 @bleuNavbar: #182526;
+@fondBloc: rgba(37,56,58,0.9);
 @beige: #EEE6D3;
 @brun: #977F67;
 @gris: #5A5955;
@@ -456,10 +457,10 @@ ul.dropdown-menu>li {
 
 
 .parallaxRideau {
-	// background-color: @bleuNavbar;
-	background-color: rgba(21,33,34,0.9);
+	background-color: @fondBloc;
     padding: 1% 2%;
     border-radius: 0.5vh;
+    margin: 10vh 2vh;
   	
 }
 
@@ -504,6 +505,7 @@ ul.dropdown-menu>li {
 
 	span {
 		color:@orange;
+		font-weight: bold;
 	}
 }
 
@@ -538,38 +540,30 @@ ul.dropdown-menu>li {
 	height:100vh;
 }
 
-#texteAccueil {
-	margin-bottom: 15%;
+
+
+.selectionLivres {
+	background-color: red;
+
 }
 
-.menuGenre {
-	background-color: @bleuHover;
+.espaceVide {
+	min-height: 100px;
 }
 
-.presentationLivres {
-	height:250px;
-	background-color: @bleuHover; 
+.focusLivre {
+	background-color: blue;
+	height: 70px;
 }
-
 
 #photoAtelier > img {
 
-	// min-height: 300px;
-	max-height: 300px;
+
+	max-height: 50vh;
 }
 
 #realisations {
 	background-color: @bleuHover;
-}
-
-.paddingTop {
-
-	padding-top:10%;
-
-}
-
-.paddingBottom {
-	padding-bottom:10%;
 }
 
 
@@ -640,11 +634,11 @@ ul.dropdown-menu>li {
 //
 footer {
 	background-color: @bleuNavbar;
-	color: @orange;
+	p {
 
-	#sectionFooter {
-	display:inline;
+		margin: 1vh auto; //surcharge à Bootstrap
 	}
+	
 }
 
 
@@ -700,7 +694,7 @@ footer {
 
 #adresseSection {
 	padding: 2vh 0;
-	background-color: @bleuHover;
+	background-color: @bleuNavbar;
 }
 
 #divIframe {
@@ -712,6 +706,10 @@ footer {
 	padding: 0px;
 	h2 {
 		text-align: center;
+	}
+	button {
+		color: @orange;
+		font-weight: bold;
 	}
 }
 

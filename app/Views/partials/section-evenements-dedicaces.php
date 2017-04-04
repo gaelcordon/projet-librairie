@@ -1,7 +1,7 @@
 <section id="bgEvenements" class="parallax">
-	<div id="Evenements" class="container paddingBottom">
-		<div class="row paddingTop">
-			<div class="blocText parallaxRideau col-centered text-center col-md-10">
+	<div id="Evenements" class="container">
+		<div class="row">
+			<div class="blocText parallaxRideau col-centered text-center">
 				<h2>Les évènements / Dédicaces</h2>
 				<p>
 					Bienvenue dans cet espace réservé à une sélection d'actualités culturelles.<br />
@@ -34,21 +34,17 @@
 				{
 		?>
 
-					<div class="paddingTop">
-						<div class="blocText parallaxRideau col-centered text-left col-md-8">
-							<div class="row">
-								<div id="photoAtelier" class="col-centered">
-									<img class="img-responsive col-centered" src="<?php	echo $this->assetUrl($photo); ?>" alt="<?php echo $alt; ?>">
-								</div>
-								<div class="col-md-12">
-									<h3><?php echo $titreEvent; ?></h3>
-									
-									<p>Date de l'évènement : <?php echo $dateEvent; ?> à <?php echo $heureEvent; ?></p>
-									<p class="text-justify"><?php echo $description; ?></p>
-								</div>
-							</div>
+					<div class="row parallaxRideau">
+						<div id="photoAtelier" class="col-md-4 col-same-height">
+							<img class="img-responsive col-centered" src="<?php	echo $this->assetUrl($photo); ?>" alt="<?php echo $alt; ?>">
 						</div>
-					</div>	
+						<div class="blocText col-md-8 col-same-height">
+							<h3><?php echo $titreEvent; ?></h3>
+							
+							<p><span>Date de l'évènement :</span> <?php echo $dateEvent; ?> à <?php echo $heureEvent; ?></p>
+							<p class="text-justify"><?php echo $description; ?></p>
+						</div>
+					</div>
 					<?php
 					}
 				}
