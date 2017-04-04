@@ -1,12 +1,11 @@
 		<section id="bgAccueil" class="parallax">
 			<div id="nouveautes" class="container">
-				<div class="row parallaxRideau">
-					<div class="blocText text-center">
-						<h2>Nouveautés</h2>
-					</div>
-				</div>
+			
 				<div class="row parallaxRideau">
 					<div class="col-centered">
+						<div class="blocText text-center">
+							<h2>Nouveautés</h2>
+						</div>
 						<div id="carouselNouveautes">
 							<ul class="carousel">
 							<?php
