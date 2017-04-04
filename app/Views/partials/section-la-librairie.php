@@ -1,8 +1,18 @@
 <section id="bgLaLibrairie" class="parallax">
+	<div class="container">
+		<div class="row paddingTop">
+			<div class="blocText parallaxRideau col-centered text-center col-md-10">
 
-		<div class="row nosEspaces">
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
-				<div id="espaceAdulte" class="text-center blocText parallaxRideau">
+				<h2>Trois espaces sont à votre disposition.</h2>
+				<p>Sur une surface d’environ <span>120 m<sup>2</sup></span>,
+				ce sont près de <span>3500 titres en stock</span> que nous mettons à votre disposition.</p>
+
+			</div>
+		</div>
+
+		<div id="espaceAdulte" class="row paddingTop">
+			<div class="container col-md-10 col-centered blocText parallaxRideau">
+				<div class="menuGenre text-center col-md-4 col-same-height">
 					<ul>
 						<li><h2>Littérature adulte</h2></li>
 						<li>Littérature française</li>
@@ -13,15 +23,13 @@
 						<li>Cuisine, Vie Pratique</li>
 					</ul>
 				</div>
-			</div>
-			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-same-height">
-				<div class="videTempo blocText parallaxRideau">
+				<div class="presentationLivres col-md-6 col-md-offset-2 col-same-height">		
 				</div>
 			</div>
 		</div>
-		<div class="row nosEspaces">
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
-				<div id="espaceJeunesse" class="text-center blocText parallaxRideau">
+		<div id="espaceJeunesse"class="row paddingTop">
+			<div class="container col-md-10 col-centered blocText parallaxRideau">
+				<div class="menuGenre text-center col-md-4 col-same-height">
 					<ul>
 						<li><h2>Jeunesse</h2></li>
 						<li>Documentaires</li>
@@ -34,14 +42,12 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-same-height">
-				<div class="videTempo blocText parallaxRideau">
-				</div>
+			<div class="presentationLivres col-md-6 col-md-offset-2 col-same-height">			
 			</div>
 		</div>
-		<div class="row nosEspaces">	
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
-				<div id="espacePapeterie" class="text-center blocText parallaxRideau">
+		<div id="espacePapeterie" class="row paddingTop">	
+			<div class="container col-md-10 col-centered blocText parallaxRideau">
+				<div class="menuGenre text-center col-md-4 col-same-height">
 					<ul>
 						<li><h2>Papeterie <br />
 						Loisirs créatifs</h2></li>
@@ -52,9 +58,8 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-same-height">
-				<div class="videTempo blocText parallaxRideau">
-				</div>
+			<div class="presentationLivres col-md-6 col-md-offset-2 col-same-height">			
 			</div>
 		</div>
+	</div>
 </section> <!-- id="bgLaLibrairie" class="parallax" -->
