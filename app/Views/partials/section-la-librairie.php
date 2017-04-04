@@ -23,10 +23,10 @@
 
 				$objetView = new \W\View\Plates\PlatesExtensions;
 ?>
-				<div class=focusLivre col-md-4>
-					<img src="<?php	echo $objetView->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />
-					<p><?php echo $titre; ?></p>
-				</div>
+					<div class="focusLivre col-md-2">
+						<img class="img-responsive" src="<?php	echo $objetView->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />
+						<p><?php echo $titre; ?></p>
+					</div>
 <?php
 			}
 			else
@@ -49,7 +49,7 @@
 			</div>
 		</div>
 		<div id="espaceAdulte" class="row parallaxRideau">
-			<div class="blocText text-center col-md-2 col-same-height">
+			<div class="blocText text-center col-md-3 col-same-height">
 				<ul>
 						<li><h2>Littérature adulte</h2></li>
 						<li id="française">Littérature française</li>
@@ -60,11 +60,11 @@
 						<li id="cuisine">Cuisine, Vie Pratique</li>
 				</ul>
 			</div>
-			<div class="selectionLivres col-md-9 col-md-offset-1 col-same-height">
-				<div id="divFrançaise" class="row divLibrairie">
+			<div class="selectionLivres col-md-8 col-md-offset-1 col-same-height">
+				<div id="divFrançaise" class=" divLibrairie">
 					<?php createDivLibrairie(2) ?>
 				</div>
-				<div id="divEtrangere" class="row divLibrairie">
+				<!--<div id="divEtrangere" class="row divLibrairie">
 					<?php createDivLibrairie(1) ?>
 				</div>
 				<div id="divPoliciere" class="row divLibrairie">
@@ -78,7 +78,7 @@
 				</div>
 				<div id="divCuisine" class="row divLibrairie">
 					<?php createDivLibrairie(13) ?>
-				</div>
+				</div>-->
 			</div>
 		</div>
 		<div id="espaceJeunesse" class="row parallaxRideau">
