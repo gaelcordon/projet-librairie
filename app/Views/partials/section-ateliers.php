@@ -1,7 +1,7 @@
 <section id="bgAteliers" class="parallax">
-	<div id="ateliers" class="container paddingBottom">
-		<div class="row paddingTop">
-			<div class="blocText parallaxRideau col-centered text-center col-md-8">
+	<div id="ateliers" class="container">
+		<div class="row parallaxRideau">
+			<div class="blocText col-centered text-center col-md-8">
 				<h2>Les Ateliers créatifs</h2>
 				<p>
 					La librairie propose un espace où la créativité de chacun pourra s'exprimer pleinement.<br />
@@ -33,21 +33,21 @@
 				{
 		?>
 
-					<div class="paddingTop">
-						<div class="blocText parallaxRideau col-centered text-left col-md-8">
-							<div class="row">
-								<div id="photoAtelier" class="col-md-4">
-									<img class="img-responsive" src="<?php	echo $this->assetUrl($photo); ?>" alt="<?php echo $alt; ?>">
-								</div>
-								<div class="col-md-6 col-md-offset-1">
-									<h3><?php echo $titreEvent; ?></h3>
-									
-									<p>Date de l'évènement : <?php echo $dateEvent; ?> à <?php echo $heureEvent; ?></p>
-									<p><?php echo $description; ?></p>
-								</div>
+					
+					
+					<div class="row parallaxRideau">
+							<div id="photoAtelier" class="col-md-4 col-same-height">
+								<img class="img-responsive col-centered" src="<?php	echo $this->assetUrl($photo); ?>" alt="<?php echo $alt; ?>">
 							</div>
-						</div>
-					</div>	
+							<div class="blocText col-md-6 col-md-offset-1 col-same-height">
+								<h3><?php echo $titreEvent; ?></h3>
+								<br />
+								<p><span>Rendez-vous le : </span><?php echo $dateEvent; ?> à <?php echo $heureEvent; ?></p>
+								<br />
+								<p><?php echo $description; ?></p>
+							</div>
+					</div>
+					
 					<?php
 					}
 				}
