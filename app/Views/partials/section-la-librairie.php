@@ -1,6 +1,17 @@
 <section id="bgLaLibrairie" class="parallax">
 	<div class="container">
 		<div class="row paddingTop">
+			<div class="blocText parallaxRideau col-centered text-center col-md-8">
+
+				<h2>Trois espaces sont à votre disposition.</h2>
+				<p>Sur une surface d’environ 120 m<sup>2</sup>,
+				ce sont près de 3500 titres en stock que nous mettons à votre disposition.</p>
+
+			</div>
+		</div>
+
+
+		<div class="row paddingTop">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-same-height">
 				<div id="espaceAdulte" class="text-center blocText parallaxRideau">
 					<ul>

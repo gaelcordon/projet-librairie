@@ -53,9 +53,7 @@
 								En dépit d’un contexte peu favorable face à une concurrence non spécialisée<br />
 								présente sur Internet, la preuve est faite qu’une librairie généraliste<br />
 								indépendante a su trouver sa place au sein d’un petit village du Vaucluse.<br />
-								<br />
-								Située non loin de la place de la mairie de Mazan, ce sont près de 3500 titres en<br />
-								stock que nous vous proposons sur une surface d’environ 120 m<sup>2</sup>.
+								
 								</p>
 							</div>											
 							<div id="vousAccompagner">
