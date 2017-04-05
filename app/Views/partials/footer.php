@@ -35,7 +35,7 @@
 
 
             <!-- Chargement du script Match Height pour gérer les hauteurs de colonnes différentes-->
-            <script type="text/javascript" src="<?php echo $this->assetUrl('js/jquery.matchHeight-min.js')?>"></script>
+            <script type="text/javascript" src="<?php echo $this->assetUrl('js/jquery.matchHeight.js')?>"></script>
 
             <!-- Chargement du script propre au projet-->
             <script type="text/javascript" src="<?php echo $this->assetUrl('js/script.js')?>"></script>
