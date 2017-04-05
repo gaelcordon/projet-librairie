@@ -1,4 +1,4 @@
-<section id="bgLogin" class="parallax">
+<section id="bgAdmin" class="parallax">
 	<div class="container"> 
 		<div class="row parallaxRideau">
 			<div class="blocText col-centered text-center col-md-8">
