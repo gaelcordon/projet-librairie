@@ -1,19 +1,28 @@
 <?php
+	
+	$GLOBALS["url"] = "";
+
 	function createDivLibrairie ($sousGenre)
 	{
 		$objetLivresModel = new \Model\LivresModel;
 
+		$objetView = new \W\View\Plates\PlatesExtensions;
+
+
 		if ($sousGenre == "adulte")
 		{
 			$tabToken = ["id_genre" => 1];
+			$GLOBALS["url"] = $objetView->generateUrl("librairie_sous_genre", ["slug" => "adulte"]);
 		}
 		else if ($sousGenre == "jeunesse")
 		{
 			$tabToken = ["id_genre" => 2];
+			$GLOBALS["url"] = $objetView->generateUrl("librairie_sous_genre", ["slug" => "jeunesse"]);
 		}
 		else
 		{
 			$tabToken = ["id_sousgenre" => $sousGenre];
+			$GLOBALS["url"] = $objetView->generateUrl("librairie_sous_genre", ["slug" => $sousGenre]);
 		}
 
 		$tabLigne = $objetLivresModel->search($tabToken, $operator = "AND");
@@ -53,8 +62,6 @@
 
 				$alt = "livre_";
 				$alt .= $LigneCourante["titreLivre"];
-
-				$objetView = new \W\View\Plates\PlatesExtensions;
 
 				$objetAuteursModel = new \Model\AuteursModel;
 				$auteur = $objetAuteursModel->find($id_auteur);
@@ -130,7 +137,7 @@
 			</div>
 		</div>
 		<div id="espaceAdulte" class="row parallaxRideau">
-			<div class="blocText text-center col-md-3 col-same-height">
+			<div class="blocText text-center col-md-3 col-same-height blocGenre">
 				<ul>
 						<li><h2>Littérature adulte</h2></li>
 						<li><a id="française" href="!#">Littérature française</a></li>
@@ -141,33 +148,39 @@
 						<li><a id="cuisine" href="!#">Cuisine, Vie Pratique</a></li>
 				</ul>
 			</div>
-			<div class="col-md-8 col-md-offset-1 col-same-height">
+			<div class="col-md-8 col-md-offset-1">
 				<div id="divGeneralAdulte">
 					<?php createDivLibrairie("adulte") ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divFrançaise" class="row divLibrairieAdulte">
 					<?php createDivLibrairie(2) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divEtrangere" class="row divLibrairieAdulte">
 					<?php createDivLibrairie(1) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divPoliciere" class="row divLibrairieAdulte">
 					<?php createDivLibrairie(3) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divBDAdulte" class="row divLibrairieAdulte">
 					<?php createDivLibrairie(6) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divSante" class="row divLibrairieAdulte">
 					<?php createDivLibrairie(17) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divCuisine" class="row divLibrairieAdulte">
 					<?php createDivLibrairie(13) ?>
-
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 			</div>
 		</div>
 		<div id="espaceJeunesse" class="row parallaxRideau">
-			<div class="blocText text-center col-md-3 col-same-height">
+			<div class="blocText text-center col-md-3 col-same-height blocGenre">
 				<ul>
 					<li><h2>Jeunesse</h2></li>
 					<li><a id="documentaire" href="!#">Documentaires</a></li>
@@ -182,33 +195,41 @@
 			<div class="col-md-8 col-md-offset-1 col-same-height">
 				<div id="divGeneralJeunesse">
 					<?php createDivLibrairie("jeunesse") ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divDocumentaire" class=" divLibrairieJeunesse">
 					<?php createDivLibrairie(5) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divPremiere" class="row divLibrairieJeunesse">
 					<?php createDivLibrairie(7) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divPreados" class="row divLibrairieJeunesse">
 					<?php createDivLibrairie(11) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divYoung" class="row divLibrairieJeunesse">
 					<?php createDivLibrairie(8) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divManga" class="row divLibrairieJeunesse">
 					<?php createDivLibrairie(8) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divPanini" class="row divLibrairieJeunesse">
 					<?php createDivLibrairie(6) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 				</div>
 				<div id="divCreatifs" class="row divLibrairieJeunesse">
 					<?php createDivLibrairie(16) ?>
+					<a class="linkLibrairie" href="<?php echo $GLOBALS["url"]; ?>">En voir plus...</a>
 
 				</div>
 			</div>
 		</div>
 		<div id="espacePapeterie" class="row parallaxRideau">	
-			<div class="blocText text-center col-md-2 col-same-height">
+			<div class="blocText text-center col-md-2 col-same-height blocGenre">
 				<ul>
 					<li><h2>Papeterie <br />
 					Loisirs créatifs</h2></li>

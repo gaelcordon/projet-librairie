@@ -3,6 +3,7 @@
 	$w_routes = array(
 		['GET|POST', '/', 							'Librairie#accueil', 				'librairie_accueil'],
 		['GET|POST', '/lalibrairie', 				'Librairie#laLibrairie', 			'librairie_la_librairie'],
+		['GET|POST', '/lalibrairie/[:slug]', 		'Librairie#sousGenre',				'librairie_sous_genre'],
 		['GET|POST', '/coupsDeCoeur', 				'Librairie#coupsDeCoeur', 			'librairie_coups_de_coeur'],
 		['GET|POST', '/ateliers', 					'Librairie#ateliers', 				'librairie_ateliers'],
 		['GET|POST', '/evenementsDedicaces',		'Librairie#evenementsDedicaces', 	'librairie_evenements_dedicaces'],
