@@ -541,6 +541,16 @@ ul.dropdown-menu>li {
 		color:@orange;
 		font-weight: bold;
 	}
+
+	a {
+		color:@grisClair;
+	}
+
+	a:hover {
+		color:@orange;
+		text-decoration: none;
+		transition: 300ms;
+	}
 }
 
 
@@ -562,6 +572,7 @@ ul.dropdown-menu>li {
 
 #bgCoupsDeCoeur {
 	background-image: url('../img/commun/bgCoupsDeCoeur.jpg');
+	min-height:80vh;
 }
 
 #bgAteliers {
@@ -570,17 +581,22 @@ ul.dropdown-menu>li {
 
 #bgEvenements {
 	background-image: url('../img/commun/bgEvenement.jpg');
-
+	
 }
 
 #bgBottomAteliers {
 	background-image: url('../img/commun/bgBottomAtelier.jpg');
-	height:100vh;
+	min-height:80vh;
 }
 
 #bgRecherche {
 	background-image: url('../img/commun/bgRecherche.jpg');
-	min-height:100vh;
+	min-height:80vh;
+}
+
+#bgLogin {
+	background-image: url('../img/commun/bgLogin.jpg');
+	min-height:80vh;
 }
 
 .selectionLivres {
@@ -596,6 +612,7 @@ ul.dropdown-menu>li {
 	height: 20vh;
 	margin-top: 3vh;
 	margin-bottom: 1vh;
+	display: inline-block;
 	img {
 		max-width: 100px;
 	}
@@ -620,11 +637,6 @@ ul.dropdown-menu>li {
 	min-height: 100px;
 }
 
-.focusLivre {
-	background-color: blue;
-	height: 70px;
-	display: inline-block;
-}
 
 .divRecherche {
 	text-align: justify;
