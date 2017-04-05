@@ -463,12 +463,19 @@ ul.dropdown-menu>li {
 //
 
 
-.parallaxRideau {
+.parallaxRideau, .parallaxRideauRecherche {
 	background-color: @fondBloc;
     padding: 1% 2%;
-    border-radius: 0.5vh;
-    margin: 10vh 2vh;
-  	
+    border-radius: 0.5vh;   
+	
+}
+
+.parallaxRideau {
+  margin: 10vh 2vh;
+}
+.parallaxRideauRecherche {
+    margin: 2vh 2vh;
+	
 }
 
 .blocText {
@@ -551,12 +558,37 @@ ul.dropdown-menu>li {
 	height:100vh;
 }
 
+.selectionLivres {
+	background-color: red;
+
+}
+
+.espaceVide {
+	min-height: 100px;
+}
+
+.focusLivre {
+	height: 20vh;
+	margin-top: 3vh;
+	margin-bottom: 1vh;
+	img {
+		max-width: 100px;
+	}
+
+	p {
+		color: white;	
+	}
 #bgAdmin {
 	background-image: url('../img/commun/bgAdmin.jpg');
 	height:100vh;
 }
 
+.divLibrairieAdulte, .divLibrairieJeunesse, .divLibrairiePapeterie {
+	display: none;
+}
 
+
+/* 	max-height: 50vh; */
 
 .espaceVide {
 	min-height: 100px;
@@ -568,8 +600,14 @@ ul.dropdown-menu>li {
 	display: inline-block;
 }
 
+.divRecherche {
+	text-align: justify;
+	img {
+		float: left;
+		max-height: 300px;
+		margin-right: 2vh;
+	}
 #photoAtelier > img {
-
 
 	max-height: 50vh;
 }
@@ -792,6 +830,19 @@ footer {
     display: block;
     border-radius: 0;
 	}
+
+	.focusLivre {
+	height: 20vh;
+	margin-top: 3vh;
+	margin-bottom: 12vh;
+	img {
+		max-width: 100px;
+	}
+
+	p {
+		color: white;	
+	}
+}
 	
 	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
 

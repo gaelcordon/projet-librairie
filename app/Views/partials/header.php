@@ -70,13 +70,20 @@
 							<li><a href="<?php echo $this->url('librairie_ateliers'); ?>">Ateliers</a></li>
 							<li><a href="<?php echo $this->url('librairie_evenements_dedicaces'); ?>">Evènements/Dédicaces</a></li>
 							<li>
-								<div class="popover_parent">
+								<div id="zoneRecherche" class="popover_parent">
 									<span class="btn glyphicon glyphicon-search"></span>
 									<fieldset class="popover search">
-									<input type="text" placeholder="Rechercher">
-									<input type="submit" value="ok">
+                    <form class="form-control" method="POST">
+                        <input type="text" name="recherche" id="search-text" class="form-control" placeholder="Rechercher">
+                        <input type="hidden" name="idFormClasse" value="Recherches">
+												<input type="hidden" name="idFormMethode" value="recherchesTraitement">
+                        <input type="submit" value="ok">
+                        <button type="submit" class="btn btn-default search-btn">
+														<span class="glyphicon glyphicon-ok-sign"></span>
+												</button>
+                    </form>  
 									</fieldset>
-								</div>
+								</div><!-- div id="zoneRecherche"-->
 							</li>
 						</ul><!-- class="nav navbar-nav" -->
 				</div><!-- id="navbar-collapse-1" -->
