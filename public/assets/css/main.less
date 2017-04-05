@@ -113,7 +113,7 @@ header {
 
 .col-centered {
     float: none;
-    margin: 0vh auto;
+    margin: 0 auto;
 }
 
 /*************************************************************************************************
@@ -382,78 +382,90 @@ ul.dropdown-menu>li {
 //
 
 #carouselNouveautes {
-	margin-top: 5vh;
-	height: 55vh;
-	z-index: -1;
 
-	// section {
-	// width: 100%;
-	// height: 25em;
-	// margin: 0 auto;
-	// // position: relative;
-	// }
+
+	  width: 40vh;
+	  height: 60vh;
+	  margin: 0 auto;
+	  position: relative;
 
 	li {
-
-	background: #333;
-	display: inline-block;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-	overflow: hidden;
-	}
-
-	img {
-		transform: scale(1);
-		max-height: 450px;
+	  width: 310px;
+	  height: 500px;
+	  display: inline-block;
+	  -webkit-transition: all .3s ease-in-out;
+	  -moz-transition: all .3s ease-in-out;
+	  transition: all .3s ease-in-out;
+	  overflow: hidden;
+	  border:2px solid @bleuNavbar;
 	}
 
 	li p {
-	color: white;
-	font-weight: bold;
-	font-size: 5em;
-	text-align: center;
-	margin-top: 1.175em;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 5em;
+	  text-align: center;
+	  margin-top: 1.175em;
 	}
 
 	.items {
-	position: absolute;
+	  position: absolute;
 	}
 
 	.main-pos {
-	z-index: 5;
-	left: 10vh !important;
+	  // margin-left: 2em !important;
+	  margin-left: 0em !important;
+	  z-index: 3000;
+
 	}
 
 	.left-pos {
-	opacity: .3;
-	left: -5vh !important;
-	z-index: 0;
-	-webkit-transform: scale(.75);
-	-moz-transform: scale(.75);
-	transform: scale(.75);
+	  opacity: .6;
+	  // margin-left: -17em !important;
+	  margin-left: -20em !important;
+	  z-index: 1000;
+	  -webkit-transform: scale(.75);
+	  -moz-transform: scale(.75);
+	  transform: scale(.75);
 	}
 
 	.back-pos {
-	left: 10vh !important;
-	opacity: .05;
-	-webkit-transform: scale(.5);
-	-moz-transform: scale(.5);
-	transform: scale(.5);
+	  // margin-left: 2em !important;
+	  margin-left: 0em !important;
+	  opacity: .05;
+	  -webkit-transform: scale(.5);
+	  -moz-transform: scale(.5);
+	  transform: scale(.5);
 	}
 
 	.right-pos {
-	opacity: .3;
-	right:  -5vh !important;
-	z-index: 0;
-	-webkit-transform: scale(.75);
-	-moz-transform: scale(.75);
-	transform: scale(.75);
+	  opacity: .6;
+	  margin-left:  20em !important;
+	  z-index: 1000;
+	  -webkit-transform: scale(.75);
+	  -moz-transform: scale(.75);
+	  transform: scale(.75);
 	}
 
+	span {
+	  position: relative;
+	  margin: 0 auto;
+	  left: 17em;
+	  top: 20em;
+	}
 
+	h2 {
+		background-color: @bleuHover;
+		margin-top: 10vh;
+		margin-bottom: 5vh;
+	}
 
 }
+
+div#buttonCarousel {
+    position: relative;
+    bottom: -30px;
+	}
 /*************************************************************************************************
 		Carousel Coups de Coeur
 *************************************************************************************************/
@@ -586,7 +598,7 @@ ul.dropdown-menu>li {
 
 #bgBottomAteliers {
 	background-image: url('../img/commun/bgBottomAtelier.jpg');
-	min-height:80vh;
+	min-height:120vh;
 }
 
 #bgRecherche {
@@ -594,9 +606,10 @@ ul.dropdown-menu>li {
 	min-height:80vh;
 }
 
-#bgLogin {
-	background-image: url('../img/commun/bgLogin.jpg');
-	min-height:80vh;
+
+#bgAdmin, #bgLogin {
+	background-image: url('../img/commun/bgAdmin.jpg');
+	height:100vh;
 }
 
 .selectionLivres {
@@ -620,10 +633,6 @@ ul.dropdown-menu>li {
 	p {
 		color: white;	
 	}
-}
-#bgAdmin {
-	background-image: url('../img/commun/bgAdmin.jpg');
-	height:100vh;
 }
 
 .divLibrairieAdulte, .divLibrairieJeunesse, .divLibrairiePapeterie {
