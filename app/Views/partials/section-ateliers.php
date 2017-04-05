@@ -5,7 +5,7 @@
 				<h2>Les Ateliers créatifs</h2>
 				<p>
 					La librairie propose un espace où la créativité de chacun pourra s'exprimer pleinement.<br />
-					Activités manuelles, ateliers d'épanouissemet personnel, discussions <br /> 
+					Activités manuelles, ateliers d'épanouissemet personnel, discussions... <br /> 
 					venez partager des moments de détente en toute simplicité.
 				</p>
 			</div>
