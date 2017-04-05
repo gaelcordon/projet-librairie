@@ -73,15 +73,15 @@
 								<div id="zoneRecherche" class="popover_parent">
 									<span class="btn glyphicon glyphicon-search"></span>
 									<fieldset class="popover search">
-                    <form class="form-control" method="POST">
-                        <input type="text" name="recherche" id="search-text" class="form-control" placeholder="Rechercher">
-                        <input type="hidden" name="idFormClasse" value="Recherches">
-												<input type="hidden" name="idFormMethode" value="recherchesTraitement">
-                        <input type="submit" value="ok">
-                        <button type="submit" class="btn btn-default search-btn">
-														<span class="glyphicon glyphicon-ok-sign"></span>
-												</button>
-                    </form>  
+					                    <form class="form-control" method="POST">
+					                        <input type="text" name="recherche" id="search-text" class="form-control" placeholder="Rechercher">
+					                        <input type="hidden" name="idFormClasse" value="Recherches">
+											<input type="hidden" name="idFormMethode" value="recherchesTraitement">
+					                        <input type="submit" value="ok">
+					                        <!-- <button type="submit" class="btn btn-default search-btn">
+											<span class="glyphicon glyphicon-ok-sign"></span> -->
+											</button>
+					                    </form>  
 									</fieldset>
 								</div><!-- div id="zoneRecherche"-->
 							</li>
