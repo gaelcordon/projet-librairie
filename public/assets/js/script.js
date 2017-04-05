@@ -27,7 +27,7 @@ $(function(){
 
     // Zone de recherche
 
-    $('.popover_parent span').on('click', function() {
+    $('.popover_parent span').on('click', function(){
         $('.popover_parent > span').not(this).parent().removeClass('active');
         $(this).parent().toggleClass('active');
         $('.search input[type="text"]').focus();
@@ -41,6 +41,22 @@ $(function(){
       }
     });
 
+
+    // Scroll Up Button
+
+    $(window).scroll(function(){
+        var scrolltop=$(this).scrollTop();
+        if(scrolltop>=1200)
+            {
+                $("#scrollUp span").show();
+            }
+        else { $("#scrollUp span").hide();
+        }
+    });
+    $("#scrollUp span").click(function()
+    {
+        $("html,body").animate({scrollTop: 0}, 1000);
+    });
 
 
     $("#formUser").on("submit", function(event){
@@ -346,32 +362,6 @@ $(function(){
         swap('clockwise'); 
       }
     });
-
-/*************************************************************************************************
-        Carousel pour les coups de coeur
-*************************************************************************************************/
-//
-
- // Instantiate the Bootstrap carousel
-$('.multi-item-carousel').carousel({
-  interval: 2000
-});
-
-// for every slide in carousel, copy the next slide's item in the slide.
-// Do the same for the next, next item.
-$('.multi-item-carousel .item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-  
-  if (next.next().length>0) {
-    next.next().children(':first-child').clone().appendTo($(this));
-  } else {
-    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
-});
 
 
 
