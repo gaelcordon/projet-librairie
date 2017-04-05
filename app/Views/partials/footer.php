@@ -1,9 +1,16 @@
 </main>
 <footer>
+    <!-- <div id="scrollUp" class="col-xs-1 col-xs-offset-10"> -->
     <div class="container-fluid">
-        <div class="row text-center blocText">
-            <p><span>&copy;</span> A la gloire de mon père <span>2017</span></p>
+        <p class="blocText"><span>&copy;</span> A la gloire de mon père <span>2017</span></p>
+        <div id="scrollUp">
+            <span class="glyphicon glyphicon-menu-up"></span>
         </div>
+       <!--  <div class="row text-center blocText">
+            <div>
+                
+            </div>
+        </div> -->
     </div>
 </footer>
 
@@ -28,7 +35,7 @@
 
 
             <!-- Chargement du script Match Height pour gérer les hauteurs de colonnes différentes-->
-            <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9487/jquery.matchHeight-min.js"></script>
+            <script type="text/javascript" src="<?php echo $this->assetUrl('js/jquery.matchHeight-min.js')?>"></script>
 
             <!-- Chargement du script propre au projet-->
             <script type="text/javascript" src="<?php echo $this->assetUrl('js/script.js')?>"></script>
