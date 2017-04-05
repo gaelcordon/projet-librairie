@@ -1,3 +1,53 @@
+<?php
+	function createDivLibrairie ($sousGenre)
+	{
+		$objetLivresModel = new \Model\LivresModel;
+
+		if ($sousGenre == "adulte")
+		{
+			$tabToken = ["id_genre" => 1];
+		}
+		else if ($sousGenre == "jeunesse")
+		{
+			$tabToken = ["id_genre" => 2];
+		}
+		else
+		{
+			$tabToken = ["id_sousgenre" => $sousGenre];
+		}
+
+		$tabLigne = $objetLivresModel->search($tabToken, $operator = "AND");
+
+		$i = 0;
+
+		foreach ($tabLigne as $LigneCourante) {
+			$i++;
+			if ($i <7)
+			{
+				$couverture = "img/livres/";
+				$couverture .= $LigneCourante["couverture"];
+
+				$alt = "livre_";
+				$alt .= $LigneCourante["titreLivre"];
+
+				$titre = $LigneCourante['titreLivre'];
+
+				$objetView = new \W\View\Plates\PlatesExtensions;
+?>
+					<div class="focusLivre col-xs-6 col-md-3">
+						<img class="img-responsive" src="<?php	echo $objetView->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />
+						<p><?php echo $titre; ?></p>
+					</div>
+<?php
+			}
+			else
+			{
+				break;
+			}
+		}
+	}
+?>
+
 <section id="bgLaLibrairie" class="parallax">
 	<div class="container">
 		<div class="row parallaxRideau">
@@ -10,75 +60,80 @@
 			</div>
 		</div>
 		<div id="espaceAdulte" class="row parallaxRideau">
-			<div class="blocText text-center col-md-2 col-same-height">
+			<div class="blocText text-center col-md-3 col-same-height">
 				<ul>
-					<li><h2>Littérature adulte</h2></li>
-					<li>Littérature française</li>
-					<li>Littérature étrangère</li>
-					<li>Littérature policière</li>
-					<li>Bande Dessinée Adulte et Jeunesse</li>
-					<li>Développement personnel, Santé, Psychologie</li>
-					<li>Cuisine, Vie Pratique</li>
+						<li><h2>Littérature adulte</h2></li>
+						<li><a id="française" href="!#">Littérature française</a></li>
+						<li><a id="etrangere" href="!#">Littérature étrangère</a></li>
+						<li><a id="thriller" href="!#">Littérature policière</a></li>
+						<li><a id="albums" href="!#">Bande Dessinée Adulte et Jeunesse</a></li>
+						<li><a id="developpement" href="!#">Développement personnel, Santé, Psychologie</a></li>
+						<li><a id="cuisine" href="!#">Cuisine, Vie Pratique</a></li>
 				</ul>
 			</div>
-			<div class="selectionLivres col-md-9 col-md-offset-1 col-same-height">
-				<div class="row">
-					<div class="focusLivre col-md-4">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa earum veniam repellendus temporibus adipisci quae non praesentium, quibusdam iusto aliquam possimus ad, eaque officiis expedita, voluptates. Quia nobis sit debitis doloribus, asperiores voluptates voluptatum quibusdam magni possimus magnam beatae voluptatibus similique ex harum eaque porro saepe nulla tempora iusto ullam?
-					</div>
-					<div class="focusLivre col-md-4">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, obcaecati eaque! Quod, est accusantium. Esse dolorum maiores eaque aliquam, unde, tempora cum rem sequi, tempore quasi deserunt reprehenderit! Esse architecto, explicabo non facere! Odio fugit quam voluptas beatae ullam! Deleniti quis ipsa dignissimos nesciunt numquam quasi nam, vero rem sequi.
-					</div>
-					<div class="focusLivre col-md-4">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias officiis qui esse natus quaerat tempore praesentium aperiam aliquid sint, id alias sapiente expedita earum reiciendis illo quod distinctio ab voluptas!
-					</div>
+			<div class="col-md-8 col-md-offset-1 col-same-height">
+				<div id="divGeneralAdulte">
+					<?php createDivLibrairie("adulte") ?>
 				</div>
-				<div class="espaceVide row">
+				<div id="divFrançaise" class=" divLibrairieAdulte">
+					<?php createDivLibrairie(2) ?>
 				</div>
-				<div class="row">
-					<div class="focusLivre col-md-4">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at dignissimos iure ipsa obcaecati quis possimus, consequatur quam asperiores reiciendis.
-					</div>
-					<div class="focusLivre col-md-4">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dicta esse iure libero quod neque pariatur quam praesentium provident repellendus nobis animi totam ratione, rerum est alias quas expedita! Iste, consequuntur, alias provident et, voluptatum, quis officia eos architecto sint dolorum nihil tempora placeat explicabo. Ex accusamus esse qui repellendus temporibus eum nesciunt, ipsum amet quidem non aut laudantium praesentium numquam, a quod hic explicabo quas iure, blanditiis, aliquid dignissimos. Dolore a, provident, eveniet quia recusandae dolor perferendis, reprehenderit nobis nesciunt consequuntur saepe ullam ducimus rerum libero facere officiis quisquam veritatis eum eius error necessitatibus commodi adipisci fugit totam. Iusto.
-					</div>
-					<div class="focusLivre col-md-4">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis eveniet atque, non ducimus reiciendis quasi vitae quam odit autem praesentium aliquam iusto corrupti, maiores molestias, quo. Quos, pariatur praesentium odit unde odio est nihil voluptas officiis provident, labore nulla totam.
-					</div>
+				<div id="divEtrangere" class="row divLibrairieAdulte">
+					<?php createDivLibrairie(1) ?>
+				</div>
+				<div id="divPoliciere" class="row divLibrairieAdulte">
+					<?php createDivLibrairie(3) ?>
+				</div>
+				<div id="divBDAdulte" class="row divLibrairieAdulte">
+					<?php createDivLibrairie(6) ?>
+				</div>
+				<div id="divSante" class="row divLibrairieAdulte">
+					<?php createDivLibrairie(17) ?>
+				</div>
+				<div id="divCuisine" class="row divLibrairieAdulte">
+					<?php createDivLibrairie(13) ?>
+
 				</div>
 			</div>
 		</div>
 		<div id="espaceJeunesse" class="row parallaxRideau">
-			<div class="blocText text-center col-md-2 col-same-height">
+			<div class="blocText text-center col-md-3 col-same-height">
 				<ul>
 					<li><h2>Jeunesse</h2></li>
-					<li>Documentaires</li>
-					<li>Premières lectures</li>
-					<li>Romans Jeunesse et pré-Ados</li>
-					<li>Romans Ados et Young Adult</li>
-					<li>Mangas</li>
-					<li>Albums</li>
-					<li>Jeux créatifs et de société</li>
+					<li><a id="documentaire" href="!#">Documentaires</a></li>
+					<li><a id="premiere" href="!#">Premières lectures</a></li>
+					<li><a id="preados" href="!#">Romans Jeunesse et pré-Ados</a></li>
+					<li><a id="young" href="!#">Romans Ados et Young Adult</a></li>
+					<li><a id="manga" href="!#">Mangas</a></li>
+					<li><a id="panini" href="!#">Albums</a></li>
+					<li><a id="creatifs" href="!#">Jeux créatifs et de société</a></li>
 				</ul>
 			</div>
-			<div class="selectionLivres col-md-9 col-md-offset-1 col-same-height">
-				<div class="row">
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
+			<div class="col-md-8 col-md-offset-1 col-same-height">
+				<div id="divGeneralJeunesse">
+					<?php createDivLibrairie("jeunesse") ?>
 				</div>
-				<div class="espaceVide row">
+				<div id="divDocumentaire" class=" divLibrairieJeunesse">
+					<?php createDivLibrairie(5) ?>
 				</div>
-				<div class="row">
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
+				<div id="divPremiere" class="row divLibrairieJeunesse">
+					<?php createDivLibrairie(7) ?>
+				</div>
+				<div id="divPreados" class="row divLibrairieJeunesse">
+					<?php createDivLibrairie(11) ?>
+				</div>
+				<div id="divYoung" class="row divLibrairieJeunesse">
+					<?php createDivLibrairie(8) ?>
+				</div>
+				<div id="divManga" class="row divLibrairieJeunesse">
+					<?php createDivLibrairie(8) ?>
+				</div>
+				<div id="divPanini" class="row divLibrairieJeunesse">
+					<?php createDivLibrairie(6) ?>
+				</div>
+				<div id="divCreatifs" class="row divLibrairieJeunesse">
+					<?php createDivLibrairie(16) ?>
+
 				</div>
 			</div>
 		</div>
@@ -87,32 +142,30 @@
 				<ul>
 					<li><h2>Papeterie <br />
 					Loisirs créatifs</h2></li>
-					<li>Papeterie scolaire ou de bureau</li>
-					<li>Décopatch</li>
-					<li>Jouets d’éveil</li>
-					<li>Matériel de loisir créatif</li>
+					<li><a id="papetrie" href="!#">Papeterie scolaire ou de bureau</a></li>
+					<li><a id="decopatch" href="!#">Décopatch</a></li>
+					<li><a id="jouets" href="!#">Jouets d’éveil</a></li>
+					<li><a id="loisirs" href="!#">Matériel de loisir créatif</a></li>
 				</ul>
 			</div>
-			<div class="selectionLivres col-md-9 col-md-offset-1 col-same-height">
-				<div class="row">
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
+			<div class="col-md-8 col-md-offset-1 col-same-height">
+				<div id="divGeneralPapeterie">
+					<?php createDivLibrairie("papeterie") ?>
 				</div>
-				<div class="espaceVide row">
+				<div id="divPapeterie" class=" divLibrairiePapeterie">
+					<?php createDivLibrairie(2) ?>
 				</div>
-				<div class="row">
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
-					<div class="focusLivre col-md-4">
-					</div>
+				<div id="divDecopatch" class="row divLibrairiePapeterie">
+					<?php createDivLibrairie(1) ?>
+				</div>
+				<div id="divJouets" class="row divLibrairiePapeterie">
+					<?php createDivLibrairie(3) ?>
+				</div>
+				<div id="divLoisirs" class="row divLibrairiePapeterie">
+					<?php createDivLibrairie(6) ?>
 				</div>
 			</div>
+
 		</div>
 	</div> <!-- class="container" -->
 </section> <!-- id="bgLaLibrairie" class="parallax" -->
