@@ -2,162 +2,126 @@
 	<div class="container">
 		<div class="row parallaxRideau">
 			<div class="blocText col-centered text-center col-md-8">
-				<h2>Nos coups de Coeur du moment</h2>
+				<h2>Nos derniers coups de Coeur</h2>
 				<p>
 					La lecture fait naître en chacun d'entre nous des émotions différentes.<br />
 					Au fil des pages, notre esprit voyage et l'appréciation de tel ou tel ouvrage se forge.
 					Nous partageons ici nous coups de coeurs afin de vous les faire découvrir avec le plus grand plaisir.
 				</p>
-			</div>
-		</div>
-	</div>
-	 
-			
+			</div>  
+			<div id="divCoupDeCoeur" class="col-xd-4 col-lg-12">
+			                
+			<?php 
+				$objetEvenementsModel = new \Model\LivresModel;
 
-		<!-- <div class="row">
-		    <div class="col-md-12">
-		      <div class="carousel slide multi-item-carousel" id="CarouselCoupsDeCoeur">
-		        <div class="carousel-inner">
-		          <div class="item active">
-		            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/f44336/000000" class="img-responsive"></a></div>
-		          </div>
-		          <div class="item">
-		            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/e91e63/000000" class="img-responsive"></a></div>
-		          </div>
-		          <div class="item">
-		            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/9c27b0/000000" class="img-responsive"></a></div>
-		          </div>
-		          <div class="item">
-		            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/673ab7/000000" class="img-responsive"></a></div>
-		          </div>
-		          <div class="item">
-		            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/4caf50/000000" class="img-responsive"></a></div>
-		          </div>
-		          <div class="item">
-		            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
-		          </div>
+				$tabLignes = $objetEvenementsModel->findAll($orderBy = "dateParution", $orderDir = "DESC");
+				$i = 0;
 
-		          <div class="item">
-		            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
-		          </div>
-		          
+				foreach($tabLignes as $LigneCourante)
+				{
+					$i++;
 
-		        </div>
-		        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-		        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-		      </div>
-		    </div>
-		  </div> -->
+					if ($i < 13)
+					{
+						$id = $LigneCourante["id"];
+						$titreLivre = $LigneCourante["titreLivre"];
+						$id_auteur = $LigneCourante["id_auteur"];
+						$id_editeur = $LigneCourante["id_editeur"];
+						$id_collection = $LigneCourante["id_collection"];
+						$id_genre = $LigneCourante["id_genre"];
+						$id_sousgenre = $LigneCourante["id_sousgenre"];
+						$dateParution = $LigneCourante["dateParution"];
 
+						$dateParution = new DateTime($dateParution);
+						$dateParution = $dateParution->format('d/m/Y');
 
+						$isbn = $LigneCourante["isbn"];
+						$id_format = $LigneCourante["id_format"];
+						$id_presentation = $LigneCourante["id_presentation"];
+						$nbPage = $LigneCourante["nbPage"];
+						$poids = $LigneCourante["poids"];
+						$dimensions = $LigneCourante["dimensions"];
+						$resume = $LigneCourante["resume"];
 
-	<div class="container">
-		<div class="row">   
-			<div class="col-xd-4 text-center col-lg-2">
-	                
-	<?php 
-		$objetEvenementsModel = new \Model\LivresModel;
+						$couverture = "img/livres/";
+						$couverture .= $LigneCourante["couverture"];
 
-		$tabLignes = $objetEvenementsModel->findAll("id", "DESC");
+						$prix = $LigneCourante["prix"];
+						$coupDeCoeur = $LigneCourante["coupDeCoeur"];
+						$dateCrea = $LigneCourante["dateCrea"];
 
-		foreach($tabLignes as $LigneCourante)
-		{
-			$id = $LigneCourante["id"];
-			$titreLivre = $LigneCourante["titreLivre"];
-			$id_auteur = $LigneCourante["id_auteur"];
-			$id_editeur = $LigneCourante["id_editeur"];
-			$id_collection = $LigneCourante["id_collection"];
-			$id_genre = $LigneCourante["id_genre"];
-			$id_sousgenre = $LigneCourante["id_sousgenre"];
-			$dateParution = $LigneCourante["dateParution"];
-			$isbn = $LigneCourante["isbn"];
-			$id_format = $LigneCourante["id_format"];
-			$id_presentation = $LigneCourante["id_presentation"];
-			$nbPage = $LigneCourante["nbPage"];
-			$poids = $LigneCourante["poids"];
-			$dimensions = $LigneCourante["dimensions"];
-			$resume = $LigneCourante["resume"];
+						$alt = "livre_";
+						$alt .= $LigneCourante["titreLivre"];
 
-			$couverture = "img/livres/";
-			$couverture .= $LigneCourante["couverture"];
+						$objetView = new \W\View\Plates\PlatesExtensions;
 
-			$prix = $LigneCourante["prix"];
-			$coupDeCoeur = $LigneCourante["coupDeCoeur"];
-			$dateCrea = $LigneCourante["dateCrea"];
+						if ($coupDeCoeur == "oui")
+						{
+							$objetAuteursModel = new \Model\AuteursModel;
+							$auteur = $objetAuteursModel->find($id_auteur);
 
-			if ($coupDeCoeur == "oui")
-			{
-				$objetAuteursModel = new \Model\AuteursModel;
-				$auteur = $objetAuteursModel->find($id_auteur);
+							$objetEditeursModel = new \Model\EditeursModel;
+							$editeur = $objetEditeursModel->find($id_editeur);
 
-				$objetEditeursModel = new \Model\EditeursModel;
-				$editeur = $objetEditeursModel->find($id_editeur);
+							$objetCollectionsModel = new \Model\CollectionsModel;
+							$collection = $objetCollectionsModel->find($id_collection);
 
-				$objetCollectionsModel = new \Model\CollectionsModel;
-				$collection = $objetCollectionsModel->find($id_collection);
+							$objetGenresModel = new \Model\GenresModel;
+							$genre = $objetGenresModel->find($id_genre);
 
-				$objetGenresModel = new \Model\GenresModel;
-				$genre = $objetGenresModel->find($id_genre);
+							$objetSousgenresModel = new \Model\SousgenresModel;
+							$sousgenre = $objetSousgenresModel->find($id_sousgenre);
 
-				$objetSousgenresModel = new \Model\SousgenresModel;
-				$sousgenre = $objetSousgenresModel->find($id_sousgenre);
+							$objetFormatsModel = new \Model\FormatsModel;
+							$format = $objetFormatsModel->find($id_format);
 
-				$objetFormatsModel = new \Model\FormatsModel;
-				$format = $objetFormatsModel->find($id_format);
-
-				$objetPresentationsModel = new \Model\PresentationsModel;
-				$presentation = $objetPresentationsModel->find($id_presentation);
+							$objetPresentationsModel = new \Model\PresentationsModel;
+							$presentation = $objetPresentationsModel->find($id_presentation);
 
 
-				echo
-<<<CODEHTML
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal$id">
-	 $titreLivre
-</button>
+	?>
+					<div class="focusLivre col-xs-6 col-md-2" data-toggle="modal" data-target="#modal<?php echo $id ?>"">
+						<img class="img-responsive" src="<?php	echo $objetView->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />
+						<p><?php echo $titreLivre; ?></p>
+					</div>
 
-<div class="modal fade" id="modal$id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  	<div class="modal-dialog modal-lg" role="document">
-    	<div class="modal-content">
-      		<div class="modal-header">
-        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        		<h3 class="modal-title" id="myModalLabel">$titreLivre</h3>
-      		</div>
-      		<div class="modal-body">
-				<img src='
-CODEHTML;
-				echo $this->assetUrl($couverture);
-				echo 
-<<<CODEHTML
-				' alt='couverture' />
-				<h3>Auteur : $auteur[libelle]</h3>
-				<p>Editeur : $editeur[libelle]</p>
-				<p>Collection : $collection[libelle]</p>
-				<p>Genre : $genre[libelle]</p>
-				<p>Sous-Genre : $sousgenre[libelle]</p>
-				<p>Date de parution : $dateParution</p>
-				<p>ISBN : $isbn</p>
-				<p>Format : $format[libelle]</p>
-				<p>Présentation : $presentation[libelle]</p>
-				<p>Nombre de pages : $nbPage</p>
-				<p>Poids : $poids Kg</p>
-				<p>dimension : $dimensions</p>
-				<p>Resume : $resume</p>
-				<p>Prix : $prix € TTC</p>
-				<!--<p>Date de création : $dateCrea</p>-->
-			</div>
-		</div>
-      	<div class="modal-footer">
-       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      	</div>
-    </div>
-</div>
-CODEHTML;
-			}
-		}
-
-	?>				
+					<div class="modal fade" id="modal<?php echo $id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					  	<div class="modal-dialog modal-lg" role="document">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        		<h3 class="modal-title" id="myModalLabel"><?php echo $titreLivre ?></h3>
+					      		</div>
+					      		<div class="modal-body">
+									<img src='<?php	echo $this->assetUrl($couverture); ?>' alt='couverture' />
+									<h3>Auteur :<?php echo $auteur["libelle"] ?></h3>
+									<p>Editeur :<?php echo $editeur["libelle"] ?></p>
+									<p>Collection : <?php echo $collection["libelle"] ?></p>
+									<p>Genre : <?php echo $genre["libelle"] ?></p>
+									<p>Sous-Genre : <?php echo $sousgenre["libelle"] ?></p>
+									<p>Date de parution :<?php echo $dateParution ?></p>
+									<p>ISBN : <?php echo $isbn ?></p>
+									<p>Format : <?php echo $format["libelle"] ?></p>
+									<p>Présentation : <?php echo $presentation["libelle"] ?></p>
+									<p>Nombre de pages : <?php echo $nbPage ?></p>
+									<p>Poids : <?php echo $poids ?> Kg</p>
+									<p>dimension : <?php echo $dimensions ?></p>
+									<p>Resume : <?php echo $resume ?></p>
+									<p>Prix : <?php echo $prix ?> € TTC</p>
+									<!--<p>Date de création : $dateCrea</p>-->
+								</div>
+							</div>
+					      	<div class="modal-footer">
+					       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					      	</div>
+					    </div>
+					</div>
+	<?php				
+						}
+					}
+				}
+?>				
 			</div>
 		</div>
 	</div>  <!-- class="container"-->
-
 </section>

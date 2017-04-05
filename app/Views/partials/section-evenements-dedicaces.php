@@ -21,7 +21,15 @@
 				$titreEvent = $LigneCourante["titreEvent"];
 				$typeEvent = $LigneCourante["typeEvent"];
 				$dateEvent = $LigneCourante["dateEvent"];
+
+				$dateEvent = new DateTime($dateEvent);
+				$dateEvent = $dateEvent->format('d/m/Y');
+
 				$heureEvent = $LigneCourante["heureEvent"];
+
+				$heureEvent = new DateTime($heureEvent);
+				$heureEvent = $heureEvent->format('H:i');
+				
 				$description = $LigneCourante["description"];
 				$photo = "img/ateliers_evenements/";
 				$photo .= $LigneCourante["photo"];
