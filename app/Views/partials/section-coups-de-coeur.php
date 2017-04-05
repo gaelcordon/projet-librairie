@@ -53,7 +53,7 @@
 
 	<div class="container">
 		<div class="row">   
-			<div class="col-xd-4 col-lg-2">
+			<div class="col-xd-4 text-center col-lg-2 col-centered">
 	                
 	<?php 
 		$objetEvenementsModel = new \Model\LivresModel;

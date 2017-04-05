@@ -76,7 +76,7 @@
 					                        <input type="text" name="recherche" id="search-text" class="form-control" placeholder="Rechercher">
 					                        <input type="hidden" name="idFormClasse" value="Recherches">
 											<input type="hidden" name="idFormMethode" value="recherchesTraitement">
-					                        <button type="submit" class="btn btn-default search-btn">
+					                        <button type="submit">
 												<span class="glyphicon glyphicon-ok-sign"></span>
 											</button>
 					                    </form>  

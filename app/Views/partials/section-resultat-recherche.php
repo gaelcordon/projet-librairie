@@ -1,5 +1,5 @@
 <section id="bgRecherche" class="parallax">
-	<div id="ateliers" class="container-fluid paddingBottom">
+	<div id="resultatRecherche" class="container-fluid paddingBottom">
 	    <div class="row">   
 <?php
 
