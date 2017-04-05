@@ -1,12 +1,12 @@
 		<section id="bgAccueil" class="parallax">
 			<div id="nouveautes" class="container">
 			
-				<div class="row parallaxRideau">
+				<div class="row">
 					<div class="col-centered">
-						<div class="blocText text-center">
-							<h2>Nouveautés</h2>
-						</div>
 						<div id="carouselNouveautes">
+							<div class="blocText text-center">
+								<h2>Nouveautés</h2>
+							</div>
 							<ul class="carousel">
 							<?php
 								$objetLivresModel = new \Model\LivresModel;
@@ -32,13 +32,17 @@
 								}
 							?>
 							</ul>
+							<!-- <span>
+							  <input type="button" value="Prev" id="prev">
+							  <input type="button" value="Next" id="next">
+							</span> -->
 						</div><!-- id="carouselNouveautes" -->
 					</div> 
 				</div> <!-- class="row" -->
-				<!-- <div id="buttonCarousel" class="row text-center">
+				<div id="buttonCarousel" class="row text-center">
 					<input type="button" value="Prev" id="prev">
 					<input type="button" value="Next" id="next">
-				</div> -->
+				</div>
 			</div><!--id="nouveautes"-->
 			<div class="container">
 				<div class="row parallaxRideau">
