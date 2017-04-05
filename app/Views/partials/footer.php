@@ -1,11 +1,10 @@
 </main>
 <footer>
-    <nav class="navbar">
-        <!-- On récupère les liens de navigations pour les réduire en responsive design -->
-            <ul class="nav navbar-nav col-centered">
-                <li>&copy; A la gloire de mon père 2017</li>
-            </ul><!-- class="nav navbar-nav" -->
-    </nav> <!-- class="navbar navbar-default navbar-fixed-top" -->
+    <div class="container-fluid">
+        <div class="row text-center blocText">
+            <p><span>&copy;</span> A la gloire de mon père <span>2017</span></p>
+        </div>
+    </div>
 </footer>
 
             <!--On construit l'url à partir du nom de la route grâce à l'objet $this

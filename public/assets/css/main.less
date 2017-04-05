@@ -104,15 +104,6 @@ header {
 }
 
 	
-/*************************************************************************************************
-		barre de menu du haut fixe avec comportement affix pour éviter le padding sur le main et les breakpoint
-*************************************************************************************************/
-//
-
-// postionnement de la barre de navigation 
-// le logo disparaît quand on scroll down 
-// et le menu de navigation reste visible
-
 
 
 /*************************************************************************************************
@@ -125,6 +116,16 @@ header {
     margin: 0vh auto;
 }
 
+/*************************************************************************************************
+		barre de menu du haut fixe avec comportement affix pour éviter le padding sur le main et les breakpoint
+*************************************************************************************************/
+//
+
+// postionnement de la barre de navigation 
+// le logo disparaît quand on scroll down 
+// et le menu de navigation reste visible
+
+
 nav {
 	background-color: @bleuNavbar;
 	font-family: 'champagneLimousine';
@@ -132,6 +133,7 @@ nav {
 	font-weight: bold;
 	font-size: 2rem;
 	position: fixed;
+	z-index: 10;
 
 
 	form {
@@ -145,6 +147,11 @@ nav {
 
 
 .navbar {
+
+	.btn-group {
+	    margin-top: 0!important;
+	    bottom: 0.3vh !important;
+		}
 	
 	// surcharge à Bootstrap : pas de border et couleur différente
 	border-color: rgba(255, 255, 255, 0);
@@ -164,6 +171,9 @@ nav {
 	}
 	.navbar-collapse, .navbar-form {
 		border-color: @orange;
+	}
+	.navbar-collapse.in {
+		overflow-y: visible;
 	}
 
 	.navbar-nav {
@@ -265,63 +275,61 @@ nav {
     		border-top-right-radius: 4px;
     		border-bottom-right-radius: 4px;
 			}
-			    
 	}
 }
+
+
 /*************************************************************************************************
 		Zone de recherche expanded
 *************************************************************************************************/
 //
 
-div#zoneRecherche {
-	margin-top: 3vh;
-	// Couleur orange pour le symbole de la loupe dans le champ de recherche
-	.glyphicon-search:before {
-		color:@orange;
-		}
-	> #searchIcon {
-	  display: inline-block;
-	  float: left;
-	  width: 33.333333333%;
-	  background-color: @bleuNavbar;
-	  text-align: center;
-	  padding: 5px 0;
-	  border: 1px solid #ccc;
-	  cursor: pointer;
-	  &:hover {
-	    background-color: @bleuHover;
-	    color: #fff;
-	   }
-	  // span {
-	  //   display: block;
-	  // }
-	}
+.popover_parent {
+	position:relative;
+	display:inline-block;
+}
+.popover {
+	display:none;
+	background:@bleuHover;
+	padding:1em;
+	border-radius:4px;
+	position:absolute;
+	top:4em;
+	z-index:1;
+	width:200px;
+	border:1px solid @orange;
+}
+  .popover:before {
+  	content:"";
+  	position: absolute;
+  	left:30px;
+  	top: -20px;
+  	width: 0;
+  	height: 0; 
+  	border: 10px solid transparent;
+  	border-bottom: 10px solid @orange;
+  }
 
-	.search-form {
-    padding: 5px 15px;
-	}
-	.search-bar {
-	  background-color: #ccc;
-	  #search-text {
-	    float: left;
-	    width: -moz-calc(100% - 40px);
-	    width: -webkit-calc(100% - 40px);
-	    width: -o-calc(100% - 40px);
-	    width: calc(100% - 50px);
-	  }
-	  .search-btn {
-	    display: inline-block;
-	    margin-left: 10px;
-	  }
-	}
+.active .popover {
+	display:block;
+}
+.active span{
+	background:@bleuHover!important;
+	color: @grisClair;
 }
 
-// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
+// Couleur orange pour le symbole de la loupe dans le champ de recherche
+.glyphicon-search:before {
+	color:@orange;
+	font-size: 1.5em;
+}
 
-.btn-group, .btn-group-vertical {
-
+input[type="submit"] {
+	float: right;
+    border: 0;
     margin-top: 1vh;
 }
+
 
 // surcharge à Bootstrap : moins de padding
 
@@ -338,7 +346,7 @@ div#navbar-collapse-1 {
 
 ul.dropdown-menu>li {
     text-align: center !important;
-    z-index: 6000;
+    z-index: 50;
 }
 
 
@@ -358,12 +366,12 @@ ul.dropdown-menu>li {
 	height: 55vh;
 	z-index: -1;
 
-	section {
-	width: 100%;
-	height: 25em;
-	margin: 0 auto;
-	// position: relative;
-	}
+	// section {
+	// width: 100%;
+	// height: 25em;
+	// margin: 0 auto;
+	// // position: relative;
+	// }
 
 	li {
 
@@ -377,6 +385,7 @@ ul.dropdown-menu>li {
 
 	img {
 		transform: scale(1);
+		max-height: 450px;
 	}
 
 	li p {
@@ -392,14 +401,14 @@ ul.dropdown-menu>li {
 	}
 
 	.main-pos {
-	z-index: 3000;
+	z-index: 5;
 	left: 10vh !important;
 	}
 
 	.left-pos {
 	opacity: .3;
 	left: -5vh !important;
-	z-index: 1000;
+	z-index: 0;
 	-webkit-transform: scale(.75);
 	-moz-transform: scale(.75);
 	transform: scale(.75);
@@ -416,7 +425,7 @@ ul.dropdown-menu>li {
 	.right-pos {
 	opacity: .3;
 	right:  -5vh !important;
-	z-index: 1000;
+	z-index: 0;
 	-webkit-transform: scale(.75);
 	-moz-transform: scale(.75);
 	transform: scale(.75);
@@ -446,7 +455,6 @@ ul.dropdown-menu>li {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	z-index: -1; // permet à l'image de passer sous le logo et la barre de navigation
 }
 
 /*************************************************************************************************
@@ -455,20 +463,19 @@ ul.dropdown-menu>li {
 //
 
 
-.parallaxRideau {
+.parallaxRideau, .parallaxRideauRecherche {
 	background-color: @fondBloc;
     padding: 1% 2%;
-    border-radius: 0.5vh;
-    margin: 10vh 2vh;
-  	
+    border-radius: 0.5vh;   
+	
 }
 
+.parallaxRideau {
+  margin: 10vh 2vh;
+}
 .parallaxRideauRecherche {
-	background-color: @fondBloc;
-    padding: 1% 2%;
-    border-radius: 0.5vh;
     margin: 2vh 2vh;
-  	
+	
 }
 
 .blocText {
@@ -519,7 +526,7 @@ ul.dropdown-menu>li {
 
 
 #bgAccueil {
-	background-image: url('../img/commun/bdAccueil.jpg');
+	background-image: url('../img/commun/bgAccueil.jpg');
 
 }
 
@@ -529,8 +536,12 @@ ul.dropdown-menu>li {
 }
 
 #bgLaLibrairie {
-	background-image: url('../img/commun/bdLaLibrairie.jpg');
+	background-image: url('../img/commun/bgLaLibrairie.jpg');
 	height:200vh;
+}
+
+#bgCoupsDeCoeur {
+	background-image: url('../img/commun/bgCoupsDeCoeur.jpg');
 }
 
 #bgAteliers {
@@ -546,8 +557,6 @@ ul.dropdown-menu>li {
 	background-image: url('../img/commun/bgBottomAtelier.jpg');
 	height:100vh;
 }
-
-
 
 .selectionLivres {
 	background-color: red;
@@ -569,20 +578,26 @@ ul.dropdown-menu>li {
 	p {
 		color: white;	
 	}
+#bgAdmin {
+	background-image: url('../img/commun/bgAdmin.jpg');
+	height:100vh;
 }
 
 .divLibrairieAdulte, .divLibrairieJeunesse, .divLibrairiePapeterie {
 	display: none;
 }
 
-#photoAtelier > img {
 
+/* 	max-height: 50vh; */
 
-	max-height: 50vh;
+.espaceVide {
+	min-height: 100px;
 }
 
-#realisations {
-	background-color: @bleuHover;
+.focusLivre {
+	background-color: blue;
+	height: 70px;
+	display: inline-block;
 }
 
 .divRecherche {
@@ -592,6 +607,13 @@ ul.dropdown-menu>li {
 		max-height: 300px;
 		margin-right: 2vh;
 	}
+#photoAtelier > img {
+
+	max-height: 50vh;
+}
+
+#realisations {
+	background-color: @bleuHover;
 }
 
 
@@ -679,13 +701,15 @@ footer {
 }
 
 #menuAdmin {
-	height: 150px;
+
+	padding: 1% 2%;
+    margin: 10vh 2vh;
 }
 
 #menuAdmin div {
-	background-color: red;
-	padding-left: 10px;
+	// padding-left: 10px;
 	background-clip: content-box;
+
 		h3 {
 			text-align: center;
 		}
@@ -748,17 +772,40 @@ footer {
 .modal-body, .modal-header, .modal-footer {
 	background-color: @bleuNavbar;
 	color: @orange;
+	border-bottom: 1px solid @orange;
+	border-top: 0;
+	 a {
+		color: @orange;
+		}
 }
-
 .btn-primary {
 	background-color: @bleuNavbar;
 	color: @grisClair;
+	border-color: @orange;
 }
 
 .btn-primary:hover, .btn-primary:focus {
 	background-color: @bleuHover !important;
 	color: @orange !important;
+    border-color: @grisClair;
+
 }
+
+.btn-default {
+    color: @orange;
+    font-weight: bold;
+    background-color: @bleuNavbar;
+    border-color: @orange;
+}
+#modalBook, #modalEvent, #modalUser {
+
+	.modal-content {
+	top:35vh;
+
+			}
+}
+
+
 /*************************************************************************************************
 		réglages particuliers des Breakpoints pour les différents périphériques 
 *************************************************************************************************/
@@ -797,6 +844,20 @@ footer {
 	}
 }
 	
+	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
+
+	.btn-group, {
+
+	    margin-top: 1vh;
+	}
+
+	img.center-block {
+		max-height: 70px;
+		margin-top: 1vh;
+	}
+
+
+
 }
 
 
@@ -810,9 +871,16 @@ footer {
 		z-index: 1;
 	}
 
+	
+
 	#divIframe {
 		padding-top: 5vh;
 		height : auto;
+	}
+
+	nav.navbar {
+
+	max-height: 14.8vh;
 	}
 }
 	
@@ -820,11 +888,16 @@ footer {
 		Breakpoint 3 : sur ordinateur de bureau MD et LG
 *************************************************************/
 @media only screen and (min-width: 993px) {
+
+	nav.navbar {
+
+	max-height: 14.8vh;
+	}
 	
 }
 
 
-
+// Autre essai de carousel
 
 .multi-item-carousel{
   .carousel-inner{
@@ -861,17 +934,3 @@ footer {
     }
   }
 }
-
-// // non-related styling:
-// body{
-//   background: #333;
-//   color: #ddd;
-// }
-// h1{
-//   color: white;
-//   font-size: 2.25em;
-//   text-align: center;
-//   margin-top: 1em;
-//   margin-bottom: 2em;
-//   text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
-// }

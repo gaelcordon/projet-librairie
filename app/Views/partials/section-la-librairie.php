@@ -92,6 +92,7 @@
 				</div>
 				<div id="divCuisine" class="row divLibrairieAdulte">
 					<?php createDivLibrairie(13) ?>
+
 				</div>
 			</div>
 		</div>
@@ -132,6 +133,7 @@
 				</div>
 				<div id="divCreatifs" class="row divLibrairieJeunesse">
 					<?php createDivLibrairie(16) ?>
+
 				</div>
 			</div>
 		</div>
@@ -165,5 +167,5 @@
 			</div>
 
 		</div>
-	</div>
+	</div> <!-- class="container" -->
 </section> <!-- id="bgLaLibrairie" class="parallax" -->

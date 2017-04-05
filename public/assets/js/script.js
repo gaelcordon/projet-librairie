@@ -25,6 +25,23 @@ $(function(){
 
     // 
 
+    // Zone de recherche
+
+    $('.popover_parent span').on('click', function() {
+        $('.popover_parent > span').not(this).parent().removeClass('active');
+        $(this).parent().toggleClass('active');
+        $('.search input[type="text"]').focus();
+    });
+
+    //Cacher le dropdow quand on click ailleurs
+    $(document).on('click touchstart', function(event) {
+      if (!$(event.target).closest('.popover_parent').length) {
+        // Cacher le menu
+        $('.popover_parent.active').removeClass('active');
+      }
+    });
+
+
 
     $("#formUser").on("submit", function(event){
         // DEBUG
@@ -213,7 +230,7 @@ $(function(){
     //Redimensionnement hauteur des colonnes bootstrap matchHeight()
     
     $(function() {
-    $('#espaceAdulte, #espaceJeunesse, #espacePapeterie').matchHeight();
+    $('.col-same-height').matchHeight();
     });
 
 

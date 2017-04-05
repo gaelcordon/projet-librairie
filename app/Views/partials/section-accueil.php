@@ -1,12 +1,11 @@
 		<section id="bgAccueil" class="parallax">
 			<div id="nouveautes" class="container">
-				<div class="row paddingTop">
-					<div class="blocText parallaxRideau col-centered text-center col-md-8">
-						<h2>Nouveautés</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-10 col-md-6 col-centered">
+			
+				<div class="row parallaxRideau">
+					<div class="col-centered">
+						<div class="blocText text-center">
+							<h2>Nouveautés</h2>
+						</div>
 						<div id="carouselNouveautes">
 							<ul class="carousel">
 							<?php
@@ -27,7 +26,7 @@
 
 							?>
 								<li class="items main-pos" id="<?php echo $i; ?>">
-								<img class="img-responsive" src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
+									<img src="<?php	echo $this->assetUrl($couverture); ?>" alt="<?php echo $alt; ?>" />	
 								</li>
 							<?php
 								}
@@ -42,9 +41,9 @@
 				</div> -->
 			</div><!--id="nouveautes"-->
 			<div class="container">
-				<div class="row paddingTop">
+				<div class="row parallaxRideau">
 					<div class="col-xs-10 col-sm-8 col-md-8 col-centered">
-						<div id="texteAccueil" class="text-center blocText parallaxRideau">
+						<div class="text-center blocText">
 							<div id="ilEtaitUneFois">
 								<h2>Il était une fois...</h2>
 								<p>
@@ -76,11 +75,11 @@
 
 		<section id="bgBottomAccueil" class="parallax">
 			<div class="container-fluid">
-				<div id="adresseSection" class="row paddingTop blocText">
-					<div id="divIframe" class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-2">
+				<div id="adresseSection" class="row blocText">
+					<div id="divIframe" class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1">
 						<iframe id="localisation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.2553174584305!2d5.125018715696843!3d44.05743623421457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ca76a77dea7fc5%3A0xefb2cbcce49b402f!2sLa+Gloire+De+Mon+P%C3%A8re+Mazan!5e0!3m2!1sfr!2sfr!4v1485903280277" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
-					<div class="row col-md-6">
+					<div class="col-md-6">
 						<div class="col-md-4 col-xs-5 col-xs-offset-1 text-center">
 							<div id="adresse">
 								<h2>Nous Trouver</h2>
@@ -88,7 +87,7 @@
 									<strong>La Gloire De Mon Père</strong><br>
 									265 Avenue de l'Europe<br />
 									84380 Mazan<br />
-									<abbr title="Phone"> 04 90 30 94 99 </abbr>
+									<span>04 90 30 94 99</span>
 								</address>
 							</div>
 						</div>
@@ -97,8 +96,8 @@
 								<h2>Horaires d'ouverture</h2>
 								<p>du Mardi au <br />
 								Samedi<br />
-								de 9h à 12h30<br />
-								et de 14h à 19h<br /></p>
+								de <span>9h</span> à <span>12h30</span><br />
+								et de <span>14h</span> à <span>19h</span><br /></p>
 							</div>
 						</div>
 						<div id="sectionFormContact" class="col-xs-8 col-xs-offset-2 col-md-7">

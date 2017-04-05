@@ -50,13 +50,6 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 		$this->show('pages/evenements-dedicaces');
 	}
 	/**
-	 * Page spécifique aux Réseaux Sociaux
-	 */
-	public function reseauxSociaux()
-	{
-		$this->show('pages/reseaux-sociaux');
-	}
-	/**
 	 * Page de logout
 	*/
 	public function logout()

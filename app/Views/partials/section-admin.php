@@ -1,46 +1,50 @@
-<section class="container">
-	<div id="menuAdmin" class="row">
-		<div class="col-lg-3 col-lg-push-2">
-			<button type="button" id="addBook" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalBook">
-	 			Ajout Livres
-			</button>
-		</div>
-		<div class="col-lg-3 col-lg-push-2">
-			<button type="button" id="addEvent" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalEvent">
-	 			Ajout Evenements
-			</button>
-		</div>
-		<div class="col-lg-3 col-lg-push-2">
-			<button type="button" id="addUser" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalUser">
-	 			Ajout Utilisateurs
-			</button>
+<section id="bgAdmin" class="parallax">
+	<div class="container">
+		<div id="menuAdmin" class="row">
+
+				<div class="col-sm-4">
+					<button type="button" id="addBook" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalBook">
+			 			Ajout Livres
+					</button>
+				</div>
+				<div class="col-sm-4">
+					<button type="button" id="addEvent" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalEvent">
+			 			Ajout Evenements
+					</button>
+				</div>
+				<div class="col-sm-4">
+					<button type="button" id="addUser" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalUser">
+			 			Ajout Utilisateurs
+					</button>
+				</div>
+
 		</div>
 	</div>
 	<div id="afficheRetour" class="row">
-<?php
+	<?php
 
-$objetAuteursModel = new \Model\AuteursModel;
-$listeAuteurs = $objetAuteursModel->findAll();
+	$objetAuteursModel = new \Model\AuteursModel;
+	$listeAuteurs = $objetAuteursModel->findAll();
 
-$objetEditeursModel = new \Model\EditeursModel;
-$listeEditeurs = $objetEditeursModel->findAll();
+	$objetEditeursModel = new \Model\EditeursModel;
+	$listeEditeurs = $objetEditeursModel->findAll();
 
-$objetCollectionsModel = new \Model\CollectionsModel;
-$listeCollections = $objetCollectionsModel->findAll();
+	$objetCollectionsModel = new \Model\CollectionsModel;
+	$listeCollections = $objetCollectionsModel->findAll();
 
-$objetGenresModel = new \Model\GenresModel;
-$listeGenres = $objetGenresModel->findAll();
+	$objetGenresModel = new \Model\GenresModel;
+	$listeGenres = $objetGenresModel->findAll();
 
-$objetSousgenresModel = new \Model\SousgenresModel;
-$listeSousgenres = $objetSousgenresModel->findAll();
+	$objetSousgenresModel = new \Model\SousgenresModel;
+	$listeSousgenres = $objetSousgenresModel->findAll();
 
-$objetFormatsModel = new \Model\FormatsModel;
-$listeFormats = $objetFormatsModel->findAll();
+	$objetFormatsModel = new \Model\FormatsModel;
+	$listeFormats = $objetFormatsModel->findAll();
 
-$objetPresentationsModel = new \Model\PresentationsModel;
-$listePresentations = $objetPresentationsModel->findAll();
+	$objetPresentationsModel = new \Model\PresentationsModel;
+	$listePresentations = $objetPresentationsModel->findAll();
 
-?>
+	?>
 	</div>
 
 	<div class="modal fade" id="modalBook" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
