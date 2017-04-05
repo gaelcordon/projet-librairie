@@ -17,6 +17,10 @@
 			$id_genre = $LigneCourante["id_genre"];
 			$id_sousgenre = $LigneCourante["id_sousgenre"];
 			$dateParution = $LigneCourante["dateParution"];
+
+			$dateParution = new DateTime($dateParution);
+			$dateParution = $dateParution->format('d/m/Y');
+
 			$isbn = $LigneCourante["isbn"];
 			$id_format = $LigneCourante["id_format"];
 			$id_presentation = $LigneCourante["id_presentation"];
@@ -64,7 +68,7 @@
 		<p>Date de parution : <?php echo $dateParution; ?></p>
 		<p>Resume : <?php echo $resume; ?></p>
 		<p>Prix : <?php echo $prix; ?> &euro;</p>
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal<?php echo $id; ?>">
+		<button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#modal<?php echo $id; ?>">
 	 		En savoir plus
 		</button>
 
