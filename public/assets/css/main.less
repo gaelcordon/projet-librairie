@@ -149,8 +149,8 @@ nav {
 .navbar {
 
 	.btn-group {
-	    margin-top: 0!important;
-	    bottom: 0.3vh !important;
+	    margin-top: 0;
+	    bottom: 0.3vh;
 		}
 	
 	// surcharge à Bootstrap : pas de border et couleur différente
@@ -326,6 +326,11 @@ form.popover.search {
     font-size: 1.5em;
     background: transparent;
 	}
+
+	.btn-default:hover {
+    background-color: transparent;
+    border-color: transparent; 
+}
 	
 }
 
@@ -571,6 +576,11 @@ ul.dropdown-menu>li {
 #bgBottomAteliers {
 	background-image: url('../img/commun/bgBottomAtelier.jpg');
 	height:100vh;
+}
+
+#bgRecherche {
+	background-image: url('../img/commun/bgRecherche.jpg');
+	min-height:100vh;
 }
 
 .selectionLivres {
@@ -843,17 +853,17 @@ footer {
 	}
 
 	.navbar .navbar-nav > li {
-    float: none;
-    display: block;
-    border-radius: 0;
+	    float: none;
+	    display: block;
+	    border-radius: 0;
 	}
 
 	.focusLivre {
-	height: 20vh;
-	margin-top: 3vh;
-	margin-bottom: 12vh;
-	img {
-		max-width: 100px;
+		height: 20vh;
+		margin-top: 3vh;
+		margin-bottom: 12vh;
+		img {
+			max-width: 100px;
 	}
 
 	p {
@@ -863,14 +873,14 @@ footer {
 	
 	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
 
-	.btn-group, {
+	.btn-group {
 
-	    margin-top: 1vh;
+		margin-top: -14vh !important;
 	}
 
 	img.center-block {
-		max-height: 70px;
-		margin-top: 1vh;
+		max-height: 50px;
+    	margin: 1vh 0
 	}
 
 
@@ -897,7 +907,7 @@ footer {
 
 	nav.navbar {
 
-	max-height: 14.8vh;
+	max-height: 17vh;
 	}
 }
 	
