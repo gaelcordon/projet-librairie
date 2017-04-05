@@ -410,6 +410,9 @@ ul.dropdown-menu>li {
 
 	.items {
 	  position: absolute;
+	  img:hover {
+		cursor: pointer;
+	  }
 	}
 
 	.main-pos {
@@ -466,6 +469,10 @@ div#buttonCarousel {
     position: relative;
     bottom: -30px;
 	}
+
+.modalNouveautes{
+	z-index: 4000;
+}
 /*************************************************************************************************
 		Carousel Coups de Coeur
 *************************************************************************************************/
@@ -628,10 +635,16 @@ div#buttonCarousel {
 	display: inline-block;
 	img {
 		max-width: 100px;
+		margin: 0 auto;
 	}
 
 	p {
+		text-align: center;
 		color: white;	
+	}
+
+	:hover {
+		cursor: pointer;
 	}
 }
 
@@ -662,6 +675,21 @@ div#buttonCarousel {
 
 #realisations {
 	background-color: @bleuHover;
+}
+
+#divCoupDeCoeur, .divLibrairieAdulte, #divGeneralAdulte {
+
+	.modal-body {
+		img{
+			float: left;
+			max-height: 300px;
+			margin-right: 2vh;
+		}
+
+		p {
+			text-align: justify;
+		}
+	}
 }
 
 
