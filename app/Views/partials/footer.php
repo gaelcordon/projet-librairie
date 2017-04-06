@@ -3,7 +3,7 @@
     <!-- <div id="scrollUp" class="col-xs-1 col-xs-offset-10"> -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 text-center blocText">
+            <div class="col-xs-8 col-xs-offset-2 text-center blocText">
                 <p class="blocText"><span>&copy;</span> A la gloire de mon père <span>2017</span></p>
             </div>
             <div id="scrollUp" class="col-xs-1">

@@ -45,19 +45,13 @@ $(function(){
     // Scroll Up Button
 
     $(window).scroll(function(){
-        var scrolltop=$(this).scrollTop();
-        // if(scrolltop>=1200)
-        //     {
-        //         $("#scrollUp span").show();
-        //     }
-        // else { $("#scrollUp span").hide();
-        // }
+       
+        $("#scrollUp span").show();
+        $("#scrollUp span").click(function()
+        {
+            $("html,body").animate({scrollTop: 0}, 1000);
+        });
     });
-    $("#scrollUp span").click(function()
-    {
-        $("html,body").animate({scrollTop: 0}, 1000);
-    });
-
 
     $("#formUser").on("submit", function(event){
         // DEBUG
