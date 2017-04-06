@@ -585,7 +585,7 @@ div#buttonCarousel {
 
 #bgLaLibrairie {
 	background-image: url('../img/commun/bgLaLibrairie.jpg');
-	height:200vh;
+	min-height:220vh;
 }
 
 #bgCoupsDeCoeur {
@@ -630,7 +630,7 @@ div#buttonCarousel {
 .focusLivre {
 	height: 20vh;
 	margin-top: 3vh;
-	margin-bottom: 1vh;
+	margin-bottom: 5vh;
 	display: inline-block;
 	img {
 		max-width: 100px;
@@ -649,6 +649,15 @@ div#buttonCarousel {
 
 .divLibrairieAdulte, .divLibrairieJeunesse, .divLibrairiePapeterie {
 	display: none;
+	position: relative;
+}
+
+.linkLibrairie {
+	color: @orange;
+	font-size: 2vh;
+	position: absolute;
+	bottom: 0vh;
+	right: 3vh;
 }
 
 
@@ -676,8 +685,8 @@ div#buttonCarousel {
 	background-color: @bleuHover;
 }
 
-#divCoupDeCoeur, .divLibrairieAdulte, #divGeneralAdulte {
-
+#divCoupDeCoeur, .divLibrairieAdulte, #divGeneralAdulte, #carouselNouveautes, .divSousGenre, .divLibrairieJeunesse, .divLibrairiePapeterie, #divGeneralJeunesse, #divGeneralPapeterie {
+	min-height: 50vh;
 	.modal-body {
 		img{
 			float: left;
@@ -689,6 +698,10 @@ div#buttonCarousel {
 			text-align: justify;
 		}
 	}
+}
+
+.blocGenre {
+	margin-top: 100px;
 }
 
 
@@ -909,6 +922,18 @@ footer {
 // *************************************************************/
 @media only screen and (max-width: 768px) {
 
+	.linkLibrairie {
+		color: @orange;
+		font-size: 2vh;
+		position: absolute;
+		bottom: 0vh;
+		right: 2vh;
+	}	
+	
+	.blocGenre {
+		margin-top: 5vh;
+	}
+
 	#divIframe {
 		padding-top: 5vh;
 		height : auto;
@@ -927,14 +952,41 @@ footer {
 	.focusLivre {
 		height: 20vh;
 		margin-top: 3vh;
-		margin-bottom: 12vh;
+		margin-bottom: 10vh;
 		img {
 			max-width: 100px;
+		}
 	}
 
 	p {
 		color: white;	
 	}
+
+	#divCoupDeCoeur, .divLibrairieAdulte, #divGeneralAdulte, #carouselNouveautes, .divSousGenre, .divLibrairieJeunesse, .divLibrairiePapeterie, #divGeneralJeunesse, #divGeneralPapeterie {
+		min-height: 140vh;
+		.modal-body {
+			img{
+				float: left;
+				max-height: 300px;
+				margin-right: 2vh;
+			}
+
+			p {
+				text-align: justify;
+			}
+		}
+	}
+
+	#carouselNouveautesTrue {
+		position: relative;
+		left: -8vh;
+	}
+
+	#carouselNouveautes {
+		min-height: 90vh;
+	}
+
+
 }
 	
 	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
@@ -949,9 +1001,6 @@ footer {
     	margin: 1vh 0
 	}
 
-
-
-}
 
 
 /*************************************************************
