@@ -55,7 +55,7 @@
         			<h4 class="modal-title" id="myModalLabel">Formulaire de saisie de livres</h4>
       			</div>
       			<div class="modal-body">
-        			<form method="get" action="">
+        			<form method="POST" action="">
         				<div class="form-group">
                         	<input class="form-control" type="text" name="titreLivre" required placeholder="Titre">
 						</div>

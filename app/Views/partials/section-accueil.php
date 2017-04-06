@@ -306,7 +306,7 @@
 						<div id="sectionFormContact" class="col-xs-8 col-xs-offset-2 col-md-7">
 							<div id="formContact" class="blocText">
 								<h2>Nous contacter</h2>
-								<form method="GET" action="">
+								<form method="POST" action="">
 									<div class="form-group">
 										<label for="nom">Nom</label>
 										<input type="text" id="nom" class="form-control" name="nom" placeholder="Nom" />
