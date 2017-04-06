@@ -46,12 +46,12 @@ $(function(){
 
     $(window).scroll(function(){
         var scrolltop=$(this).scrollTop();
-        if(scrolltop>=1200)
-            {
-                $("#scrollUp span").show();
-            }
-        else { $("#scrollUp span").hide();
-        }
+        // if(scrolltop>=1200)
+        //     {
+        //         $("#scrollUp span").show();
+        //     }
+        // else { $("#scrollUp span").hide();
+        // }
     });
     $("#scrollUp span").click(function()
     {
