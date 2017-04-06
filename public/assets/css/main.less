@@ -585,7 +585,7 @@ div#buttonCarousel {
 
 #bgLaLibrairie {
 	background-image: url('../img/commun/bgLaLibrairie.jpg');
-	height:220vh;
+	min-height:220vh;
 }
 
 #bgCoupsDeCoeur {
@@ -923,13 +923,18 @@ footer {
 // 		Breakpoint 1 : sur téléphone (petit écran) XS
 // *************************************************************/
 @media only screen and (max-width: 768px) {
+
 	.linkLibrairie {
 		color: @orange;
 		font-size: 2vh;
 		position: absolute;
-		bottom: -25vh;
-		right: 5vh;
+		bottom: 0vh;
+		right: 2vh;
 	}	
+	
+	.blocGenre {
+		margin-top: 5vh;
+	}
 
 	#divIframe {
 		padding-top: 5vh;
@@ -949,14 +954,41 @@ footer {
 	.focusLivre {
 		height: 20vh;
 		margin-top: 3vh;
-		margin-bottom: 12vh;
+		margin-bottom: 10vh;
 		img {
 			max-width: 100px;
+		}
 	}
 
 	p {
 		color: white;	
 	}
+
+	#divCoupDeCoeur, .divLibrairieAdulte, #divGeneralAdulte, #carouselNouveautes, .divSousGenre, .divLibrairieJeunesse, .divLibrairiePapeterie, #divGeneralJeunesse, #divGeneralPapeterie {
+		min-height: 140vh;
+		.modal-body {
+			img{
+				float: left;
+				max-height: 300px;
+				margin-right: 2vh;
+			}
+
+			p {
+				text-align: justify;
+			}
+		}
+	}
+
+	#carouselNouveautesTrue {
+		position: relative;
+		left: -8vh;
+	}
+
+	#carouselNouveautes {
+		min-height: 90vh;
+	}
+
+
 }
 	
 	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
@@ -971,10 +1003,6 @@ footer {
     	margin: 1vh 0
 	}
 
-
-
-
-}
 
 
 /*************************************************************

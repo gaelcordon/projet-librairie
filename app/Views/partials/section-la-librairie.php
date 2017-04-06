@@ -31,7 +31,7 @@
 
 		foreach ($tabLigne as $LigneCourante) {
 			$i++;
-			if ($i <7)
+			if ($i < 9)
 			{
 				$id = $LigneCourante["id"];
 				$titreLivre = $LigneCourante["titreLivre"];
