@@ -2,17 +2,17 @@
 	<div class="container">
 		<div id="menuAdmin" class="row">
 
-				<div class="col-sm-4">
+				<div class="col-sm-4 btnAdmin">
 					<button type="button" id="addBook" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalBook">
 			 			Ajout Livres
 					</button>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 btnAdmin">
 					<button type="button" id="addEvent" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalEvent">
 			 			Ajout Evenements
 					</button>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 btnAdmin">
 					<button type="button" id="addUser" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalUser">
 			 			Ajout Utilisateurs
 					</button>
