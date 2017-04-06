@@ -501,7 +501,7 @@ div#buttonCarousel {
 //
 
 
-.parallaxRideau, .parallaxRideauRecherche {
+.parallaxRideau, .parallaxRideauRecherche, .parallaxRideauLogin {
 	background-color: @fondBloc;
     padding: 1% 2%;
     border-radius: 0.5vh;   
@@ -511,6 +511,12 @@ div#buttonCarousel {
 .parallaxRideau {
   margin: 10vh 2vh;
 }
+
+.parallaxRideauLogin {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
 .parallaxRideauRecherche {
     margin: 2vh 2vh;
 	
@@ -687,6 +693,10 @@ div#buttonCarousel {
 
 #divCoupDeCoeur, .divLibrairieAdulte, #divGeneralAdulte, #carouselNouveautes, .divSousGenre, .divLibrairieJeunesse, .divLibrairiePapeterie, #divGeneralJeunesse, #divGeneralPapeterie {
 	min-height: 50vh;
+
+	.modal-content{
+		top: 10vh;
+	}
 	.modal-body {
 		img{
 			float: left;
@@ -903,12 +913,20 @@ footer {
     background-color: @bleuNavbar;
     border-color: @orange;
 }
-#modalBook, #modalEvent, #modalUser {
+#modalBook {
 
 	.modal-content {
-	top:35vh;
+	top:5vh;
 
-			}
+	}
+}
+
+#modalEvent, #modalUser {
+
+	.modal-content {
+		top:15vh;
+
+	}
 }
 
 
@@ -928,6 +946,10 @@ footer {
 		position: absolute;
 		bottom: 0vh;
 		right: 2vh;
+	}
+
+	.btnAdmin {
+		margin-top: 10vh;
 	}	
 	
 	.blocGenre {
@@ -986,11 +1008,6 @@ footer {
 		min-height: 90vh;
 	}
 
-
-}
-	
-	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
-
 	.btn-group {
 
 		margin-top: -14vh !important;
@@ -1000,6 +1017,11 @@ footer {
 		max-height: 50px;
     	margin: 1vh 0
 	}
+}
+	
+	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
+
+
 
 
 
