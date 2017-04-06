@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="<?php echo $this->assetUrl('css/jquery-ui.min.css')?>"/>
 
 	<!-- Feuille de style pour la fonctionnalité time picker dans les formulaires -->
-	<link rel="stylesheet" href="<?php echo $this->assetUrl('css/jquery.timepicker.min.css')?>"/>
+	<link rel="stylesheet" href="<?php echo $this->assetUrl('css/jquery.timepicker.css')?>"/>
 
 	<!-- On charge la feuille de style propre au projet au format less -->
 	<link rel="stylesheet/less" type="text/css" href="<?php echo $this->assetUrl('css/main.less')?>"/>

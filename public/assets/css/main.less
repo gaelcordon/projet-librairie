@@ -934,6 +934,14 @@ footer {
 	}
 }
 
+.close {
+
+    font-size: 25px;
+
+    text-shadow: none;
+
+    opacity: 1;
+}
 
 /*************************************************************************************************
 		réglages particuliers des Breakpoints pour les différents périphériques 
@@ -1042,10 +1050,10 @@ footer {
 
 
 	.popover {
-		left: -66px !important;
+		left: -80px !important;
 	}
 	.popover:before {
-		left: 80px !important;
+		left: 83px !important;
 	}
 
 
@@ -1074,7 +1082,7 @@ footer {
 		left: -130px !important;
 	}
 	.popover:before {
-		left: 145px !important;
+		left: 133px !important;
 	}
 
 
@@ -1099,46 +1107,7 @@ footer {
 		left: -20px !important;
 	}
 	.popover:before {
-		left:35px !important;
+		left:22px !important;
 	}
 	
-}
-
-
-// Autre essai de carousel
-
-.multi-item-carousel{
-  .carousel-inner{
-    > .item{
-      transition: 100ms ease-in-out left;
-    }
-    .active{
-      &.left{
-        left:-33%;
-      }
-      &.right{
-        left:33%;
-      }
-    }
-    .next{
-      left: 33%;
-    }
-    .prev{
-      left: -33%;
-    }
-    @media all and (transform-3d), (-webkit-transform-3d) {
-      > .item{
-        // use your favourite prefixer here
-        transition: 500ms ease-in-out left;
-        transition: 500ms ease-in-out all;
-        backface-visibility: visible;
-        transform: none!important;
-      }
-    }
-  }
-  .carouse-control{
-    &.left, &.right{
-      background-image: none;
-    }
-  }
 }
