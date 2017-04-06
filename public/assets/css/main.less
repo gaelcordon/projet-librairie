@@ -759,32 +759,30 @@ div#buttonCarousel {
 //
 footer {
 	background-color: @bleuNavbar;
-	p {
+		p {
 
-		margin: 3vh auto 0 auto; //surcharge à Bootstrap
-		text-align: center;
+			margin: 0 auto; //surcharge à Bootstrap
+			text-align: center;
+		}
+
+	#scrollUp {
+
+				 span {
+					cursor:pointer;
+					color: @orange;
+					
+				}
+
+			.glyphicon-menu-up:before {
+			    content: "\e260";
+			    font-size: 4vh;
+			    padding: 0;
+		}
+
+			.glyphicon-menu-up:before:hover {
+				background-color: @fondBloc;
+		}
 	}
-}
-
-#scrollUp {
-
-		position:relative;
-		bottom:8vh;
-		text-align: right;
-		margin-right: 2vh;
-
-
-		 span {
-			cursor:pointer;
-			color: @orange;
-			background-color: @fondBloc;
-		}
-
-		.glyphicon-menu-up:before {
-		    content: "\e260";
-		    font-size: 4vh;
-		    padding: 1vh;
-		}
 }
 
 /*************************************************************

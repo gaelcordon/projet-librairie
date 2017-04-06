@@ -294,7 +294,7 @@
 								</address>
 							</div>
 						</div>
-						<div class="col-md-4 col-xs-5 text-center">
+						<div class="col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 text-center">
 							<div id="horaires">
 								<h2>Horaires d'ouverture</h2>
 								<p>du Mardi au <br />

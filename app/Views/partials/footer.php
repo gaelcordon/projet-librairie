@@ -2,16 +2,15 @@
 <footer>
     <!-- <div id="scrollUp" class="col-xs-1 col-xs-offset-10"> -->
     <div class="container-fluid">
-        <p class="blocText"><span>&copy;</span> A la gloire de mon père <span>2017</span></p>
-        <div id="scrollUp">
-            <span class="glyphicon glyphicon-menu-up"></span>
-        </div>
-       <!--  <div class="row text-center blocText">
-            <div>
-                
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 text-center blocText">
+                <p class="blocText"><span>&copy;</span> A la gloire de mon père <span>2017</span></p>
             </div>
-        </div> -->
-    </div>
+            <div id="scrollUp" class="col-xs-1">
+                <span class="glyphicon glyphicon-menu-up"></span>
+            </div>               
+        </div><!-- class="class="row" -->
+    </div> <!--class="container-fluid" -->
 </footer>
 
             <!--On construit l'url à partir du nom de la route grâce à l'objet $this
