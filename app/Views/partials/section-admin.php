@@ -1,22 +1,41 @@
 <section id="bgAdmin" class="parallax">
 	<div class="container">
 		<div id="menuAdmin" class="row">
-
+	<?php
+		$placement= "";
+		if ( isset($w_user["id"]) && (($w_user["id"] == 1) || ($w_user["id"] == 3) || ($w_user["id"] == 4)))
+		{
+	?>
 				<div class="col-sm-4 btnAdmin">
 					<button type="button" id="addBook" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalBook">
 			 			Ajout Livres
 					</button>
 				</div>
-				<div class="col-sm-4 btnAdmin">
+	<?php
+		}
+		else 
+		{
+			$placement = "col-md-offset-4";
+		}
+
+	?>
+				<div class="col-sm-4 <?php echo $placement; ?> btnAdmin">
 					<button type="button" id="addEvent" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalEvent">
 			 			Ajout Evenements
 					</button>
 				</div>
+	<?php
+		if ( isset($w_user["id"]) && (($w_user["id"] == 1) || ($w_user["id"] == 3) || ($w_user["id"] == 4)))
+		{
+	?>
 				<div class="col-sm-4 btnAdmin">
 					<button type="button" id="addUser" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalUser">
 			 			Ajout Utilisateurs
 					</button>
 				</div>
+	<?php
+		}
+	?>
 
 		</div>
 	</div>
@@ -55,7 +74,7 @@
         			<h4 class="modal-title" id="myModalLabel">Formulaire de saisie de livres</h4>
       			</div>
       			<div class="modal-body">
-        			<form method="get" action="">
+        			<form method="POST" action="">
         				<div class="form-group">
                         	<input class="form-control" type="text" name="titreLivre" required placeholder="Titre">
 						</div>
@@ -111,13 +130,6 @@
 	                    <div class="form-group">
 	                        <select class="form-control" name="sgenre" id="sgenre">
 	                        	<option value="0" selected disabled>Sous-Genre...</option>
-	                            <?php
-	                            foreach($listeSousgenres as $sousgenre)
-	                            {
-	                                echo '<option value="'.$sousgenre['id'].'">'.$sousgenre['libelle'].'</option>
-	                            ';
-	                            }
-	                            ?>
 	                        </select>
 	                    </div>
 						<div class="form-group">

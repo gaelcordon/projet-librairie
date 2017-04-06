@@ -44,20 +44,12 @@ $(function(){
 
     // Scroll Up Button
 
-    $(window).scroll(function(){
-        var scrolltop=$(this).scrollTop();
-        // if(scrolltop>=1200)
-        //     {
-        //         $("#scrollUp span").show();
-        //     }
-        // else { $("#scrollUp span").hide();
-        // }
+    $(window).scroll(function(){     
+        $("#scrollUp span").show();
+        $("#scrollUp span").click(function(){
+            $("html,body").animate({scrollTop: 0}, 1000);
+        });
     });
-    $("#scrollUp span").click(function()
-    {
-        $("html,body").animate({scrollTop: 0}, 1000);
-    });
-
 
     $("#formUser").on("submit", function(event){
         // DEBUG
@@ -83,6 +75,31 @@ $(function(){
             $("#formUser input[name^=password]").addClass("erreur");
         }
     });
+
+    $('#genre').on('change', function(){
+        //appel du script ajax
+        $.ajax({
+            url: urlRouteAjax,
+            method: 'get', 
+            data: {GenreJson: $(this).val()}, 
+            dataType: 'json',
+            success: function(data){
+                console.log(data);
+                // on vide le menu déroulant avant de le remplir avec la bouche
+                    $('#sgenre').empty(); 
+                //boucle foreach en JS
+                $.each(data, function(index, value) 
+                {
+                    //on ajoute l'option dans le menu déroulant
+                    $('#sgenre').append('<option value="'
+                                                            +value.id
+                                                            +'">'
+                                                            +value.libelle
+                                                            +'</option>'); 
+                }); //fin du $.each
+                } //fin du success
+            }); // fin du $.ajax
+        }); //fin du 'on change' sur genre
 
     // Fonction pour faire apparître un calendrier
      $('.datePicker').datepicker();
