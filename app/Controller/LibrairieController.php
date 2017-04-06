@@ -42,6 +42,12 @@ class LibrairieController 		// ON HERITE DE LA CLASSE FormController
 		$this->show('pages/ateliers');
 	}
 
+	public function sousGenre($slug)
+	{
+		$GLOBALS['sousgenre'] = $slug;
+		$this->show('pages/sousgenre', ["sousgenre" => $GLOBALS['sousgenre']]);
+	}
+
 	/**
 	 * Page spécifique aux Evènements Dédicaces
 	 */

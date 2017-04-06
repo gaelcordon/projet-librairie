@@ -7,7 +7,7 @@
 							<div class="blocText text-center">
 								<h2>Nouveautés</h2>
 							</div>
-							<ul class="carousel">
+							<ul id="carouselNouveautesTrue" class="carousel">
 							<?php
 								$objetLivresModel = new \Model\LivresModel;
 
