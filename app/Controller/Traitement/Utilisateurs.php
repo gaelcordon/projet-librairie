@@ -55,11 +55,6 @@ class Utilisateurs
             $GLOBALS["userCreateRetour"] = "INFORMATION MANQUANTE";
         }
 
-/*        
-        // ON POURRAIT CREER UN AUTRE OBJET DE LA CLASSE FormController
-        $objetFormController = new FormController,;
-        $email = $objetFormController->verifierSaisie();
-*/       
     }
     
 }

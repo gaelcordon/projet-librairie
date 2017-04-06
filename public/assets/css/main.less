@@ -128,7 +128,7 @@ header {
 nav {
 	background-color: @bleuNavbar;
 	font-family: 'champagneLimousine';
-	letter-spacing: 2px;
+	letter-spacing: 1.08px;
 	font-weight: bold;
 	font-size: 2rem;
 	position: fixed;
@@ -295,6 +295,7 @@ span.btn.glyphicon.glyphicon-search {
 	padding:1em;
 	border-radius:4px;
 	position:absolute;
+	left: -66px;
 	top:2.2em;
 	z-index:1;
 	width:200px;
@@ -303,8 +304,8 @@ span.btn.glyphicon.glyphicon-search {
 .popover:before {
 	content:"";
 	position: absolute;
-	left:30px;
 	top: -20px;
+	left: 80px;
 	width: 0;
 	height: 0; 
 	border: 10px solid transparent;
@@ -583,7 +584,7 @@ div#buttonCarousel {
 
 #bgBottomAccueil {
 	background-image: url('../img/commun/vueCpFacade.jpg');
-	height: 140vh;
+	height: 180vh;
 }
 
 #bgLaLibrairie {
@@ -933,6 +934,14 @@ footer {
 	}
 }
 
+.close {
+
+    font-size: 25px;
+
+    text-shadow: none;
+
+    opacity: 1;
+}
 
 /*************************************************************************************************
 		réglages particuliers des Breakpoints pour les différents périphériques 
@@ -1038,12 +1047,18 @@ footer {
 		max-height: 50px;
     	margin: 1vh 0
 	}
+
+
+	.popover {
+		left: -80px !important;
+	}
+	.popover:before {
+		left: 83px !important;
+	}
+
+
 }
 	
-	// surcharge à Bootstrap : plus de margin pour écarter l'image de la librairie accueil du filet orange
-
-
-
 
 
 /*************************************************************
@@ -1063,10 +1078,13 @@ footer {
 		height : auto;
 	}
 
-	nav.navbar {
-
-	max-height: 17vh;
+	.popover {
+		left: -130px !important;
 	}
+	.popover:before {
+		left: 133px !important;
+	}
+
 
 	#carouselNouveautes {
 		width: auto;
@@ -1085,48 +1103,11 @@ footer {
 *************************************************************/
 @media only screen and (min-width: 1024px) {
 
-	nav.navbar {
-
-	max-height: 14.8vh;
+	.popover {
+		left: -20px !important;
+	}
+	.popover:before {
+		left:22px !important;
 	}
 	
-}
-
-
-// Autre essai de carousel
-
-.multi-item-carousel{
-  .carousel-inner{
-    > .item{
-      transition: 100ms ease-in-out left;
-    }
-    .active{
-      &.left{
-        left:-33%;
-      }
-      &.right{
-        left:33%;
-      }
-    }
-    .next{
-      left: 33%;
-    }
-    .prev{
-      left: -33%;
-    }
-    @media all and (transform-3d), (-webkit-transform-3d) {
-      > .item{
-        // use your favourite prefixer here
-        transition: 500ms ease-in-out left;
-        transition: 500ms ease-in-out all;
-        backface-visibility: visible;
-        transform: none!important;
-      }
-    }
-  }
-  .carouse-control{
-    &.left, &.right{
-      background-image: none;
-    }
-  }
 }

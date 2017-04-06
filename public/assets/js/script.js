@@ -8,14 +8,6 @@
 $(function(){
     // CE CODE SERA APPELE PAR JQUERY QUAND LA PAGE SERA PRETE
     
-    // FORMULAIRE DE CREATION D'UN NOUVEAU MEMBRE
-    // QUAND LE VISITEUR VA CLIQUER SUR LE BOUTON "Ajouter cet utilisateur"
-    // JE VAIS VERIFIER SI LES 2 PASSWORDS SONT IDENTIQUES
-    // ALORS ON ENVOIE LE FORMULAIRE
-    // SINON, ON AFFICHE UN MESSAGE D'ERREUR
-
-
-    
     // Dropdown bouton accueil
     $('.btn-group').hover(function() {
     $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
@@ -44,18 +36,23 @@ $(function(){
 
     // Scroll Up Button
 
-    $(window).scroll(function(){
-       
+    $(window).scroll(function(){     
         $("#scrollUp span").show();
-        $("#scrollUp span").click(function()
-        {
+        $("#scrollUp span").click(function(){
             $("html,body").animate({scrollTop: 0}, 1000);
         });
     });
 
+
+    // FORMULAIRE DE CREATION D'UN NOUVEAU MEMBRE
+    // QUAND LE VISITEUR VA CLIQUER SUR LE BOUTON "Ajouter cet utilisateur"
+    // JE VAIS VERIFIER SI LES 2 PASSWORDS SONT IDENTIQUES
+    // ALORS ON ENVOIE LE FORMULAIRE
+    // SINON, ON AFFICHE UN MESSAGE D'ERREUR
+
     $("#formUser").on("submit", function(event){
         // DEBUG
-        alert("TU AS CLIQUE");
+        // alert("TU AS CLIQUE");
         // RECUPERER LES VALEURS DES 2 CHAMPS password1 et password2
         var password1 = $("#formUser input[name=password1]").val();
         var password2 = $("#formUser input[name=password2]").val();

@@ -133,7 +133,7 @@
 	                        </select>
 	                    </div>
 						<div class="form-group">
-                        	<input class="form-control" type="text" class="datePicker" name="dateParution" placeholder="Date de Parution">
+                        	<input class="form-control datePicker" type="text" name="dateParution" placeholder="Date de Parution">
                        	</div>
 						<div class="form-group">
                         	<input class="form-control" type="text" name="isbn" placeholder="ISBN">
