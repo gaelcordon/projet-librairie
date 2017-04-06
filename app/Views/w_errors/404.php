@@ -1,10 +1,7 @@
-<!-- <?php $this->layout('layout', ['title' => 'Perdu ?']) ?>
-
-<?php $this->start('main_content'); ?>
-<h1>404. Perdu ?</h1>
-<?php $this->stop('main_content'); ?> -->
+<?php
 
 
-<?php $this->insert('partials/header', ["titre" => 'Perdu ?']); ?>
-<?php $this->insert('partials/section-perdu'); ?>
-<?php $this->insert('partials/footer'); ?>
+
+$this->insert('partials/header', ["titre" => 'Perdu ?']);
+$this->insert('partials/section-perdu');
+$this->insert('partials/footer');
