@@ -84,6 +84,31 @@ $(function(){
         }
     });
 
+    $('#genre').on('change', function(){
+        //appel du script ajax
+        $.ajax({
+            url: urlRouteAjax,
+            method: 'get', 
+            data: {GenreJson: $(this).val()}, 
+            dataType: 'json',
+            success: function(data){
+                console.log(data);
+                // on vide le menu déroulant avant de le remplir avec la bouche
+                    $('#sgenre').empty(); 
+                //boucle foreach en JS
+                $.each(data, function(index, value) 
+                {
+                    //on ajoute l'option dans le menu déroulant
+                    $('#sgenre').append('<option value="'
+                                                            +value.id
+                                                            +'">'
+                                                            +value.libelle
+                                                            +'</option>'); 
+                }); //fin du $.each
+                } //fin du success
+            }); // fin du $.ajax
+        }); //fin du 'on change' sur genre
+
     // Fonction pour faire apparître un calendrier
      $('.datePicker').datepicker();
 

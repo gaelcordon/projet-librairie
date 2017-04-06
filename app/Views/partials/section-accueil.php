@@ -82,7 +82,7 @@
 										  	<div class="modal-dialog modal-lg" role="document">
 										    	<div class="modal-content">
 										      		<div class="modal-header">
-										        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="crossClose" aria-hidden="true">&times;</span></button>
 										        		<h3 class="modal-title" id="myModalLabel"><?php echo $titreLivre ?></h3>
 										      		</div>
 										      		<div class="modal-body">
@@ -102,10 +102,10 @@
 														<p>Resume : <?php echo $resume ?></p>
 														<p>Prix : <?php echo $prix ?> € TTC</p>
 													</div>
+											      	<div class="modal-footer">
+											       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											      	</div>
 												</div>
-										      	<div class="modal-footer">
-										       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										      	</div>
 										    </div>
 										</div>
 					<?php
@@ -121,7 +121,7 @@
 										  	<div class="modal-dialog modal-lg" role="document">
 										    	<div class="modal-content">
 										      		<div class="modal-header">
-										        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span  class="crossClose" aria-hidden="true">&times;</span></button>
 										        		<h3 class="modal-title" id="myModalLabel"><?php echo $titreLivre ?></h3>
 										      		</div>
 										      		<div class="modal-body">
@@ -141,10 +141,10 @@
 														<p>Resume : <?php echo $resume ?></p>
 														<p>Prix : <?php echo $prix ?> € TTC</p>
 													</div>
+											      	<div class="modal-footer">
+											       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											      	</div>
 												</div>
-										      	<div class="modal-footer">
-										       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										      	</div>
 										    </div>
 										</div>
 					<?php	
@@ -160,7 +160,7 @@
 										  	<div class="modal-dialog modal-lg" role="document">
 										    	<div class="modal-content">
 										      		<div class="modal-header">
-										        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span  class="crossClose" aria-hidden="true">&times;</span></button>
 										        		<h3 class="modal-title" id="myModalLabel"><?php echo $titreLivre ?></h3>
 										      		</div>
 										      		<div class="modal-body">
@@ -180,10 +180,10 @@
 														<p>Resume : <?php echo $resume ?></p>
 														<p>Prix : <?php echo $prix ?> € TTC</p>
 													</div>
+											      	<div class="modal-footer">
+											       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											      	</div>
 												</div>
-										      	<div class="modal-footer">
-										       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										      	</div>
 										    </div>
 										</div>
 					<?php
@@ -199,7 +199,7 @@
 									  	<div class="modal-dialog modal-lg" role="document">
 									    	<div class="modal-content">
 									      		<div class="modal-header">
-									        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="crossClose" aria-hidden="true">&times;</span></button>
 									        		<h3 class="modal-title" id="myModalLabel"><?php echo $titreLivre ?></h3>
 									      		</div>
 									      		<div class="modal-body">
@@ -219,10 +219,10 @@
 													<p>Resume : <?php echo $resume ?></p>
 													<p>Prix : <?php echo $prix ?> € TTC</p>
 												</div>
+										      	<div class="modal-footer">
+										       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										      	</div>
 											</div>
-									      	<div class="modal-footer">
-									       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									      	</div>
 									    </div>
 									</div>
 					<?php
@@ -294,7 +294,7 @@
 								</address>
 							</div>
 						</div>
-						<div class="col-md-4 col-xs-5 text-center">
+						<div class="col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2 text-center">
 							<div id="horaires">
 								<h2>Horaires d'ouverture</h2>
 								<p>du Mardi au <br />

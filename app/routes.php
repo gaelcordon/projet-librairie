@@ -13,6 +13,7 @@
  		['GET|POST', '/login',   				'Librairie#login',				'login'],
  		// ROUTE POUR LOGOUT utilisation de la normalisation Framework W
  		['GET|POST', '/logout',  				'Librairie#logout',				'logout'],
+ 		['GET|POST', '/api-web-ajax',   			'Ajax#traiterGenre',					'ajax_sousgenres'],
 		
 	
 	);

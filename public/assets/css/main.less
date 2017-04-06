@@ -246,17 +246,6 @@ nav {
 		}
 	 }
 
-	.input-group {
-		.form-control {
-			font-family: 'champagneLimousine', Helvetica, sans-serif;
-			font-style: italic;
-			border-style:none;
-			background-color: @bleuHover;
-			-webkit-transition: -webkit-box-shadow ease-in-out .15s;
-			-o-transition: box-shadow ease-in-out .15s;
-			transition: box-shadow ease-in-out .15s;
-		}
-	}	
 
 	.input-group .form-control:last-child {
     border-top-left-radius: 4px;
@@ -277,6 +266,16 @@ nav {
 	}
 }
 
+.form-control {
+			font-family: 'champagneLimousine', Helvetica, sans-serif;
+			font-size: 16px;
+			border-style:none;
+			color: white;
+			background-color: @fondBloc;
+			-webkit-transition: -webkit-box-shadow ease-in-out .15s;
+			-o-transition: box-shadow ease-in-out .15s;
+			transition: box-shadow ease-in-out .15s;
+		}
 
 /*************************************************************************************************
 		Zone de recherche expanded
@@ -438,6 +437,7 @@ ul.dropdown-menu>li {
 	  -webkit-transform: scale(.5);
 	  -moz-transform: scale(.5);
 	  transform: scale(.5);
+	  overflow: hidden;
 	}
 
 	.right-pos {
@@ -447,14 +447,9 @@ ul.dropdown-menu>li {
 	  -webkit-transform: scale(.75);
 	  -moz-transform: scale(.75);
 	  transform: scale(.75);
+	  overflow: hidden;
 	}
 
-	span {
-	  position: relative;
-	  margin: 0 auto;
-	  left: 17em;
-	  top: 20em;
-	}
 
 	h2 {
 		background-color: @fondBloc;
@@ -714,6 +709,10 @@ div#buttonCarousel {
 	margin-top: 100px;
 }
 
+.crossClose {
+	color: white;
+}
+
 
 
 /*************************************************************************************************
@@ -782,32 +781,30 @@ div#buttonCarousel {
 //
 footer {
 	background-color: @bleuNavbar;
-	p {
+		p {
 
-		margin: 3vh auto 0 auto; //surcharge à Bootstrap
-		text-align: center;
+			margin: 0 auto; //surcharge à Bootstrap
+			text-align: center;
+		}
+
+	#scrollUp {
+
+				 span {
+					cursor:pointer;
+					color: @orange;
+					
+				}
+
+			.glyphicon-menu-up:before {
+			    content: "\e260";
+			    font-size: 4vh;
+			    padding: 0;
+		}
+
+			.glyphicon-menu-up:before:hover {
+				background-color: @fondBloc;
+		}
 	}
-}
-
-#scrollUp {
-
-		position:relative;
-		bottom:8vh;
-		text-align: right;
-		margin-right: 2vh;
-
-
-		 span {
-			cursor:pointer;
-			color: @orange;
-			background-color: @fondBloc;
-		}
-
-		.glyphicon-menu-up:before {
-		    content: "\e260";
-		    font-size: 4vh;
-		    padding: 1vh;
-		}
 }
 
 /*************************************************************
@@ -940,7 +937,7 @@ footer {
 // /*************************************************************
 // 		Breakpoint 1 : sur téléphone (petit écran) XS
 // *************************************************************/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
 	.linkLibrairie {
 		color: @orange;
@@ -972,6 +969,16 @@ footer {
 	    display: block;
 	    border-radius: 0;
 	}
+
+	/*.right-pos, .back-pos {
+		//display: none !important;
+		li{
+			overflow: hidden;
+		}
+		img {
+			overflow: hidden;
+		}
+	}*/
 
 	.focusLivre {
 		height: 20vh;
@@ -1007,7 +1014,14 @@ footer {
 	}
 
 	#carouselNouveautes {
-		min-height: 90vh;
+		width: auto;
+		min-height: 100vh;
+		overflow: hidden;
+		padding-left: 6vh;
+		h2 {
+			position: relative;
+			left: -3vh;
+		}
 	}
 
 	.btn-group {
@@ -1030,7 +1044,7 @@ footer {
 /*************************************************************
 		Breakpoint 2 : sur tablette (styles généraux) SM
 *************************************************************/
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 		
 
 	#logo {
@@ -1048,12 +1062,23 @@ footer {
 
 	max-height: 17vh;
 	}
+
+	#carouselNouveautes {
+		width: auto;
+		min-height: 70vh;
+		overflow: hidden;
+		padding-left: 18vh;
+		h2 {
+			position: relative;
+			left: -9vh;
+		}
+	}
 }
 	
 /*************************************************************
 		Breakpoint 3 : sur ordinateur de bureau MD et LG
 *************************************************************/
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1024px) {
 
 	nav.navbar {
 
