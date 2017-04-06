@@ -239,6 +239,10 @@
 					<li><a id="loisirs" href="!#">Matériel de loisir créatif</a></li>
 				</ul>
 			</div>
+
+
+			<!-- pour la soutenance on a mis volontairement en commentaire et on affiche plus bas des images directement par manque de temps
+
 			<div class="col-md-8 col-md-offset-1 col-same-height">
 				<div id="divGeneralPapeterie">
 					<?php createDivLibrairie("papeterie") ?>
@@ -255,8 +259,25 @@
 				<div id="divLoisirs" class="row divLibrairiePapeterie">
 					<?php createDivLibrairie(6) ?>
 				</div>
-			</div>
+			</div> -->
 
+			<div class="col-md-8 col-md-offset-1 col-same-height">
+				<div class="focusLivre col-xs-6 col-md-3">
+					<img class="img-responsive" src="<?php echo $this->assetUrl('img/jeux/jeux_feutres.jpg')?>" alt="feutres"/> 
+					<p>Feutres</p>
+				</div>
+				<div class="focusLivre col-xs-6 col-md-3">
+					<img class="img-responsive" src="<?php echo $this->assetUrl('img/jeux/jeux_decopatch.jpg')?>" alt="decopatch"/> 
+					<p>Feutres</p>
+				</div>
+				<div class="focusLivre col-xs-6 col-md-3">
+					<img class="img-responsive" src="<?php echo $this->assetUrl('img/jeux/jeux_fimo.jpg')?>" alt="fimo"/> 
+					<p>Feutres</p>
+				</div>
+				<div class="focusLivre col-xs-6 col-md-3">
+					<img class="img-responsive" src="<?php echo $this->assetUrl('img/jeux/jeux_plusPlus.jpg')?>" alt="plusplus"/> 
+					<p>Feutres</p>
+				</div>
 		</div>
 	</div> <!-- class="container" -->
 </section> <!-- id="bgLaLibrairie" class="parallax" -->
