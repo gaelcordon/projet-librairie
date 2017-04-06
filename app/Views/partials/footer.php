@@ -16,6 +16,23 @@
             <!--On construit l'url à partir du nom de la route grâce à l'objet $this
             qui instancie le moteur plates (utilisé par le frameworl W)-->
 
+            <!-- Script Ajax -->
+            <script type="text/javascript">
+<?php
+$urlRouteAjax = $this->url("ajax_sousgenres");
+
+// Astuce: 
+// JE CREE DU CODE JS AVEC PHP
+// POUR TRANSMETTRE DES INFOS DEPUIS PHP VERS JS
+echo
+<<<CODEJS
+
+var urlRouteAjax = "$urlRouteAjax";
+
+CODEJS;
+
+?>
+            </script>
 
             <!-- Chargement de la bibliothèque jquery minified pour Javascript -->
             <script type="text/javascript" src="<?php echo $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
@@ -38,5 +55,6 @@
 
             <!-- Chargement du script propre au projet-->
             <script type="text/javascript" src="<?php echo $this->assetUrl('js/script.js')?>"></script>
+
     </body>
 </html>

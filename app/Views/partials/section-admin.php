@@ -111,13 +111,6 @@
 	                    <div class="form-group">
 	                        <select class="form-control" name="sgenre" id="sgenre">
 	                        	<option value="0" selected disabled>Sous-Genre...</option>
-	                            <?php
-	                            foreach($listeSousgenres as $sousgenre)
-	                            {
-	                                echo '<option value="'.$sousgenre['id'].'">'.$sousgenre['libelle'].'</option>
-	                            ';
-	                            }
-	                            ?>
 	                        </select>
 	                    </div>
 						<div class="form-group">
