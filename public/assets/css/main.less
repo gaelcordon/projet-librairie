@@ -437,6 +437,7 @@ ul.dropdown-menu>li {
 	  -webkit-transform: scale(.5);
 	  -moz-transform: scale(.5);
 	  transform: scale(.5);
+	  overflow: hidden;
 	}
 
 	.right-pos {
@@ -446,14 +447,9 @@ ul.dropdown-menu>li {
 	  -webkit-transform: scale(.75);
 	  -moz-transform: scale(.75);
 	  transform: scale(.75);
+	  overflow: hidden;
 	}
 
-	span {
-	  position: relative;
-	  margin: 0 auto;
-	  left: 17em;
-	  top: 20em;
-	}
 
 	h2 {
 		background-color: @fondBloc;
@@ -713,6 +709,10 @@ div#buttonCarousel {
 	margin-top: 100px;
 }
 
+.crossClose {
+	color: white;
+}
+
 
 
 /*************************************************************************************************
@@ -937,7 +937,7 @@ footer {
 // /*************************************************************
 // 		Breakpoint 1 : sur téléphone (petit écran) XS
 // *************************************************************/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
 	.linkLibrairie {
 		color: @orange;
@@ -969,6 +969,16 @@ footer {
 	    display: block;
 	    border-radius: 0;
 	}
+
+	/*.right-pos, .back-pos {
+		//display: none !important;
+		li{
+			overflow: hidden;
+		}
+		img {
+			overflow: hidden;
+		}
+	}*/
 
 	.focusLivre {
 		height: 20vh;
@@ -1004,7 +1014,14 @@ footer {
 	}
 
 	#carouselNouveautes {
-		min-height: 90vh;
+		width: auto;
+		min-height: 100vh;
+		overflow: hidden;
+		padding-left: 6vh;
+		h2 {
+			position: relative;
+			left: -3vh;
+		}
 	}
 
 	.btn-group {
@@ -1027,7 +1044,7 @@ footer {
 /*************************************************************
 		Breakpoint 2 : sur tablette (styles généraux) SM
 *************************************************************/
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 		
 
 	#logo {
@@ -1045,12 +1062,23 @@ footer {
 
 	max-height: 17vh;
 	}
+
+	#carouselNouveautes {
+		width: auto;
+		min-height: 70vh;
+		overflow: hidden;
+		padding-left: 18vh;
+		h2 {
+			position: relative;
+			left: -9vh;
+		}
+	}
 }
 	
 /*************************************************************
 		Breakpoint 3 : sur ordinateur de bureau MD et LG
 *************************************************************/
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1024px) {
 
 	nav.navbar {
 
