@@ -8,14 +8,17 @@
 $(function(){
     // CE CODE SERA APPELE PAR JQUERY QUAND LA PAGE SERA PRETE
     
+    // 
     // Dropdown bouton accueil
-    $('.btn-group').hover(function() {
-    $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
-    }, function() {
-    $(this).find('.dropdown-menu').first().stop(true, true).delay(500).slideUp();
+    $('#homeButton').click(function(){
+      $('.dropdown-menu').slideToggle();
     });
 
-    // 
+    // } , function() {
+    //     $('.dropdown-menu').slideUp();
+    // });
+
+
 
     // Zone de recherche
 

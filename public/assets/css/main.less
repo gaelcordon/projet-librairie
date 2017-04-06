@@ -145,9 +145,14 @@ nav {
 
 .navbar {
 
+
 	.btn-group {
 	    margin-top: 0;
 	    bottom: 0.3vh;
+
+		    img {
+		    	cursor: pointer;
+		    }
 		}
 	
 	// surcharge à Bootstrap : pas de border et couleur différente
@@ -185,6 +190,7 @@ nav {
     		border: 1px solid @orange;
     		border-radius: 6px;
     		font-size: 2rem;
+    		z-index: 500;
 
 			> li {
 
@@ -984,15 +990,10 @@ footer {
 	    border-radius: 0;
 	}
 
-	/*.right-pos, .back-pos {
-		//display: none !important;
-		li{
-			overflow: hidden;
-		}
-		img {
-			overflow: hidden;
-		}
-	}*/
+	.dropdown-menu {
+    
+    left: -60px !important;
+	}
 
 	.focusLivre {
 		height: 20vh;

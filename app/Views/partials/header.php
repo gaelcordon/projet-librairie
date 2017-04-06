@@ -51,9 +51,10 @@
 				<!-- On récupère les liens de navigations pour les réduire en responsive design -->
 				<div class="collapse navbar-collapse" id="navbar-collapse-1">
 						<ul class="col-centered nav navbar-nav">
-							<div class="btn-group">
-								<a href="<?php echo $this->url('librairie_accueil'); ?>"><img src="<?php echo $this->assetUrl('img/commun/iconAccueil.png')?>" alt="icon-accueil-librairie-Mazan"></a>
+							<div id="homeButton" class="btn-group">
+								<img src="<?php echo $this->assetUrl('img/commun/iconAccueil.png')?>" alt="icon-accueil-librairie-Mazan">
 								<ul class="dropdown-menu">
+									<li><a href="<?php echo $this->url('librairie_accueil'); ?>"><span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
 									<li><a href="http://localhost/projet-librairie/public/#adresseSection"><span class="glyphicon glyphicon-envelope"></span>  contacter</a></li>
 									<li><a href="https://www.facebook.com/librairiegloire/?ref=ts&fref=ts" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i>  Suivez-nous</a></li>
 									<!-- Gestion de l'affichage du glyphicon en fonction de la session utilisateur -->
