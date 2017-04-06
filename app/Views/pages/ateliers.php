@@ -4,20 +4,14 @@ $titre = "Ateliers - A la gloire de mon pere";
 
 // On prévoit la décalration de variable pour définir quel est le menu actif
 
-/*$activeAccueil = "active";
-$activeLibrairie = "";
-$activeCoupsDeCoeur = "";
-$activePapeterie = "";
-$activeLoisirsEtJeux = "";
-$activeEvenementsAteliers = "";
-$activeNousContacter = "";
-$activeInscription = "";
-$activeConnexion = "";
-$activeDeconnexion = "";
-$activeAdmin = "";*/
+$GLOBALS['activeLibrairie'] = "";
+$GLOBALS['activeCoupsDeCoeur'] = "";
+$GLOBALS['activeAteliers'] = "active";
+$GLOBALS['activeEvenements'] = "";
+
 
 // Contruction de la vue
 
-$this->insert('partials/header', ["titre" => $titre]);
+$this->insert('partials/header', ["titre" => $titre, "activeLibrairie" => $GLOBALS['activeLibrairie'], "activeCoupsDeCoeur" => $GLOBALS['activeCoupsDeCoeur'], "activeAteliers" => $GLOBALS['activeAteliers'], "activeEvenements" => $GLOBALS['activeEvenements']]);
 $this->insert('partials/section-ateliers');
 $this->insert('partials/footer');

@@ -65,10 +65,10 @@
 									<?php endif; ?>
 								</ul>	
 							</div>
-							<li><a href="<?php echo $this->url('librairie_la_librairie'); ?>">La librairie</a></li>
-							<li><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
-							<li><a href="<?php echo $this->url('librairie_ateliers'); ?>">Ateliers</a></li>
-							<li><a href="<?php echo $this->url('librairie_evenements_dedicaces'); ?>">Evènements/Dédicaces</a></li>
+							<li class="<?php echo $GLOBALS['activeLibrairie']; ?>"><a href="<?php echo $this->url('librairie_la_librairie'); ?>">La librairie</a></li>
+							<li class="<?php echo $GLOBALS['activeCoupsDeCoeur']; ?>"><a href="<?php echo $this->url('librairie_coups_de_coeur'); ?>">Coups de coeur</a></li>
+							<li class="<?php echo $GLOBALS['activeAteliers']; ?>"><a href="<?php echo $this->url('librairie_ateliers'); ?>">Ateliers</a></li>
+							<li class="<?php echo $GLOBALS['activeEvenements']; ?>"><a href="<?php echo $this->url('librairie_evenements_dedicaces'); ?>">Evènements/Dédicaces</a></li>
 							<li>
 								<div id="zoneRecherche" class="popover_parent">
 									<span class="btn glyphicon glyphicon-search"></span>
