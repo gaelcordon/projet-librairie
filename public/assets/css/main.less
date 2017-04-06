@@ -708,7 +708,7 @@ div#buttonCarousel {
 }
 
 .crossClose {
-	color: white;
+	color: white !important;
 }
 
 
@@ -884,7 +884,10 @@ footer {
 
 .modal-body, .modal-header, .modal-footer {
 	background-color: @bleuNavbar;
-	color: @orange;
+	span {
+		color: @orange;
+	}
+	color: white;
 	border-bottom: 1px solid @orange;
 	border-top: 0;
 	 a {

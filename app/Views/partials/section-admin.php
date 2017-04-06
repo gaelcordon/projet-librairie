@@ -1,22 +1,41 @@
 <section id="bgAdmin" class="parallax">
 	<div class="container">
 		<div id="menuAdmin" class="row">
-
+	<?php
+		$placement= "";
+		if ( isset($w_user["id"]) && (($w_user["id"] == 1) || ($w_user["id"] == 3) || ($w_user["id"] == 4)))
+		{
+	?>
 				<div class="col-sm-4 btnAdmin">
 					<button type="button" id="addBook" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalBook">
 			 			Ajout Livres
 					</button>
 				</div>
-				<div class="col-sm-4 btnAdmin">
+	<?php
+		}
+		else 
+		{
+			$placement = "col-md-offset-4";
+		}
+
+	?>
+				<div class="col-sm-4 <?php echo $placement; ?> btnAdmin">
 					<button type="button" id="addEvent" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalEvent">
 			 			Ajout Evenements
 					</button>
 				</div>
+	<?php
+		if ( isset($w_user["id"]) && (($w_user["id"] == 1) || ($w_user["id"] == 3) || ($w_user["id"] == 4)))
+		{
+	?>
 				<div class="col-sm-4 btnAdmin">
 					<button type="button" id="addUser" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalUser">
 			 			Ajout Utilisateurs
 					</button>
 				</div>
+	<?php
+		}
+	?>
 
 		</div>
 	</div>

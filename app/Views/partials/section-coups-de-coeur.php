@@ -94,20 +94,20 @@
 					      		</div>
 					      		<div class="modal-body">
 									<img src='<?php	echo $this->assetUrl($couverture); ?>' alt='couverture' />
-									<h3>Auteur :<?php echo $auteur["libelle"] ?></h3>
-									<p>Editeur :<?php echo $editeur["libelle"] ?></p>
-									<p>Collection : <?php echo $collection["libelle"] ?></p>
-									<p>Genre : <?php echo $genre["libelle"] ?></p>
-									<p>Sous-Genre : <?php echo $sousgenre["libelle"] ?></p>
-									<p>Date de parution :<?php echo $dateParution ?></p>
-									<p>ISBN : <?php echo $isbn ?></p>
-									<p>Format : <?php echo $format["libelle"] ?></p>
-									<p>Présentation : <?php echo $presentation["libelle"] ?></p>
-									<p>Nombre de pages : <?php echo $nbPage ?></p>
-									<p>Poids : <?php echo $poids ?> Kg</p>
-									<p>dimension : <?php echo $dimensions ?></p>
-									<p>Resume : <?php echo $resume ?></p>
-									<p>Prix : <?php echo $prix ?> € TTC</p>
+									<h3><span>Auteur : </span><?php echo $auteur["libelle"] ?></h3>
+									<p><span>Editeur : </span><?php echo $editeur["libelle"] ?></p>
+									<p><span>Collection : </span><?php echo $collection["libelle"] ?></p>
+									<p><span>Genre : </span><?php echo $genre["libelle"] ?></p>
+									<p><span>Sous-Genre : </span><?php echo $sousgenre["libelle"] ?></p>
+									<p><span>Date de parution : </span><?php echo $dateParution ?></p>
+									<p><span>ISBN : </span><?php echo $isbn ?></p>
+									<p><span>Format : </span><?php echo $format["libelle"] ?></p>
+									<p><span>Présentation : </span><?php echo $presentation["libelle"] ?></p>
+									<p><span>Nombre de pages : </span><?php echo $nbPage ?></p>
+									<p><span>Poids : </span><?php echo $poids ?> Kg</p>
+									<p><span>dimension : </span><?php echo $dimensions ?></p>
+									<p><span>Resume : </span><?php echo $resume ?></p>
+									<p><span>Prix : </span><?php echo $prix ?> € TTC</p>
 									<!--<p>Date de création : $dateCrea</p>-->
 								</div>
 						      	<div class="modal-footer">
